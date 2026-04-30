@@ -1,0 +1,32 @@
+======================================================================
+OPTIONAL-PLAN NO-REWARD — PASS@K EVALUATION SUMMARY
+======================================================================
+
+Model:     checkpoints_mbpp_full/checkpoints/global_step_230/actor/huggingface
+Condition: optional-plan-no-reward (alpha=0)
+Date:      2026-04-25T22:36:02.925305
+
+======================================================================
+PASS@1 RESULTS
+======================================================================
+
+MBPP_VAL
+----------------------------------------------------------------------
+  Accuracy: 60.00% (54/90)
+  Plans present:     100.0%
+  Avg plan score:    0.099
+  With plan success: 60.0%
+  Without plan:      0.0%
+  Plan benefit:      +60.0%
+
+MBPP_TEST
+----------------------------------------------------------------------
+  Accuracy: 57.40% (287/500)
+  Plans present:     99.6%
+  Avg plan score:    0.098
+  With plan success: 57.6%
+  Without plan:      0.0%
+  Plan benefit:      +57.6%
+
+
+

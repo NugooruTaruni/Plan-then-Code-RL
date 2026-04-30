@@ -1,0 +1,1099 @@
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.2.0)/charset_normalizer (3.4.6) doesn't match a supported version!
+  warnings.warn(
+2026-04-26 06:49:44,208 [INFO] [EXP1_FULL] checkpoint=checkpoints_mbpp_full/checkpoints/global_step_230 | split=all
+2026-04-26 06:49:44,208 [INFO] alpha=0.0 beta=1.0 judge=gpt-4o-mini feedback=on (max=1)
+2026-04-26 06:49:44,209 [INFO] raw generations → eval_results_optional_no_reward/raw_global_step_230_20260426_064944.jsonl
+2026-04-26 06:49:44,209 [INFO] Loading tokenizer: Qwen/Qwen2.5-Coder-3B-Instruct
+2026-04-26 06:49:44,948 [INFO] Loading HF model: checkpoints_mbpp_full/checkpoints/global_step_230/actor/huggingface
+2026-04-26 06:49:46,606 [INFO] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.84s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:25<00:00, 10.56s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:25<00:00, 12.70s/it]
+2026-04-26 06:50:12,106 [INFO]   ✓ HF model loaded
+2026-04-26 06:50:12,109 [INFO] policy device: cuda:0
+2026-04-26 06:50:12,228 [INFO] Loaded 90 rows from data/mbpp_val_full.parquet
+2026-04-26 06:50:12,235 [INFO] 
+============================================================
+EVALUATING: val (90 tasks)
+============================================================
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+2026-04-26 06:50:27,135 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:50:53,552 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:50:53,564 [INFO] [  1/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 171 tok | 11.1s | Write a python function to find minimum sum of factors 
+2026-04-26 06:51:07,959 [INFO] [  2/90] PASS ✓             | plan=N score=0.00 R=1.00 | 243 tok | 14.3s | Write a function to count the element frequency in the 
+2026-04-26 06:51:16,502 [INFO] [  3/90] PASS ✓             | plan=N score=0.00 R=1.00 | 159 tok | 8.4s | Write a function to convert tuple into list by adding t
+2026-04-26 06:51:24,479 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:51:38,858 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:51:38,864 [INFO] [  4/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 109 tok | 6.6s | Write a function to find the summation of tuple element
+2026-04-26 06:51:49,685 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:52:14,288 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:52:14,290 [INFO] [  5/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 174 tok | 9.4s | Write a function to check if there is a subset with sum
+2026-04-26 06:52:34,210 [INFO] [  6/90] PASS ✓             | plan=N score=0.00 R=1.00 | 351 tok | 19.8s | Write a function to sort a list of elements using radix
+2026-04-26 06:52:41,470 [INFO] [  7/90] PASS ✓             | plan=N score=0.00 R=1.00 | 123 tok | 7.2s | Write a python function to find the largest postive num
+2026-04-26 06:52:51,130 [INFO] [  8/90] PASS ✓             | plan=N score=0.00 R=1.00 | 158 tok | 9.6s | Write a function to find the square root of a perfect n
+2026-04-26 06:52:57,625 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:53:12,664 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:53:12,666 [INFO] [  9/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 90 tok | 5.3s | Write a function to calculate volume of a tetrahedron.
+2026-04-26 06:53:20,689 [INFO] [ 10/90] PASS ✓             | plan=N score=0.00 R=1.00 | 121 tok | 7.9s | Write a function to find the lcm of the given array ele
+2026-04-26 06:53:28,417 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:53:39,518 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:53:39,522 [INFO] [ 11/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 104 tok | 6.7s | Write a function to print check if the triangle is scal
+2026-04-26 06:54:01,361 [INFO] [ 12/90] PASS ✓             | plan=N score=0.00 R=1.00 | 313 tok | 21.8s | Write a function to find the longest bitonic subsequenc
+2026-04-26 06:54:18,027 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:54:39,492 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:54:39,497 [INFO] [ 13/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 224 tok | 15.8s | Write a function to check whether a given string has a 
+2026-04-26 06:54:53,343 [INFO] [ 14/90] PASS ✓             | plan=N score=0.00 R=1.00 | 220 tok | 13.8s | Write a function to find the sum of maximum increasing 
+2026-04-26 06:54:59,116 [INFO] [ 15/90] PASS ✓             | plan=N score=0.00 R=1.00 | 88 tok | 5.7s | Write a python function to check whether two given line
+2026-04-26 06:55:06,445 [INFO] [ 16/90] PASS ✓             | plan=N score=0.00 R=1.00 | 126 tok | 7.2s | Write a python function to capitalize first and last le
+2026-04-26 06:55:16,672 [INFO] [ 17/90] PASS ✓             | plan=N score=0.00 R=1.00 | 169 tok | 10.1s | Write a function to find all pairs in an integer array 
+2026-04-26 06:55:27,115 [INFO] [ 18/90] PASS ✓             | plan=N score=0.00 R=1.00 | 184 tok | 10.4s | Write a function to find the list of lists with minimum
+2026-04-26 06:55:39,654 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:56:16,129 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:56:16,135 [INFO] [ 19/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 152 tok | 10.6s | Write a function to find the nth jacobsthal-lucas numbe
+2026-04-26 06:56:29,154 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:56:45,847 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:56:45,849 [INFO] [ 20/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 155 tok | 10.6s | Write a function to find the ration of negative numbers
+2026-04-26 06:56:55,285 [INFO] [ 21/90] PASS ✓             | plan=N score=0.00 R=1.00 | 220 tok | 9.4s | Write a function to find minimum number of coins that m
+2026-04-26 06:56:59,949 [INFO] [ 22/90] PASS ✓             | plan=N score=0.00 R=1.00 | 108 tok | 4.6s | Write a function to check if the two given strings are 
+2026-04-26 06:57:06,694 [INFO] [ 23/90] PASS ✓             | plan=N score=0.00 R=1.00 | 153 tok | 6.7s | Write a function to remove particular data type element
+2026-04-26 06:57:11,461 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:57:23,891 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:57:23,892 [INFO] [ 24/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 86 tok | 3.7s | Write a function to search a literals string in a strin
+2026-04-26 06:57:28,344 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:57:37,970 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:57:37,972 [INFO] [ 25/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 85 tok | 3.7s | Write a function to find the top or bottom surface area
+2026-04-26 06:57:44,370 [INFO] [ 26/90] PASS ✓             | plan=N score=0.00 R=1.00 | 151 tok | 6.3s | Write a function to select the nth items of a list.
+2026-04-26 06:57:51,638 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:58:05,478 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:58:05,482 [INFO] [ 27/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 153 tok | 6.4s | Write a python function to find the first repeated word
+2026-04-26 06:58:10,851 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:58:22,788 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:58:22,791 [INFO] [ 28/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 109 tok | 4.6s | Write a python function to convert a given string list 
+2026-04-26 06:58:34,522 [INFO] [ 29/90] PASS ✓             | plan=N score=0.00 R=1.00 | 278 tok | 11.7s | Write a function to create a list containing the power 
+2026-04-26 06:58:43,695 [INFO] [ 30/90] PASS ✓             | plan=N score=0.00 R=1.00 | 220 tok | 9.1s | Write a python function to find the difference between 
+2026-04-26 06:58:49,636 [INFO] [ 31/90] PASS ✓             | plan=N score=0.00 R=1.00 | 140 tok | 5.9s | Write a function to find if the given number is abundan
+2026-04-26 06:58:53,196 [INFO] [ 32/90] PASS ✓             | plan=N score=0.00 R=1.00 | 84 tok | 3.5s | Write a function to replace all occurrences of spaces, 
+2026-04-26 06:58:57,529 [INFO] [ 33/90] PASS ✓             | plan=N score=0.00 R=1.00 | 102 tok | 4.3s | Write a function to add two numbers and print number of
+2026-04-26 06:59:04,212 [INFO] [ 34/90] PASS ✓             | plan=N score=0.00 R=1.00 | 157 tok | 6.6s | Write a function to flatten the tuple list to a string.
+2026-04-26 06:59:09,044 [INFO] [ 35/90] PASS ✓             | plan=N score=0.00 R=1.00 | 113 tok | 4.8s | Write a python function to toggle only first and last b
+2026-04-26 06:59:14,717 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:59:23,937 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:59:23,940 [INFO] [ 36/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 107 tok | 4.5s | Write a function to find the last occurrence of a chara
+2026-04-26 06:59:28,518 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:59:41,674 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 06:59:41,678 [INFO] [ 37/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 90 tok | 3.8s | Write a python function to find the sum of hamming dist
+2026-04-26 06:59:49,528 [INFO] [ 38/90] PASS ✓             | plan=N score=0.00 R=1.00 | 185 tok | 7.8s | Write a function to find the length of the longest incr
+2026-04-26 06:59:54,078 [INFO] [ 39/90] PASS ✓             | plan=N score=0.00 R=1.00 | 107 tok | 4.5s | Write a python function to find the sum of fifth power 
+2026-04-26 07:00:02,521 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:00:18,423 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:00:18,426 [INFO] [ 40/90] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 181 tok | 7.6s | Write a python function to find the maximum element in 
+2026-04-26 07:00:24,274 [INFO] [ 41/90] PASS ✓             | plan=N score=0.00 R=1.00 | 138 tok | 5.8s | Write a function to extract a specified column from a g
+2026-04-26 07:00:33,991 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:00:48,258 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:00:48,263 [INFO] [ 42/90] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 210 tok | 8.8s | Write a python function to check whether a given sequen
+2026-04-26 07:00:51,355 [INFO] [ 43/90] PASS ✓             | plan=N score=0.00 R=1.00 | 72 tok | 3.0s | Write a function to convert the given tuple to a floati
+2026-04-26 07:00:57,192 [INFO] [ 44/90] PASS ✓             | plan=N score=0.00 R=1.00 | 138 tok | 5.8s | Write a python function to find odd numbers from a mixe
+2026-04-26 07:01:02,050 [INFO] [ 45/90] PASS ✓             | plan=N score=0.00 R=1.00 | 115 tok | 4.8s | Write a python function to find the difference between 
+2026-04-26 07:01:07,912 [INFO] [ 46/90] PASS ✓             | plan=N score=0.00 R=1.00 | 139 tok | 5.8s | Write a python function to count the pairs with xor as 
+2026-04-26 07:01:13,681 [INFO] [ 47/90] PASS ✓             | plan=N score=0.00 R=1.00 | 136 tok | 5.7s | Write a function to toggle characters case in a string.
+2026-04-26 07:01:23,687 [INFO] [ 48/90] PASS ✓             | plan=N score=0.00 R=1.00 | 236 tok | 9.9s | Write a python function to find the digit distance betw
+2026-04-26 07:01:31,289 [INFO] [ 49/90] PASS ✓             | plan=N score=0.00 R=1.00 | 181 tok | 7.5s | Write a function to find the largest sum of contiguous 
+2026-04-26 07:01:36,360 [INFO] [ 50/90] PASS ✓             | plan=N score=0.00 R=1.00 | 121 tok | 5.0s | Write a function to find the union of elements of the g
+2026-04-26 07:01:45,243 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:02:04,660 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:02:04,663 [INFO] [ 51/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 187 tok | 7.9s | Write a function to assign with each element, its pair 
+2026-04-26 07:02:10,153 [INFO] [ 52/90] PASS ✓             | plan=N score=0.00 R=1.00 | 129 tok | 5.4s | Write a python function to find the maximum length of s
+2026-04-26 07:02:15,400 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:02:26,206 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:02:26,211 [INFO] [ 53/90] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 96 tok | 4.1s | Write a function to extract values between quotation ma
+2026-04-26 07:02:31,779 [INFO] [ 54/90] PASS ✓             | plan=N score=0.00 R=1.00 | 130 tok | 5.5s | Write a python function to count unequal element pairs 
+2026-04-26 07:02:36,315 [INFO] [ 55/90] PASS ✓             | plan=N score=0.00 R=1.00 | 105 tok | 4.5s | Write a python function to split a string into characte
+2026-04-26 07:02:40,913 [INFO] [ 56/90] PASS ✓             | plan=N score=0.00 R=1.00 | 107 tok | 4.5s | Write a function to get the sum of a non-negative integ
+2026-04-26 07:02:48,488 [INFO] [ 57/90] PASS ✓             | plan=N score=0.00 R=1.00 | 178 tok | 7.5s | Write a function to check whether a specified list is s
+2026-04-26 07:02:51,816 [INFO] [ 58/90] PASS ✓             | plan=N score=0.00 R=1.00 | 78 tok | 3.3s | Write a function to create a list of empty dictionaries
+2026-04-26 07:02:56,676 [INFO] [ 59/90] PASS ✓             | plan=N score=0.00 R=1.00 | 114 tok | 4.8s | Write a function to sort each sublist of strings in a g
+2026-04-26 07:03:06,590 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:03:19,907 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:03:19,914 [INFO] [ 60/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 211 tok | 8.8s | Write a function to remove words from a given list of s
+2026-04-26 07:03:31,540 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:03:48,646 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:03:48,652 [INFO] [ 61/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 259 tok | 10.7s | Write a function to find maximum possible sum of disjoi
+2026-04-26 07:03:55,413 [INFO] [ 62/90] PASS ✓             | plan=N score=0.00 R=1.00 | 158 tok | 6.7s | Write a python function to remove two duplicate numbers
+2026-04-26 07:04:01,242 [INFO] [ 63/90] PASS ✓             | plan=N score=0.00 R=1.00 | 137 tok | 5.8s | Write a python function to calculate the product of the
+2026-04-26 07:04:05,908 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:04:16,582 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:04:16,585 [INFO] [ 64/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 93 tok | 3.9s | Write a function to find the surface area of a cylinder
+2026-04-26 07:04:23,741 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:04:40,027 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:04:40,032 [INFO] [ 65/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 142 tok | 6.0s | Write a python function to find nth number in a sequenc
+2026-04-26 07:04:47,172 [INFO] [ 66/90] PASS ✓             | plan=N score=0.00 R=1.00 | 169 tok | 7.1s | Write a python function to check whether an array is su
+2026-04-26 07:04:52,569 [INFO] [ 67/90] PASS ✓             | plan=N score=0.00 R=1.00 | 127 tok | 5.3s | Write a python function to find the last digit in facto
+2026-04-26 07:05:03,938 [INFO] [ 68/90] PASS ✓             | plan=N score=0.00 R=1.00 | 273 tok | 11.3s | Write a function to interleave lists of the same length
+2026-04-26 07:05:10,237 [INFO] [ 69/90] PASS ✓             | plan=N score=0.00 R=1.00 | 149 tok | 6.2s | Write a function to find the dissimilar elements in the
+2026-04-26 07:05:20,503 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:05:40,820 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:05:40,823 [INFO] [ 70/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 211 tok | 8.9s | Write a function to extract the even elements in the ne
+2026-04-26 07:05:46,189 [INFO] [ 71/90] PASS ✓             | plan=N score=0.00 R=1.00 | 125 tok | 5.3s | Write a python function to find the surface area of the
+2026-04-26 07:05:48,388 [INFO] [ 72/90] PASS ✓             | plan=N score=0.00 R=1.00 | 49 tok | 2.1s | Write a function to check if a dictionary is empty or n
+2026-04-26 07:05:55,758 [INFO] [ 73/90] PASS ✓             | plan=N score=0.00 R=1.00 | 173 tok | 7.3s | Write a function for nth catalan number.
+2026-04-26 07:06:04,989 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:06:21,328 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:06:21,333 [INFO] [ 74/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 184 tok | 7.8s | Write a function to find all adverbs and their position
+2026-04-26 07:06:26,620 [INFO] [ 75/90] PASS ✓             | plan=N score=0.00 R=1.00 | 124 tok | 5.2s | Write a function to find the n - expensive price items 
+2026-04-26 07:06:32,298 [INFO] [ 76/90] PASS ✓             | plan=N score=0.00 R=1.00 | 132 tok | 5.6s | Write a python function to split the array and add the 
+2026-04-26 07:06:36,317 [INFO] [ 77/90] PASS ✓             | plan=N score=0.00 R=1.00 | 94 tok | 4.0s | Write a function to convert a list to a tuple.
+2026-04-26 07:06:42,133 [INFO] [ 78/90] PASS ✓             | plan=N score=0.00 R=1.00 | 137 tok | 5.8s | Write a python function to find the difference between 
+2026-04-26 07:06:48,509 [INFO] [ 79/90] PASS ✓             | plan=N score=0.00 R=1.00 | 150 tok | 6.3s | Write a function to find perfect squares between two gi
+2026-04-26 07:06:53,966 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:07:09,490 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:07:09,492 [INFO] [ 80/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 112 tok | 4.7s | Write a function to convert polar coordinates to rectan
+2026-04-26 07:07:14,960 [INFO] [ 81/90] PASS ✓             | plan=N score=0.00 R=1.00 | 129 tok | 5.4s | Write a python function to interchange the first and la
+2026-04-26 07:07:22,599 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:07:36,739 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:07:36,743 [INFO] [ 82/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 157 tok | 6.7s | Write a python function to find sum of product of binom
+2026-04-26 07:07:41,764 [INFO] [ 83/90] PASS ✓             | plan=N score=0.00 R=1.00 | 117 tok | 5.0s | Write a function to remove leading zeroes from an ip ad
+2026-04-26 07:07:49,834 [INFO] [ 84/90] PASS ✓             | plan=N score=0.00 R=1.00 | 190 tok | 8.0s | Write a function to find the difference of first even a
+2026-04-26 07:08:02,150 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:08:23,330 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:08:23,335 [INFO] [ 85/90] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 275 tok | 11.4s | Write a python function to count minimum number of swap
+2026-04-26 07:08:27,747 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:08:42,773 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:08:42,777 [INFO] [ 86/90] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 92 tok | 3.8s | Write a function to find the size of the given tuple.
+2026-04-26 07:08:57,134 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:09:27,724 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:09:27,729 [INFO] [ 87/90] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 315 tok | 13.1s | Write a function to find kth element from the given two
+2026-04-26 07:09:34,818 [INFO] [ 88/90] PASS ✓             | plan=N score=0.00 R=1.00 | 166 tok | 7.0s | Write a function to check whether the given number is a
+2026-04-26 07:09:39,721 [INFO] [ 89/90] PASS ✓             | plan=N score=0.00 R=1.00 | 116 tok | 4.8s | Write a function to find sum and average of first n nat
+2026-04-26 07:09:43,212 [INFO] [ 90/90] PASS ✓             | plan=N score=0.00 R=1.00 | 80 tok | 3.4s | Write a python function to check whether the given numb
+2026-04-26 07:09:43,212 [INFO]   avg plan_decomposition : nan
+2026-04-26 07:09:43,212 [INFO]   avg plan_edge_cases    : nan
+2026-04-26 07:09:43,212 [INFO]   avg plan_approach      : nan
+2026-04-26 07:09:43,212 [INFO]   avg plan_clarity       : nan
+2026-04-26 07:09:43,213 [INFO] 
+RESULTS: val
+2026-04-26 07:09:43,213 [INFO]   pass@1  (attempt 1)     : 61/90 (67.8%)
+2026-04-26 07:09:43,213 [INFO]   pass@1  (after feedback): 66/90 (73.3%)
+2026-04-26 07:09:43,213 [INFO]   tasks entering feedback : 29
+2026-04-26 07:09:43,213 [INFO]   recovered by feedback   : 5 (17.2% of feedback tasks)
+2026-04-26 07:09:43,213 [INFO]   avg plan_score (attempt 1): 0.000
+2026-04-26 07:09:43,213 [INFO]   avg reward (attempt 1)  : 0.678
+2026-04-26 07:09:43,213 [INFO]   avg reward (final)      : 0.733
+2026-04-26 07:09:43,213 [INFO]   Saved: eval_results_optional_no_reward/eval_val.jsonl
+2026-04-26 07:09:43,226 [INFO] Loaded 500 rows from data/mbpp_test_full.parquet
+2026-04-26 07:09:43,229 [INFO] 
+============================================================
+EVALUATING: test (500 tasks)
+============================================================
+2026-04-26 07:09:51,204 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:10:04,705 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:10:04,707 [INFO] [  1/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 158 tok | 6.7s | Write a python function to remove first and last occurr
+2026-04-26 07:10:09,409 [INFO] [  2/500] PASS ✓             | plan=N score=0.00 R=1.00 | 108 tok | 4.6s | Write a function to sort a given matrix in ascending or
+2026-04-26 07:10:18,293 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:10:35,462 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:10:35,466 [INFO] [  3/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 193 tok | 8.0s | Write a function to count the most common words in a di
+2026-04-26 07:10:39,440 [INFO] [  4/500] PASS ✓             | plan=N score=0.00 R=1.00 | 92 tok | 3.9s | Write a python function to find the volume of a triangu
+2026-04-26 07:10:44,589 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:10:55,284 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:10:55,287 [INFO] [  5/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 99 tok | 4.2s | Write a function to split a string at lowercase letters
+2026-04-26 07:11:01,017 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:11:11,215 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:11:11,219 [INFO] [  6/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 118 tok | 5.0s | Write a function to find sequences of lowercase letters
+2026-04-26 07:11:13,847 [INFO] [  7/500] PASS ✓             | plan=N score=0.00 R=1.00 | 60 tok | 2.6s | Write a function to find the perimeter of a square.
+2026-04-26 07:11:18,478 [INFO] [  8/500] PASS ✓             | plan=N score=0.00 R=1.00 | 108 tok | 4.6s | Write a function to remove characters from the first st
+2026-04-26 07:11:24,069 [INFO] [  9/500] PASS ✓             | plan=N score=0.00 R=1.00 | 130 tok | 5.5s | Write a function to find whether a given array of integ
+2026-04-26 07:11:32,084 [INFO] [ 10/500] PASS ✓             | plan=N score=0.00 R=1.00 | 188 tok | 8.0s | Write a function to check if the given number is woodba
+2026-04-26 07:11:38,085 [INFO] [ 11/500] PASS ✓             | plan=N score=0.00 R=1.00 | 140 tok | 5.9s | Write a function to find m number of multiples of n.
+2026-04-26 07:11:41,520 [INFO] [ 12/500] PASS ✓             | plan=N score=0.00 R=1.00 | 80 tok | 3.4s | Write a function to find the first duplicate element in
+2026-04-26 07:11:48,178 [INFO] [ 13/500] PASS ✓             | plan=N score=0.00 R=1.00 | 155 tok | 6.6s | Write a python function to find the maximum sum of elem
+2026-04-26 07:11:56,712 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:12:08,714 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:12:08,715 [INFO] [ 14/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 157 tok | 6.6s | Write a function to convert the given binary number to 
+2026-04-26 07:12:15,652 [INFO] [ 15/500] PASS ✓             | plan=N score=0.00 R=1.00 | 163 tok | 6.9s | Write a python function to find the product of non-repe
+2026-04-26 07:12:21,159 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:12:31,066 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:12:31,070 [INFO] [ 16/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 102 tok | 4.3s | Write a function to check if the given tuple list has a
+2026-04-26 07:12:37,220 [INFO] [ 17/500] PASS ✓             | plan=N score=0.00 R=1.00 | 143 tok | 6.1s | Write a python function to remove all digits from a lis
+2026-04-26 07:12:46,656 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:13:00,100 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:13:00,106 [INFO] [ 18/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 188 tok | 8.0s | Write a python function to find binomial co-efficient.
+2026-04-26 07:13:05,186 [INFO] [ 19/500] PASS ✓             | plan=N score=0.00 R=1.00 | 119 tok | 5.0s | Write a python function to find the element occurring o
+2026-04-26 07:13:10,931 [INFO] [ 20/500] PASS ✓             | plan=N score=0.00 R=1.00 | 135 tok | 5.7s | Write a python function to count all the substrings sta
+2026-04-26 07:13:22,960 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:13:48,566 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:13:48,570 [INFO] [ 21/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 259 tok | 10.9s | Write a function to find the top k integers that occur 
+2026-04-26 07:13:57,328 [INFO] [ 22/500] PASS ✓             | plan=N score=0.00 R=1.00 | 206 tok | 8.7s | Write a python function to find the largest prime facto
+2026-04-26 07:14:04,768 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:14:16,052 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:14:16,056 [INFO] [ 23/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 154 tok | 6.5s | Write a python function to convert a decimal number to 
+2026-04-26 07:14:22,258 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:14:33,740 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:14:33,745 [INFO] [ 24/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 119 tok | 5.1s | Write a python function to find the missing number in a
+2026-04-26 07:14:36,521 [INFO] [ 25/500] PASS ✓             | plan=N score=0.00 R=1.00 | 64 tok | 2.7s | Write a function to find the n-th rectangular number.
+2026-04-26 07:14:52,410 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:15:17,047 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:15:17,052 [INFO] [ 26/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 357 tok | 14.9s | Write a python function to find the nth digit in the pr
+2026-04-26 07:15:24,018 [INFO] [ 27/500] PASS ✓             | plan=N score=0.00 R=1.00 | 163 tok | 6.9s | Write a function to sort a given mixed list of integers
+2026-04-26 07:15:32,221 [INFO] [ 28/500] PASS ✓             | plan=N score=0.00 R=1.00 | 192 tok | 8.1s | Write a function to find the division of first even and
+2026-04-26 07:15:45,179 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:16:04,640 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:16:04,642 [INFO] [ 29/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 293 tok | 12.3s | Write a function to check if the letters of a given str
+2026-04-26 07:16:12,082 [INFO] [ 30/500] PASS ✓             | plan=N score=0.00 R=1.00 | 174 tok | 7.4s | Write a function to find frequency of the elements in a
+2026-04-26 07:16:16,547 [INFO] [ 31/500] PASS ✓             | plan=N score=0.00 R=1.00 | 103 tok | 4.4s | Write a function to filter even numbers using lambda fu
+2026-04-26 07:16:25,037 [INFO] [ 32/500] PASS ✓             | plan=N score=0.00 R=1.00 | 197 tok | 8.4s | Write a python function to find the sum of repeated ele
+2026-04-26 07:16:30,643 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:16:41,069 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:16:41,072 [INFO] [ 33/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 109 tok | 4.6s | Write a function to find sequences of lowercase letters
+2026-04-26 07:16:44,953 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:16:51,830 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:16:51,836 [INFO] [ 34/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 70 tok | 3.0s | Write a function that matches a word at the beginning o
+2026-04-26 07:16:56,978 [INFO] [ 35/500] PASS ✓             | plan=N score=0.00 R=1.00 | 119 tok | 5.1s | Write a function to find the gcd of the given array ele
+2026-04-26 07:17:00,111 [INFO] [ 36/500] PASS ✓             | plan=N score=0.00 R=1.00 | 71 tok | 3.1s | Write a python function to determine whether all the nu
+2026-04-26 07:17:22,899 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:17:39,685 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:17:39,687 [INFO] [ 37/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 510 tok | 21.5s | Write a python function to find the last digit when fac
+2026-04-26 07:17:46,430 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:17:58,365 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:17:58,369 [INFO] [ 38/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 136 tok | 5.8s | Write a python function to set all odd bits of a given 
+2026-04-26 07:18:04,198 [INFO] [ 39/500] PASS ✓             | plan=N score=0.00 R=1.00 | 136 tok | 5.8s | Write a function to extract every first or specified el
+2026-04-26 07:18:09,707 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:18:22,138 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:18:22,140 [INFO] [ 40/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 101 tok | 4.3s | Write a function to find the list with minimum length u
+2026-04-26 07:18:25,277 [INFO] [ 41/500] PASS ✓             | plan=N score=0.00 R=1.00 | 72 tok | 3.1s | Write a function to print check if the triangle is equi
+2026-04-26 07:18:28,272 [INFO] [ 42/500] PASS ✓             | plan=N score=0.00 R=1.00 | 69 tok | 2.9s | Write a function to caluclate area of a parallelogram.
+2026-04-26 07:18:31,475 [INFO] [ 43/500] PASS ✓             | plan=N score=0.00 R=1.00 | 75 tok | 3.1s | Write a python function to check whether the first and 
+2026-04-26 07:18:39,767 [INFO] [ 44/500] PASS ✓             | plan=N score=0.00 R=1.00 | 196 tok | 8.2s | Write a function to sort the given array by using count
+2026-04-26 07:18:42,819 [INFO] [ 45/500] PASS ✓             | plan=N score=0.00 R=1.00 | 69 tok | 3.0s | Write a function to find t-nth term of geometric series
+2026-04-26 07:18:46,150 [INFO] [ 46/500] PASS ✓             | plan=N score=0.00 R=1.00 | 76 tok | 3.3s | Write a python function to check if a given number is o
+2026-04-26 07:18:51,021 [INFO] [ 47/500] PASS ✓             | plan=N score=0.00 R=1.00 | 114 tok | 4.8s | Write a python function to find the largest number that
+2026-04-26 07:18:55,490 [INFO] [ 48/500] PASS ✓             | plan=N score=0.00 R=1.00 | 104 tok | 4.4s | Write a python function to check whether the given two 
+2026-04-26 07:18:59,043 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:19:06,498 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:19:06,505 [INFO] [ 49/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 63 tok | 2.7s | Write a function to find the nth octagonal number.
+2026-04-26 07:19:15,336 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:19:33,942 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:19:33,946 [INFO] [ 50/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 189 tok | 7.9s | Write a function to find the maximum length of the subs
+2026-04-26 07:19:40,638 [INFO] [ 51/500] PASS ✓             | plan=N score=0.00 R=1.00 | 158 tok | 6.6s | Write a python function to count number of substrings w
+2026-04-26 07:19:45,630 [INFO] [ 52/500] PASS ✓             | plan=N score=0.00 R=1.00 | 116 tok | 4.9s | Write a python function to find smallest number in a li
+2026-04-26 07:19:54,554 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:20:14,601 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:20:14,605 [INFO] [ 53/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 186 tok | 7.8s | Write a function to find the maximum difference between
+2026-04-26 07:20:19,778 [INFO] [ 54/500] PASS ✓             | plan=N score=0.00 R=1.00 | 121 tok | 5.1s | Write a function to sort a list of tuples using lambda.
+2026-04-26 07:20:23,606 [INFO] [ 55/500] PASS ✓             | plan=N score=0.00 R=1.00 | 87 tok | 3.8s | Write a function of recursion list sum.
+2026-04-26 07:20:28,734 [INFO] [ 56/500] PASS ✓             | plan=N score=0.00 R=1.00 | 119 tok | 5.1s | Write a python function to count positive numbers in a 
+2026-04-26 07:20:35,711 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:20:52,878 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:20:52,879 [INFO] [ 57/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 135 tok | 5.7s | Write a function to find the number of ways to partitio
+2026-04-26 07:20:57,585 [INFO] [ 58/500] PASS ✓             | plan=N score=0.00 R=1.00 | 110 tok | 4.6s | Write a python function to check whether the given arra
+2026-04-26 07:21:04,487 [INFO] [ 59/500] PASS ✓             | plan=N score=0.00 R=1.00 | 161 tok | 6.8s | Write a function to check whether a list contains the g
+2026-04-26 07:21:10,936 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:21:22,787 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:21:22,793 [INFO] [ 60/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 132 tok | 5.5s | Write a function to find whether all the given tuples h
+2026-04-26 07:21:30,123 [INFO] [ 61/500] PASS ✓             | plan=N score=0.00 R=1.00 | 172 tok | 7.3s | Write a function to sort a list of elements using comb 
+2026-04-26 07:21:38,765 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:22:02,305 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:22:02,314 [INFO] [ 62/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 177 tok | 7.5s | Write a python function to check whether the given numb
+2026-04-26 07:22:06,955 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:22:19,909 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:22:19,911 [INFO] [ 63/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 91 tok | 3.9s | Write a function to split the given string with multipl
+2026-04-26 07:22:29,513 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:22:44,928 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:22:44,930 [INFO] [ 64/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 205 tok | 8.6s | Write a function to check whether it follows the sequen
+2026-04-26 07:22:53,943 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:23:08,913 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:23:08,915 [INFO] [ 65/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 181 tok | 7.6s | Write a function to find tuples which have all elements
+2026-04-26 07:23:14,725 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:23:28,007 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:23:28,013 [INFO] [ 66/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 101 tok | 4.2s | Write a python function to count the number of squares 
+2026-04-26 07:23:36,783 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:23:48,869 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:23:48,873 [INFO] [ 67/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 193 tok | 8.1s | Write a python function to find the difference between 
+2026-04-26 07:23:55,022 [INFO] [ 68/500] PASS ✓             | plan=N score=0.00 R=1.00 | 145 tok | 6.1s | Write a python function to find number of integers with
+2026-04-26 07:24:00,292 [INFO] [ 69/500] PASS ✓             | plan=N score=0.00 R=1.00 | 124 tok | 5.2s | Write a python function to check whether the length of 
+2026-04-26 07:24:04,163 [INFO] [ 70/500] PASS ✓             | plan=N score=0.00 R=1.00 | 91 tok | 3.8s | Write a function to find the nth tetrahedral number.
+2026-04-26 07:24:13,902 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:24:31,774 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:24:31,781 [INFO] [ 71/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 195 tok | 8.2s | Write a function to zip the two given tuples.
+2026-04-26 07:24:35,871 [INFO] [ 72/500] PASS ✓             | plan=N score=0.00 R=1.00 | 94 tok | 4.0s | Write a function to find the volume of a sphere.
+2026-04-26 07:24:41,559 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:24:52,369 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:24:52,375 [INFO] [ 73/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 105 tok | 4.4s | Write a python function to find the character made by a
+2026-04-26 07:24:58,252 [INFO] [ 74/500] PASS ✓             | plan=N score=0.00 R=1.00 | 139 tok | 5.8s | Write a function to find the n-th number in newman conw
+2026-04-26 07:25:01,912 [INFO] [ 75/500] PASS ✓             | plan=N score=0.00 R=1.00 | 86 tok | 3.6s | Write a function to find the surface area of a sphere.
+2026-04-26 07:25:04,826 [INFO] [ 76/500] PASS ✓             | plan=N score=0.00 R=1.00 | 67 tok | 2.9s | Write a function to find nth centered hexagonal number.
+2026-04-26 07:25:13,573 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:25:32,301 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:25:32,302 [INFO] [ 77/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 173 tok | 7.3s | Write a function to merge three dictionaries into a sin
+2026-04-26 07:25:42,134 [INFO] [ 78/500] PASS ✓             | plan=N score=0.00 R=1.00 | 229 tok | 9.8s | Write a function to get the frequency of the elements i
+2026-04-26 07:25:47,720 [INFO] [ 79/500] PASS ✓             | plan=N score=0.00 R=1.00 | 130 tok | 5.5s | Write a function to find the closest smaller number tha
+2026-04-26 07:25:52,676 [INFO] [ 80/500] PASS ✓             | plan=N score=0.00 R=1.00 | 116 tok | 4.9s | Write a python function to find the length of the longe
+2026-04-26 07:25:57,594 [INFO] [ 81/500] PASS ✓             | plan=N score=0.00 R=1.00 | 112 tok | 4.8s | Write a function to check if a substring is present in 
+2026-04-26 07:26:04,583 [INFO] [ 82/500] PASS ✓             | plan=N score=0.00 R=1.00 | 165 tok | 6.9s | Write a function to check whether the given number is u
+2026-04-26 07:26:07,094 [INFO] [ 83/500] PASS ✓             | plan=N score=0.00 R=1.00 | 58 tok | 2.4s | Write a function to calculate the value of 'a' to the p
+2026-04-26 07:26:14,218 [INFO] [ 84/500] PASS ✓             | plan=N score=0.00 R=1.00 | 166 tok | 7.0s | Write a function to extract the index minimum value rec
+2026-04-26 07:26:19,133 [INFO] [ 85/500] PASS ✓             | plan=N score=0.00 R=1.00 | 116 tok | 4.8s | Write a python function to find the minimum length of s
+2026-04-26 07:26:22,070 [INFO] [ 86/500] PASS ✓             | plan=N score=0.00 R=1.00 | 69 tok | 2.9s | Write a python function to find the number of divisors 
+2026-04-26 07:26:32,089 [INFO] [ 87/500] PASS ✓             | plan=N score=0.00 R=1.00 | 235 tok | 9.9s | Write a function to find frequency count of list of lis
+2026-04-26 07:26:36,400 [INFO] [ 88/500] PASS ✓             | plan=N score=0.00 R=1.00 | 98 tok | 4.2s | Write a function to multiply all the numbers in a list 
+2026-04-26 07:26:42,980 [INFO] [ 89/500] PASS ✓             | plan=N score=0.00 R=1.00 | 156 tok | 6.5s | Write a function to convert the given decimal number to
+2026-04-26 07:26:46,667 [INFO] [ 90/500] PASS ✓             | plan=N score=0.00 R=1.00 | 87 tok | 3.6s | Write a function to find the next smallest palindrome o
+2026-04-26 07:26:52,495 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:27:04,084 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:27:04,090 [INFO] [ 91/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 89 tok | 3.8s | Write a function to find the kth element in the given a
+2026-04-26 07:27:08,242 [INFO] [ 92/500] PASS ✓             | plan=N score=0.00 R=1.00 | 96 tok | 4.1s | Write a function to convert snake case string to camel 
+2026-04-26 07:27:16,106 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:27:29,279 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:27:29,281 [INFO] [ 93/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 158 tok | 6.7s | Write a function to find eulerian number a(n, m).
+2026-04-26 07:27:34,080 [INFO] [ 94/500] PASS ✓             | plan=N score=0.00 R=1.00 | 111 tok | 4.7s | Write a function to sort each sublist of strings in a g
+2026-04-26 07:27:38,896 [INFO] [ 95/500] PASS ✓             | plan=N score=0.00 R=1.00 | 114 tok | 4.8s | Write a python function to count true booleans in the g
+2026-04-26 07:27:42,621 [INFO] [ 96/500] PASS ✓             | plan=N score=0.00 R=1.00 | 88 tok | 3.6s | Write a function to add the given list to the given tup
+2026-04-26 07:27:49,662 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:27:58,905 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:27:58,916 [INFO] [ 97/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 139 tok | 5.9s | Write a python function to count hexadecimal numbers fo
+2026-04-26 07:28:08,947 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:28:35,175 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:28:35,178 [INFO] [ 98/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 223 tok | 9.3s | Write a function to merge multiple sorted inputs into a
+2026-04-26 07:28:42,056 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:28:53,361 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:28:53,366 [INFO] [ 99/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 128 tok | 5.3s | Write a python function to find the count of rotations 
+2026-04-26 07:29:06,907 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:29:36,508 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:29:36,513 [INFO] [100/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 296 tok | 12.5s | Write a function to extract the ranges that are missing
+2026-04-26 07:29:45,496 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:30:06,647 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:30:06,655 [INFO] [101/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 185 tok | 7.8s | Write a function to find common elements in given neste
+2026-04-26 07:30:12,248 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:30:22,595 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:30:22,598 [INFO] [102/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 110 tok | 4.6s | Write a python function to find the perimeter of a cyli
+2026-04-26 07:30:26,157 [INFO] [103/500] PASS ✓             | plan=N score=0.00 R=1.00 | 84 tok | 3.5s | Write a function to check if a string represents an int
+2026-04-26 07:30:36,417 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:31:03,092 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:31:03,098 [INFO] [104/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 220 tok | 9.2s | Write a function to assign frequency to each tuple in t
+2026-04-26 07:31:05,739 [INFO] [105/500] PASS ✓             | plan=N score=0.00 R=1.00 | 61 tok | 2.6s | Write a function to check whether all dictionaries in a
+2026-04-26 07:31:09,338 [INFO] [106/500] PASS ✓             | plan=N score=0.00 R=1.00 | 84 tok | 3.5s | Write a function to convert a given tuple of positive i
+2026-04-26 07:31:18,264 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:31:36,858 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:31:36,861 [INFO] [107/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 183 tok | 7.8s | Write a function to convert all possible convertible el
+2026-04-26 07:31:39,335 [INFO] [108/500] PASS ✓             | plan=N score=0.00 R=1.00 | 56 tok | 2.4s | [link text](https:// [link text](https:// [link text](h
+2026-04-26 07:31:48,429 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:32:11,951 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:32:11,960 [INFO] [109/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 198 tok | 8.2s | Write a python function to find the element that appear
+2026-04-26 07:32:18,121 [INFO] [110/500] PASS ✓             | plan=N score=0.00 R=1.00 | 147 tok | 6.1s | Write a function to find the maximum product from the p
+2026-04-26 07:32:27,747 [INFO] [111/500] PASS ✓             | plan=N score=0.00 R=1.00 | 230 tok | 9.6s | Write a function to find the triplet with sum of the gi
+2026-04-26 07:32:36,887 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:33:02,754 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:33:02,755 [INFO] [112/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 197 tok | 8.1s | Write a function to find n’th smart number.
+2026-04-26 07:33:12,913 [INFO] [113/500] PASS ✓             | plan=N score=0.00 R=1.00 | 126 tok | 5.2s | Write a function to sum all amicable numbers from 1 to 
+2026-04-26 07:33:18,784 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:33:30,699 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:33:30,705 [INFO] [114/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 115 tok | 4.7s | Write a function to get the angle of a complex number.
+2026-04-26 07:33:38,311 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:33:53,745 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:33:53,748 [INFO] [115/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 157 tok | 6.6s | Write a function to find the maximum difference between
+2026-04-26 07:34:01,441 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:34:11,940 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:34:11,943 [INFO] [116/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 150 tok | 6.2s | Write a python function to find the sum of common divis
+2026-04-26 07:34:19,614 [INFO] [117/500] PASS ✓             | plan=N score=0.00 R=1.00 | 185 tok | 7.6s | Write a function to multiply two integers without using
+2026-04-26 07:34:26,385 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:34:38,658 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:34:38,676 [INFO] [118/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 138 tok | 5.7s | Write a function to shortlist words that are longer tha
+2026-04-26 07:34:48,067 [INFO] [119/500] PASS ✓             | plan=N score=0.00 R=1.00 | 229 tok | 9.3s | Write a function to calculate magic square.
+2026-04-26 07:34:54,103 [INFO] [120/500] PASS ✓             | plan=N score=0.00 R=1.00 | 142 tok | 6.0s | Write a function to find the item with maximum frequenc
+2026-04-26 07:35:05,225 [INFO] [121/500] PASS ✓             | plan=N score=0.00 R=1.00 | 266 tok | 11.1s | Write a python function to reverse only the vowels of a
+2026-04-26 07:35:08,611 [INFO] [122/500] PASS ✓             | plan=N score=0.00 R=1.00 | 78 tok | 3.3s | Write a function to convert tuple to a string.
+2026-04-26 07:35:12,684 [INFO] [123/500] PASS ✓             | plan=N score=0.00 R=1.00 | 96 tok | 4.0s | Write a function to calculate the sum of the negative n
+2026-04-26 07:35:19,372 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:35:30,496 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:35:30,498 [INFO] [124/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 135 tok | 5.7s | Write a python function to check whether the last eleme
+2026-04-26 07:35:33,105 [INFO] [125/500] PASS ✓             | plan=N score=0.00 R=1.00 | 60 tok | 2.5s | Write a function to find the nth hexagonal number.
+2026-04-26 07:35:39,750 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:35:50,007 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:35:50,011 [INFO] [126/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 134 tok | 5.6s | Write a function to calculate electricity bill.
+2026-04-26 07:35:57,273 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:36:11,140 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:36:11,147 [INFO] [127/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 147 tok | 6.1s | Write a function to find the ration of zeroes in an arr
+2026-04-26 07:36:20,665 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:36:40,423 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:36:40,428 [INFO] [128/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 201 tok | 8.5s | Write a python function to check whether the given numb
+2026-04-26 07:36:44,923 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:36:54,971 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:36:54,975 [INFO] [129/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 84 tok | 3.6s | Write a function to find the circumference of a circle.
+2026-04-26 07:37:07,185 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:37:21,000 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:37:21,003 [INFO] [130/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 261 tok | 11.0s | Write a function to extract elements that occur singly 
+2026-04-26 07:37:28,726 [INFO] [131/500] PASS ✓             | plan=N score=0.00 R=1.00 | 180 tok | 7.7s | Write a function to sort a list of elements using panca
+2026-04-26 07:37:37,437 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:37:57,221 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:37:57,223 [INFO] [132/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 186 tok | 7.8s | Write a function to count the same pair in three given 
+2026-04-26 07:38:04,461 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:38:17,837 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:38:17,843 [INFO] [133/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 134 tok | 5.7s | Write a function to find number of lists present in the
+2026-04-26 07:38:23,502 [INFO] [134/500] PASS ✓             | plan=N score=0.00 R=1.00 | 133 tok | 5.6s | Write a python function to find the sum of absolute dif
+2026-04-26 07:38:30,987 [INFO] [135/500] PASS ✓             | plan=N score=0.00 R=1.00 | 177 tok | 7.4s | Write a python function to find the maximum difference 
+2026-04-26 07:38:36,958 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:38:43,615 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:38:43,619 [INFO] [136/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 102 tok | 4.3s | Write a function to find the ascii value of total chara
+2026-04-26 07:38:51,597 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:39:07,085 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:39:07,089 [INFO] [137/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 169 tok | 7.1s | Write a function to find the maximum total path sum in 
+2026-04-26 07:39:18,786 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:39:39,426 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:39:39,432 [INFO] [138/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 254 tok | 10.7s | Write a function to divide a number into two parts such
+2026-04-26 07:39:50,587 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:40:09,936 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:40:09,940 [INFO] [139/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 239 tok | 10.2s | Write a function to find the longest subsequence such t
+2026-04-26 07:40:17,299 [INFO] [140/500] PASS ✓             | plan=N score=0.00 R=1.00 | 169 tok | 7.3s | Write a python function to find whether the given numbe
+2026-04-26 07:40:22,788 [INFO] [141/500] PASS ✓             | plan=N score=0.00 R=1.00 | 128 tok | 5.4s | Write a python function to check whether the given numb
+2026-04-26 07:40:36,629 [INFO] [142/500] PASS ✓             | plan=N score=0.00 R=1.00 | 328 tok | 13.8s | Write a function to sort the given array by using merge
+2026-04-26 07:40:43,173 [INFO] [143/500] PASS ✓             | plan=N score=0.00 R=1.00 | 152 tok | 6.5s | Write a function to find the vertex of a parabola.
+2026-04-26 07:40:49,050 [INFO] [144/500] PASS ✓             | plan=N score=0.00 R=1.00 | 137 tok | 5.8s | Write a function to extract every specified element fro
+2026-04-26 07:40:56,085 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:41:08,156 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:41:08,160 [INFO] [145/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 140 tok | 6.0s | Write a python function to toggle all even bits of a gi
+2026-04-26 07:41:14,716 [INFO] [146/500] PASS ✓             | plan=N score=0.00 R=1.00 | 152 tok | 6.5s | Write a function to convert a tuple of string values to
+2026-04-26 07:41:27,483 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:41:48,614 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:41:48,618 [INFO] [147/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 272 tok | 11.7s | Write a function to reflect the run-length encoding fro
+2026-04-26 07:41:58,743 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:42:17,738 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:42:17,743 [INFO] [148/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 202 tok | 9.1s | Write a python function to find k number of operations 
+2026-04-26 07:42:24,605 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:42:34,954 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:42:34,956 [INFO] [149/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 130 tok | 5.6s | Write a function to print the season for the given mont
+2026-04-26 07:42:46,601 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:43:08,455 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:43:08,457 [INFO] [150/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 229 tok | 9.8s | Write a function to find x and y that satisfies ax + by
+2026-04-26 07:43:15,035 [INFO] [151/500] PASS ✓             | plan=N score=0.00 R=1.00 | 153 tok | 6.5s | Write a function to remove all elements from a given li
+2026-04-26 07:43:19,971 [INFO] [152/500] PASS ✓             | plan=N score=0.00 R=1.00 | 112 tok | 4.9s | Write a function to calculate the sum of the positive i
+2026-04-26 07:43:24,656 [INFO] [153/500] PASS ✓             | plan=N score=0.00 R=1.00 | 103 tok | 4.6s | Write a function to calculate the area of a regular pol
+2026-04-26 07:43:32,941 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:43:48,496 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:43:48,506 [INFO] [154/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 163 tok | 7.0s | Write a python function to check whether the sum of div
+2026-04-26 07:43:56,197 [INFO] [155/500] PASS ✓             | plan=N score=0.00 R=1.00 | 175 tok | 7.6s | Write a python function to count characters at same pos
+2026-04-26 07:44:02,189 [INFO] [156/500] PASS ✓             | plan=N score=0.00 R=1.00 | 137 tok | 5.9s | Write a python function to count the pairs with xor as 
+2026-04-26 07:44:09,892 [INFO] [157/500] PASS ✓             | plan=N score=0.00 R=1.00 | 179 tok | 7.6s | Write a python function to find smallest power of 2 gre
+2026-04-26 07:44:14,523 [INFO] [158/500] PASS ✓             | plan=N score=0.00 R=1.00 | 106 tok | 4.6s | Write a python function to find the frequency of a numb
+2026-04-26 07:44:21,704 [INFO] [159/500] PASS ✓             | plan=N score=0.00 R=1.00 | 166 tok | 7.1s | Write a function to calculate the nth pell number.
+2026-04-26 07:44:28,375 [INFO] [160/500] PASS ✓             | plan=N score=0.00 R=1.00 | 152 tok | 6.6s | Write a function to find sum of the numbers in a list b
+2026-04-26 07:44:31,258 [INFO] [161/500] PASS ✓             | plan=N score=0.00 R=1.00 | 67 tok | 2.8s | Write a function to find the perimeter of a pentagon.
+2026-04-26 07:44:35,857 [INFO] [162/500] PASS ✓             | plan=N score=0.00 R=1.00 | 103 tok | 4.5s | Write a function to find the occurence of characters 's
+2026-04-26 07:44:39,769 [INFO] [163/500] PASS ✓             | plan=N score=0.00 R=1.00 | 88 tok | 3.8s | Write a function to remove everything except alphanumer
+2026-04-26 07:44:48,008 [INFO] [164/500] PASS ✓             | plan=N score=0.00 R=1.00 | 190 tok | 8.2s | Write a function to group a sequence of key-value pairs
+2026-04-26 07:44:58,194 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:45:11,493 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:45:11,496 [INFO] [165/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 216 tok | 9.3s | Write a function to verify validity of a string of pare
+2026-04-26 07:45:14,601 [INFO] [166/500] PASS ✓             | plan=N score=0.00 R=1.00 | 68 tok | 3.0s | Write a function to find the perimeter of a triangle.
+2026-04-26 07:45:24,729 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:45:40,000 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:45:40,006 [INFO] [167/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 211 tok | 9.0s | Write a python function to find two distinct numbers su
+2026-04-26 07:45:44,437 [INFO] [168/500] PASS ✓             | plan=N score=0.00 R=1.00 | 102 tok | 4.4s | Write a function to search some literals strings in a s
+2026-04-26 07:46:20,321 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:46:20,323 [INFO] [169/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 198 tok | 8.5s | Write a function to find if the given number is a keith
+2026-04-26 07:46:32,121 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:46:49,899 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:46:49,902 [INFO] [170/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 241 tok | 10.4s | Write a function to calculate distance between two poin
+2026-04-26 07:46:57,242 [INFO] [171/500] PASS ✓             | plan=N score=0.00 R=1.00 | 171 tok | 7.3s | Write a function to find the longest common prefix in t
+2026-04-26 07:47:08,095 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:47:25,921 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:47:25,925 [INFO] [172/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 226 tok | 9.7s | Write a function to find uppercase, lowercase, special 
+2026-04-26 07:47:33,893 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:47:51,478 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:47:51,482 [INFO] [173/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 154 tok | 6.6s | Write a function to count all the distinct pairs having
+2026-04-26 07:47:57,160 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:48:09,590 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:48:09,600 [INFO] [174/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 111 tok | 4.7s | Write a function to find all the values in a list that 
+2026-04-26 07:48:17,152 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:48:33,228 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:48:33,231 [INFO] [175/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 154 tok | 6.6s | Write a function to find the focus of a parabola.
+2026-04-26 07:48:37,471 [INFO] [176/500] PASS ✓             | plan=N score=0.00 R=1.00 | 99 tok | 4.2s | Write a function to search some literals strings in a s
+2026-04-26 07:48:47,125 [INFO] [177/500] PASS ✓             | plan=N score=0.00 R=1.00 | 226 tok | 9.6s | Write a function to find the longest common subsequence
+2026-04-26 07:48:53,788 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:49:07,098 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:49:07,102 [INFO] [178/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 131 tok | 5.6s | Write a python function to check whether the given numb
+2026-04-26 07:49:17,614 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:49:32,053 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:49:32,057 [INFO] [179/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 222 tok | 9.5s | Write a python function to find the first missing posit
+2026-04-26 07:49:36,992 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:49:46,402 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:49:46,409 [INFO] [180/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 94 tok | 4.0s | Write a python function to count the number of integral
+2026-04-26 07:49:50,515 [INFO] [181/500] PASS ✓             | plan=N score=0.00 R=1.00 | 94 tok | 4.0s | Write a function to check whether the given month name 
+2026-04-26 07:49:53,629 [INFO] [182/500] PASS ✓             | plan=N score=0.00 R=1.00 | 72 tok | 3.0s | Write a python function to check whether a string has a
+2026-04-26 07:49:57,749 [INFO] [183/500] PASS ✓             | plan=N score=0.00 R=1.00 | 98 tok | 4.0s | Write a function to remove the duplicates from the give
+2026-04-26 07:50:06,543 [INFO] [184/500] PASS ✓             | plan=N score=0.00 R=1.00 | 208 tok | 8.7s | Write a python function to convert octal number to deci
+2026-04-26 07:50:15,795 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:50:28,095 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:50:28,098 [INFO] [185/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 194 tok | 8.2s | Write a python function to find the first position of a
+2026-04-26 07:50:36,449 [INFO] [186/500] PASS ✓             | plan=N score=0.00 R=1.00 | 196 tok | 8.3s | Write a function to remove all the tuples with length k
+2026-04-26 07:50:44,947 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:51:01,475 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:51:01,478 [INFO] [187/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 185 tok | 7.8s | Write a function to perform the exponentiation of the g
+2026-04-26 07:51:23,443 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:51:49,610 [INFO] [188/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 488 tok | 20.6s | Write a function to find the largest triangle that can 
+2026-04-26 07:51:55,172 [INFO] [189/500] PASS ✓             | plan=N score=0.00 R=1.00 | 127 tok | 5.5s | Write a python function to find highest power of 2 less
+2026-04-26 07:52:03,437 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:52:19,346 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:52:19,348 [INFO] [190/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 174 tok | 7.3s | Write a function to find all index positions of the max
+2026-04-26 07:52:21,905 [INFO] [191/500] PASS ✓             | plan=N score=0.00 R=1.00 | 60 tok | 2.5s | Write a python function to check whether the elements i
+2026-04-26 07:52:28,261 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:52:37,422 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:52:37,426 [INFO] [192/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 121 tok | 5.1s | Write a function to remove even characters in a string.
+2026-04-26 07:52:43,577 [INFO] [193/500] PASS ✓             | plan=N score=0.00 R=1.00 | 145 tok | 6.1s | Write a python function to find the hamming distance be
+2026-04-26 07:52:48,183 [INFO] [194/500] PASS ✓             | plan=N score=0.00 R=1.00 | 106 tok | 4.5s | Write a python function to count the occurrence of a gi
+2026-04-26 07:52:54,777 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:53:10,142 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:53:10,148 [INFO] [195/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 131 tok | 5.5s | Write a function to find the inversions of tuple elemen
+2026-04-26 07:53:18,233 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:53:34,467 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:53:34,471 [INFO] [196/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 170 tok | 7.3s | Write a function to perform the adjacent element concat
+2026-04-26 07:53:44,099 [INFO] [197/500] PASS ✓             | plan=N score=0.00 R=1.00 | 226 tok | 9.6s | Write a function to count the longest repeating subsequ
+2026-04-26 07:53:48,944 [INFO] [198/500] PASS ✓             | plan=N score=0.00 R=1.00 | 110 tok | 4.8s | Write a function to check the given decimal with a prec
+2026-04-26 07:53:55,346 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:54:10,148 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:54:10,149 [INFO] [199/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 113 tok | 4.8s | Write a function to delete the smallest element from th
+2026-04-26 07:54:14,944 [INFO] [200/500] PASS ✓             | plan=N score=0.00 R=1.00 | 113 tok | 4.7s | Write a function to check that the given string contain
+2026-04-26 07:54:21,049 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:54:31,630 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:54:31,633 [INFO] [201/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 118 tok | 5.0s | Write a python function to count numbers whose oth and 
+2026-04-26 07:54:36,570 [INFO] [202/500] PASS ✓             | plan=N score=0.00 R=1.00 | 116 tok | 4.9s | Write a python function to find the sum of fourth power
+2026-04-26 07:54:44,307 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:55:00,196 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:55:00,201 [INFO] [203/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 167 tok | 6.9s | Write a function to perform the concatenation of two st
+2026-04-26 07:55:04,578 [INFO] [204/500] PASS ✓             | plan=N score=0.00 R=1.00 | 102 tok | 4.3s | Write a function to convert radians to degrees.
+2026-04-26 07:55:09,861 [INFO] [205/500] PASS ✓             | plan=N score=0.00 R=1.00 | 125 tok | 5.2s | Write a function to decode a run-length encoded given l
+2026-04-26 07:55:18,839 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:55:35,447 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:55:35,451 [INFO] [206/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 186 tok | 7.6s | Write a function to check if a nested list is a subset 
+2026-04-26 07:55:42,087 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:55:52,233 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:55:52,238 [INFO] [207/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 131 tok | 5.6s | Write a python function to find the first repeated char
+2026-04-26 07:56:00,521 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:56:17,177 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:56:17,182 [INFO] [208/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 171 tok | 7.3s | Write a python function to find the minimum operations 
+2026-04-26 07:56:24,554 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:56:38,172 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:56:38,177 [INFO] [209/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 155 tok | 6.5s | Write a function to extract maximum and minimum k eleme
+2026-04-26 07:56:45,381 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:56:57,249 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:56:57,255 [INFO] [210/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 147 tok | 6.2s | Write a function to replace maximum n occurrences of sp
+2026-04-26 07:57:02,592 [INFO] [211/500] PASS ✓             | plan=N score=0.00 R=1.00 | 127 tok | 5.3s | Write a python function to find the first even number i
+2026-04-26 07:57:06,114 [INFO] [212/500] PASS ✓             | plan=N score=0.00 R=1.00 | 83 tok | 3.5s | Write a function to check if all the elements in tuple 
+2026-04-26 07:57:13,307 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:57:31,641 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:57:31,648 [INFO] [213/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 150 tok | 6.3s | Write a function to check for majority element in the g
+2026-04-26 07:57:34,539 [INFO] [214/500] PASS ✓             | plan=N score=0.00 R=1.00 | 64 tok | 2.8s | Write a python function to count set bits of a given nu
+2026-04-26 07:57:43,148 [INFO] [215/500] PASS ✓             | plan=N score=0.00 R=1.00 | 200 tok | 8.5s | Write a python function to find the minimum element in 
+2026-04-26 07:57:48,668 [INFO] [216/500] PASS ✓             | plan=N score=0.00 R=1.00 | 128 tok | 5.5s | Write a python function to remove the characters which 
+2026-04-26 07:57:53,743 [INFO] [217/500] PASS ✓             | plan=N score=0.00 R=1.00 | 117 tok | 5.0s | Write a function to find minimum of three numbers.
+2026-04-26 07:57:59,073 [INFO] [218/500] PASS ✓             | plan=N score=0.00 R=1.00 | 123 tok | 5.3s | Write a python function to check whether all the bits a
+2026-04-26 07:58:08,836 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:58:33,510 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:58:33,513 [INFO] [219/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 204 tok | 8.8s | Write a function to re-arrange the elements of the give
+2026-04-26 07:58:36,156 [INFO] [220/500] PASS ✓             | plan=N score=0.00 R=1.00 | 61 tok | 2.6s | Write a function to replace blank spaces with any chara
+2026-04-26 07:58:42,924 [INFO] [221/500] PASS ✓             | plan=N score=0.00 R=1.00 | 157 tok | 6.7s | Write a function to find the maximum sum in the given r
+2026-04-26 07:58:48,200 [INFO] [222/500] PASS ✓             | plan=N score=0.00 R=1.00 | 125 tok | 5.2s | Write a function to get the n largest items from a data
+2026-04-26 07:58:52,511 [INFO] [223/500] PASS ✓             | plan=N score=0.00 R=1.00 | 102 tok | 4.2s | Write a function to find the lateral surface area of a 
+2026-04-26 07:58:55,116 [INFO] [224/500] PASS ✓             | plan=N score=0.00 R=1.00 | 59 tok | 2.5s | Write a function to find the volume of a cube.
+2026-04-26 07:59:01,808 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:59:20,596 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:59:20,598 [INFO] [225/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 136 tok | 5.7s | Write a python function to set all even bits of a given
+2026-04-26 07:59:32,655 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:59:58,137 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 07:59:58,146 [INFO] [226/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 266 tok | 11.2s | Write a python function to count the maximum number of 
+2026-04-26 08:00:08,294 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:00:29,274 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:00:29,277 [INFO] [227/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 211 tok | 9.0s | Write a function to check the occurrences of records wh
+2026-04-26 08:00:32,777 [INFO] [228/500] PASS ✓             | plan=N score=0.00 R=1.00 | 80 tok | 3.4s | Write a python function to count number of non-empty su
+2026-04-26 08:00:45,889 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:01:13,379 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:01:13,381 [INFO] [229/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 221 tok | 9.4s | Write a function to find the number of possible sequenc
+2026-04-26 08:01:21,529 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:01:34,463 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:01:34,465 [INFO] [230/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 150 tok | 6.3s | Write a function to replace the last element of the lis
+2026-04-26 08:01:42,051 [INFO] [231/500] PASS ✓             | plan=N score=0.00 R=1.00 | 181 tok | 7.5s | Write a function to generate a 3d array having each ele
+2026-04-26 08:01:46,202 [INFO] [232/500] PASS ✓             | plan=N score=0.00 R=1.00 | 97 tok | 4.1s | Write a function to count total characters in a string.
+2026-04-26 08:01:56,962 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:02:14,268 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:02:14,271 [INFO] [233/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 217 tok | 9.2s | Write a function to sort the given list based on the oc
+2026-04-26 08:02:19,717 [INFO] [234/500] PASS ✓             | plan=N score=0.00 R=1.00 | 126 tok | 5.4s | Write a python function to find the next perfect square
+2026-04-26 08:02:32,691 [INFO] [235/500] PASS ✓             | plan=N score=0.00 R=1.00 | 304 tok | 12.9s | Write a function to find the maximum sum of bi-tonic su
+2026-04-26 08:02:39,611 [INFO] [236/500] PASS ✓             | plan=N score=0.00 R=1.00 | 161 tok | 6.8s | Write a function for computing square roots using the b
+2026-04-26 08:02:50,173 [INFO] [237/500] PASS ✓             | plan=N score=0.00 R=1.00 | 249 tok | 10.5s | Write a function to find the longest palindromic subseq
+2026-04-26 08:02:56,514 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:03:07,633 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:03:07,641 [INFO] [238/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 122 tok | 5.2s | Write a function to calculate the harmonic sum of n-1.
+2026-04-26 08:03:14,060 [INFO] [239/500] PASS ✓             | plan=N score=0.00 R=1.00 | 147 tok | 6.3s | Write a function to find the intersection of two arrays
+2026-04-26 08:03:20,255 [INFO] [240/500] PASS ✓             | plan=N score=0.00 R=1.00 | 143 tok | 6.1s | Write a python function to count the occcurences of an 
+2026-04-26 08:03:25,925 [INFO] [241/500] PASS ✓             | plan=N score=0.00 R=1.00 | 131 tok | 5.6s | Write a function to insert an element before each eleme
+2026-04-26 08:03:28,496 [INFO] [242/500] PASS ✓             | plan=N score=0.00 R=1.00 | 59 tok | 2.5s | Write a python function to convert complex numbers to p
+2026-04-26 08:03:33,849 [INFO] [243/500] PASS ✓             | plan=N score=0.00 R=1.00 | 123 tok | 5.3s | Write a python function to count integers from a given 
+2026-04-26 08:03:42,456 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:03:53,462 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:03:53,468 [INFO] [244/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 161 tok | 6.8s | Write a function to find all words starting with 'a' or
+2026-04-26 08:04:02,631 [INFO] [245/500] PASS ✓             | plan=N score=0.00 R=1.00 | 215 tok | 9.1s | Write a function to choose specified number of colours 
+2026-04-26 08:04:10,260 [INFO] [246/500] PASS ✓             | plan=N score=0.00 R=1.00 | 178 tok | 7.6s | Write a python function to count the number of prime nu
+2026-04-26 08:04:13,495 [INFO] [247/500] PASS ✓             | plan=N score=0.00 R=1.00 | 74 tok | 3.2s | Write a function to swap two numbers.
+2026-04-26 08:04:18,084 [INFO] [248/500] PASS ✓             | plan=N score=0.00 R=1.00 | 106 tok | 4.5s | Write a function to find number of odd elements in the 
+2026-04-26 08:04:28,010 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:04:51,887 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:04:51,891 [INFO] [249/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 202 tok | 8.5s | Write a function to maximize the given two tuples.
+2026-04-26 08:04:58,743 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:05:17,317 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:05:17,321 [INFO] [250/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 131 tok | 5.5s | Write a function to find the nth newman–shanks–williams
+2026-04-26 08:05:24,580 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:05:37,344 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:05:37,352 [INFO] [251/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 151 tok | 6.4s | Write a function to perform mathematical division opera
+2026-04-26 08:05:43,507 [INFO] [252/500] PASS ✓             | plan=N score=0.00 R=1.00 | 144 tok | 6.1s | Write a function to split a given list into two parts w
+2026-04-26 08:05:49,595 [INFO] [253/500] PASS ✓             | plan=N score=0.00 R=1.00 | 144 tok | 6.0s | Write a function to merge two dictionaries.
+2026-04-26 08:05:54,665 [INFO] [254/500] PASS ✓             | plan=N score=0.00 R=1.00 | 117 tok | 5.0s | Write a function to calculate a dog's age in dog's year
+2026-04-26 08:06:03,469 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:06:21,243 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:06:21,248 [INFO] [255/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 183 tok | 7.7s | Write a function to split a list for every nth element.
+2026-04-26 08:06:24,285 [INFO] [256/500] PASS ✓             | plan=N score=0.00 R=1.00 | 70 tok | 3.0s | Write a function to find the lateral surface area of a 
+2026-04-26 08:06:28,849 [INFO] [257/500] PASS ✓             | plan=N score=0.00 R=1.00 | 104 tok | 4.5s | Write a python function to find the sum of squares of f
+2026-04-26 08:06:32,619 [INFO] [258/500] PASS ✓             | plan=N score=0.00 R=1.00 | 87 tok | 3.7s | Write a function to find the n'th star number.
+2026-04-26 08:06:34,768 [INFO] [259/500] PASS ✓             | plan=N score=0.00 R=1.00 | 49 tok | 2.1s | Write a function to find the ascii value of a character
+2026-04-26 08:06:40,096 [INFO] [260/500] PASS ✓             | plan=N score=0.00 R=1.00 | 125 tok | 5.3s | Write a python function to find the sum of even numbers
+2026-04-26 08:06:45,686 [INFO] [261/500] PASS ✓             | plan=N score=0.00 R=1.00 | 129 tok | 5.5s | Write a python function to find the sum of fifth power 
+2026-04-26 08:06:49,785 [INFO] [262/500] PASS ✓             | plan=N score=0.00 R=1.00 | 96 tok | 4.0s | Write a function to perfom the rear element extraction 
+2026-04-26 08:06:55,477 [INFO] [263/500] PASS ✓             | plan=N score=0.00 R=1.00 | 133 tok | 5.6s | Write a function to substract the contents of one tuple
+2026-04-26 08:07:03,295 [INFO] [264/500] PASS ✓             | plan=N score=0.00 R=1.00 | 183 tok | 7.8s | Write a python function to find sum of even index binom
+2026-04-26 08:07:11,570 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:07:26,998 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:07:27,003 [INFO] [265/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 158 tok | 6.7s | Write a python function to find the position of the las
+2026-04-26 08:07:32,355 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:07:41,760 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:07:41,766 [INFO] [266/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 96 tok | 4.1s | Write a function to find the volume of a cylinder.
+2026-04-26 08:07:51,221 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:08:08,837 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:08:08,843 [INFO] [267/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 204 tok | 8.5s | Write a function to filter a dictionary based on values
+2026-04-26 08:08:15,069 [INFO] [268/500] PASS ✓             | plan=N score=0.00 R=1.00 | 147 tok | 6.2s | Write a function to find the element count that occurs 
+2026-04-26 08:08:19,221 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:08:27,271 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:08:27,273 [INFO] [269/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 65 tok | 2.8s | Write a function to find the nth decagonal number.
+2026-04-26 08:08:34,017 [INFO] [270/500] PASS ✓             | plan=N score=0.00 R=1.00 | 155 tok | 6.7s | Write a function to search an element in the given arra
+2026-04-26 08:08:39,350 [INFO] [271/500] PASS ✓             | plan=N score=0.00 R=1.00 | 124 tok | 5.3s | Write a python function to check if the elements of a g
+2026-04-26 08:08:43,607 [INFO] [272/500] PASS ✓             | plan=N score=0.00 R=1.00 | 98 tok | 4.2s | Write a function to substaract two lists using map and 
+2026-04-26 08:08:54,309 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:09:09,355 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:09:09,356 [INFO] [273/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 208 tok | 8.7s | Write a python function to check whether the frequency 
+2026-04-26 08:09:12,464 [INFO] [274/500] PASS ✓             | plan=N score=0.00 R=1.00 | 74 tok | 3.0s | Write a function to check whether all items of a list a
+2026-04-26 08:09:18,472 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:09:29,293 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:09:29,294 [INFO] [275/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 116 tok | 4.8s | Write a function that matches a string that has an a fo
+2026-04-26 08:09:40,901 [INFO] [276/500] PASS ✓             | plan=N score=0.00 R=1.00 | 277 tok | 11.5s | Write a function to find the largest sum of contiguous 
+2026-04-26 08:09:45,996 [INFO] [277/500] PASS ✓             | plan=N score=0.00 R=1.00 | 118 tok | 5.0s | Write a python function to find the sum of squares of f
+2026-04-26 08:09:54,735 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:10:09,897 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:10:09,903 [INFO] [278/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 166 tok | 7.0s | Write a function to count array elements having modular
+2026-04-26 08:10:15,150 [INFO] [279/500] PASS ✓             | plan=N score=0.00 R=1.00 | 122 tok | 5.2s | Write a python function to calculate the number of odd 
+2026-04-26 08:10:23,350 [INFO] [280/500] PASS ✓             | plan=N score=0.00 R=1.00 | 193 tok | 8.1s | Write a function to find the list of lists with maximum
+2026-04-26 08:10:32,140 [INFO] [281/500] PASS ✓             | plan=N score=0.00 R=1.00 | 206 tok | 8.7s | Write a function to find out the number of ways of pain
+2026-04-26 08:10:34,411 [INFO] [282/500] PASS ✓             | plan=N score=0.00 R=1.00 | 51 tok | 2.2s | Write a python function to find quotient of two numbers
+2026-04-26 08:10:39,435 [INFO] [283/500] PASS ✓             | plan=N score=0.00 R=1.00 | 118 tok | 5.0s | Write a function to find the third side of a right angl
+2026-04-26 08:10:45,852 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:11:00,367 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:11:00,372 [INFO] [284/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 118 tok | 5.0s | Write a function to find the maximum value in a given h
+2026-04-26 08:11:06,306 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:11:16,508 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:11:16,513 [INFO] [285/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 116 tok | 4.9s | Write a function to return the sum of all divisors of a
+2026-04-26 08:11:32,430 [INFO] [286/500] PASS ✓             | plan=N score=0.00 R=1.00 | 373 tok | 15.8s | Write a python function to count inversions in an array
+2026-04-26 08:11:42,705 [INFO] [287/500] PASS ✓             | plan=N score=0.00 R=1.00 | 239 tok | 10.2s | Write a function to flatten a given nested list structu
+2026-04-26 08:11:55,569 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:12:14,760 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:12:14,765 [INFO] [288/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 255 tok | 10.9s | Write a function to find the nested list elements which
+2026-04-26 08:12:22,902 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:12:41,288 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:12:41,292 [INFO] [289/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 173 tok | 7.4s | Write a function to calculate the maximum aggregate fro
+2026-04-26 08:12:49,600 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:13:08,357 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:13:08,362 [INFO] [290/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 170 tok | 7.1s | Write a function to find the count of all binary sequen
+2026-04-26 08:13:16,915 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:13:33,685 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:13:33,689 [INFO] [291/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 170 tok | 7.1s | Write a function to find the depth of a dictionary.
+2026-04-26 08:13:39,916 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:13:56,638 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:13:56,642 [INFO] [292/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 125 tok | 5.2s | Write a python function to find the most significant bi
+2026-04-26 08:14:05,363 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:14:23,691 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:14:23,697 [INFO] [293/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 184 tok | 7.9s | Write a python function to check whether the count of i
+2026-04-26 08:14:29,372 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:14:43,109 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:14:43,113 [INFO] [294/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 108 tok | 4.6s | Write a python function to find element at a given inde
+2026-04-26 08:14:47,422 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:14:57,407 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:14:57,409 [INFO] [295/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 84 tok | 3.5s | Write a function to match two words from a list of word
+2026-04-26 08:15:10,774 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:15:42,082 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:15:42,084 [INFO] [296/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 267 tok | 11.5s | Write a function to find the maximum sum of increasing 
+2026-04-26 08:15:48,666 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:16:03,681 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:16:03,683 [INFO] [297/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 122 tok | 5.2s | Write a function to get a colon of a tuple.
+2026-04-26 08:16:14,764 [INFO] [298/500] PASS ✓             | plan=N score=0.00 R=1.00 | 259 tok | 11.0s | Write a function to find the specified number of larges
+2026-04-26 08:16:16,326 [INFO] [299/500] PASS ✓             | plan=N score=0.00 R=1.00 | 35 tok | 1.5s | Write a python function to find the maximum of two numb
+2026-04-26 08:16:20,818 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:16:29,056 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:16:29,060 [INFO] [300/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 82 tok | 3.5s | Write a function to convert a given string to a tuple.
+2026-04-26 08:16:33,552 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:16:46,184 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:16:46,189 [INFO] [301/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 82 tok | 3.5s | Write a python function to set the left most unset bit.
+2026-04-26 08:16:51,553 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:17:02,353 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:17:02,356 [INFO] [302/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 106 tok | 4.5s | Write a function to find the volume of a cone.
+2026-04-26 08:17:07,985 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:17:18,162 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:17:18,167 [INFO] [303/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 104 tok | 4.5s | Write a python function to print positive numbers in a 
+2026-04-26 08:17:27,213 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:17:51,712 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:17:51,716 [INFO] [304/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 191 tok | 8.1s | Write a function to find out the maximum sum such that 
+2026-04-26 08:18:00,002 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:18:15,293 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:18:15,298 [INFO] [305/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 168 tok | 7.1s | Write a python function to find the first maximum lengt
+2026-04-26 08:18:22,438 [INFO] [306/500] PASS ✓             | plan=N score=0.00 R=1.00 | 170 tok | 7.1s | Write a function to find the index of the last occurren
+2026-04-26 08:18:30,545 [INFO] [307/500] PASS ✓             | plan=N score=0.00 R=1.00 | 192 tok | 8.0s | Write a function to reflect the modified run-length enc
+2026-04-26 08:18:39,683 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:18:59,745 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:18:59,747 [INFO] [308/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 189 tok | 7.9s | Write a python function to find the maximum volume of a
+2026-04-26 08:19:03,052 [INFO] [309/500] PASS ✓             | plan=N score=0.00 R=1.00 | 75 tok | 3.2s | Write a function to find all five characters long word 
+2026-04-26 08:19:09,929 [INFO] [310/500] PASS ✓             | plan=N score=0.00 R=1.00 | 163 tok | 6.8s | Write a function to calculate the difference between th
+2026-04-26 08:19:17,858 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:19:31,958 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:19:31,962 [INFO] [311/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 159 tok | 6.7s | Write a function to find the demlo number for the given
+2026-04-26 08:19:40,279 [INFO] [312/500] PASS ✓             | plan=N score=0.00 R=1.00 | 197 tok | 8.2s | Write a function to find all index positions of the min
+2026-04-26 08:19:51,146 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:20:13,380 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:20:13,384 [INFO] [313/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 238 tok | 10.0s | Write a function to re-arrange the given array in alter
+2026-04-26 08:20:21,358 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:20:35,077 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:20:35,080 [INFO] [314/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 170 tok | 7.2s | Write a function to extract the sum of alternate chains
+2026-04-26 08:20:43,178 [INFO] [315/500] PASS ✓             | plan=N score=0.00 R=1.00 | 192 tok | 8.0s | Write a python function to find the minimum number of s
+2026-04-26 08:20:50,039 [INFO] [316/500] PASS ✓             | plan=N score=0.00 R=1.00 | 163 tok | 6.8s | Write a function to get the word with most number of oc
+2026-04-26 08:20:53,726 [INFO] [317/500] PASS ✓             | plan=N score=0.00 R=1.00 | 86 tok | 3.6s | Write a function to print check if the triangle is isos
+2026-04-26 08:21:00,713 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:21:16,246 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:21:16,251 [INFO] [318/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 144 tok | 6.1s | Write a function to rotate a given list by specified nu
+2026-04-26 08:21:21,370 [INFO] [319/500] PASS ✓             | plan=N score=0.00 R=1.00 | 122 tok | 5.0s | Write a python function to count negative numbers in a 
+2026-04-26 08:21:25,525 [INFO] [320/500] PASS ✓             | plan=N score=0.00 R=1.00 | 97 tok | 4.1s | Write a function to find all three, four, five characte
+2026-04-26 08:21:32,663 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:21:44,646 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:21:44,651 [INFO] [321/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 131 tok | 5.5s | Write a python function to count unset bits of a given 
+2026-04-26 08:21:52,094 [INFO] [322/500] PASS ✓             | plan=N score=0.00 R=1.00 | 175 tok | 7.4s | Write a function to count character frequency of a give
+2026-04-26 08:21:56,665 [INFO] [323/500] PASS ✓             | plan=N score=0.00 R=1.00 | 108 tok | 4.5s | Write a python function to sort a list according to the
+2026-04-26 08:22:01,438 [INFO] [324/500] PASS ✓             | plan=N score=0.00 R=1.00 | 112 tok | 4.7s | Write a python function to check whether the triangle i
+2026-04-26 08:22:05,588 [INFO] [325/500] PASS ✓             | plan=N score=0.00 R=1.00 | 95 tok | 4.1s | Write a function to find the sum of arithmetic progress
+2026-04-26 08:22:09,441 [INFO] [326/500] PASS ✓             | plan=N score=0.00 R=1.00 | 88 tok | 3.8s | Write a function to check whether the given month name 
+2026-04-26 08:22:15,707 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:22:29,221 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:22:29,228 [INFO] [327/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 112 tok | 4.8s | Write a function that matches a word at the end of a st
+2026-04-26 08:22:34,991 [INFO] [328/500] PASS ✓             | plan=N score=0.00 R=1.00 | 135 tok | 5.7s | Write a python function to count the number of substrin
+2026-04-26 08:22:47,999 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:23:06,064 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:23:06,068 [INFO] [329/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 279 tok | 11.6s | Write a python function to find the maximum occuring di
+2026-04-26 08:23:10,899 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:23:22,264 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:23:22,269 [INFO] [330/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 96 tok | 4.0s | Write a python function to find the sum of the three lo
+2026-04-26 08:23:26,541 [INFO] [331/500] PASS ✓             | plan=N score=0.00 R=1.00 | 100 tok | 4.2s | Write a function to convert the given set into ordered 
+2026-04-26 08:23:40,509 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:24:12,217 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:24:12,220 [INFO] [332/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 309 tok | 13.0s | Write a function to find the smallest range that includ
+2026-04-26 08:24:19,165 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:24:29,277 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:24:29,279 [INFO] [333/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 139 tok | 5.8s | Write a function to calculate the number of digits and 
+2026-04-26 08:24:36,524 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:24:48,518 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:24:48,523 [INFO] [334/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 146 tok | 6.1s | Write a python function to find number of elements with
+2026-04-26 08:24:55,518 [INFO] [335/500] PASS ✓             | plan=N score=0.00 R=1.00 | 164 tok | 6.9s | Write a function to find the difference between two con
+2026-04-26 08:25:01,195 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:25:12,678 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:25:12,682 [INFO] [336/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 112 tok | 4.7s | Write a function to find entringer number e(n, k).
+2026-04-26 08:25:18,173 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:25:31,496 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:25:31,503 [INFO] [337/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 101 tok | 4.2s | Write a python function to count the number of squares 
+2026-04-26 08:25:41,831 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:25:56,049 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:25:56,056 [INFO] [338/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 223 tok | 9.4s | Write a function to count sequences of given length hav
+2026-04-26 08:26:00,206 [INFO] [339/500] PASS ✓             | plan=N score=0.00 R=1.00 | 97 tok | 4.1s | Write a python function to check whether the given stri
+2026-04-26 08:26:06,666 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:26:17,618 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:26:17,623 [INFO] [340/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 126 tok | 5.4s | Write a python function to minimize the length of the s
+2026-04-26 08:26:25,163 [INFO] [341/500] PASS ✓             | plan=N score=0.00 R=1.00 | 174 tok | 7.5s | Write a python function to find the first element occur
+2026-04-26 08:26:30,286 [INFO] [342/500] PASS ✓             | plan=N score=0.00 R=1.00 | 119 tok | 5.0s | Write a python function to check whether all the charac
+2026-04-26 08:26:36,138 [INFO] [343/500] PASS ✓             | plan=N score=0.00 R=1.00 | 136 tok | 5.8s | Write a function to remove a specified column from a gi
+2026-04-26 08:26:39,107 [INFO] [344/500] PASS ✓             | plan=N score=0.00 R=1.00 | 68 tok | 2.9s | Write a function to find t-nth term of arithemetic prog
+2026-04-26 08:26:46,914 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:27:06,879 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:27:06,886 [INFO] [345/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 164 tok | 7.0s | Write a python function to count the number of rectangl
+2026-04-26 08:27:10,659 [INFO] [346/500] PASS ✓             | plan=N score=0.00 R=1.00 | 87 tok | 3.7s | Write a function to find the third angle of a triangle 
+2026-04-26 08:27:17,771 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:27:31,260 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:27:31,268 [INFO] [347/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 144 tok | 6.0s | Write a function to find the maximum element of all the
+2026-04-26 08:27:35,676 [INFO] [348/500] PASS ✓             | plan=N score=0.00 R=1.00 | 105 tok | 4.3s | Write a function to find modulo division of two lists u
+2026-04-26 08:27:42,762 [INFO] [349/500] PASS ✓             | plan=N score=0.00 R=1.00 | 170 tok | 7.0s | Write a python function to check whether one root of th
+2026-04-26 08:27:45,885 [INFO] [350/500] PASS ✓             | plan=N score=0.00 R=1.00 | 73 tok | 3.0s | Write a function to find the n’th carol number.
+2026-04-26 08:27:52,155 [INFO] [351/500] PASS ✓             | plan=N score=0.00 R=1.00 | 148 tok | 6.2s | Write a function to remove empty lists from a given lis
+2026-04-26 08:27:59,849 [INFO] [352/500] PASS ✓             | plan=N score=0.00 R=1.00 | 182 tok | 7.6s | Write a python function to find the item with maximum o
+2026-04-26 08:28:06,480 [INFO] [353/500] PASS ✓             | plan=N score=0.00 R=1.00 | 158 tok | 6.6s | Write a function to add the k elements to each element 
+2026-04-26 08:28:18,821 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:28:39,337 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:28:39,340 [INFO] [354/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 271 tok | 11.3s | Write a function to find the number of flips required t
+2026-04-26 08:28:43,870 [INFO] [355/500] PASS ✓             | plan=N score=0.00 R=1.00 | 106 tok | 4.5s | Write a python function to count the number of digits o
+2026-04-26 08:28:52,207 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:29:06,532 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:29:06,540 [INFO] [356/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 177 tok | 7.4s | Write a python function to find the largest product of 
+2026-04-26 08:29:16,547 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:29:37,560 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:29:37,565 [INFO] [357/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 214 tok | 9.0s | Write a function to check if a binary tree is balanced 
+2026-04-26 08:29:43,241 [INFO] [358/500] PASS ✓             | plan=N score=0.00 R=1.00 | 134 tok | 5.6s | Write a function to repeat the given tuple n times.
+2026-04-26 08:29:46,992 [INFO] [359/500] PASS ✓             | plan=N score=0.00 R=1.00 | 87 tok | 3.7s | Write a function to find the lateral surface area of cu
+2026-04-26 08:29:53,498 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:30:06,627 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:30:06,630 [INFO] [360/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 131 tok | 5.6s | Write a function to sort a tuple by its float element.
+2026-04-26 08:30:17,842 [INFO] [361/500] PASS ✓             | plan=N score=0.00 R=1.00 | 264 tok | 11.1s | Write a function to find the smallest missing element i
+2026-04-26 08:30:25,049 [INFO] [362/500] PASS ✓             | plan=N score=0.00 R=1.00 | 168 tok | 7.1s | Write a function to sort a given list of elements in as
+2026-04-26 08:30:27,990 [INFO] [363/500] PASS ✓             | plan=N score=0.00 R=1.00 | 68 tok | 2.9s | Write a function to find the volume of a cuboid.
+2026-04-26 08:30:32,868 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:30:45,985 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:30:45,991 [INFO] [364/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 92 tok | 3.8s | Write a function to print all permutations of a given s
+2026-04-26 08:30:51,621 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:31:02,388 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:31:02,393 [INFO] [365/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 113 tok | 4.7s | Write a function to round the given number to the neare
+2026-04-26 08:31:14,552 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:31:33,776 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:31:33,781 [INFO] [366/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 243 tok | 10.3s | Write a function to remove tuple elements that occur mo
+2026-04-26 08:31:38,955 [INFO] [367/500] PASS ✓             | plan=N score=0.00 R=1.00 | 121 tok | 5.1s | Write a python function to remove all occurrences of a 
+2026-04-26 08:31:44,459 [INFO] [368/500] PASS ✓             | plan=N score=0.00 R=1.00 | 129 tok | 5.4s | Write a python function to shift last element to first 
+2026-04-26 08:31:48,168 [INFO] [369/500] PASS ✓             | plan=N score=0.00 R=1.00 | 86 tok | 3.6s | Write a function to find the surface area of a cuboid.
+2026-04-26 08:31:56,326 [INFO] [370/500] PASS ✓             | plan=N score=0.00 R=1.00 | 189 tok | 8.1s | Write a function to generate a two-dimensional array.
+2026-04-26 08:32:03,345 [INFO] [371/500] PASS ✓             | plan=N score=0.00 R=1.00 | 166 tok | 7.0s | Write a function to sort a list of lists by a given ind
+2026-04-26 08:32:09,107 [INFO] [372/500] PASS ✓             | plan=N score=0.00 R=1.00 | 134 tok | 5.7s | Write a function to find the number of rotations in a c
+2026-04-26 08:32:16,106 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:32:30,412 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:32:30,416 [INFO] [373/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 142 tok | 6.0s | Write a python function to toggle all odd bits of a giv
+2026-04-26 08:32:36,917 [INFO] [374/500] PASS ✓             | plan=N score=0.00 R=1.00 | 154 tok | 6.4s | Write a python function to find the frequency of the sm
+2026-04-26 08:32:41,945 [INFO] [375/500] PASS ✓             | plan=N score=0.00 R=1.00 | 118 tok | 5.0s | Write a function to find the n'th perrin number using r
+2026-04-26 08:32:48,674 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:33:01,238 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:33:01,240 [INFO] [376/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 121 tok | 5.2s | Write a function to find out the minimum no of swaps re
+2026-04-26 08:33:05,525 [INFO] [377/500] PASS ✓             | plan=N score=0.00 R=1.00 | 99 tok | 4.2s | Write a python function to check whether the hexadecima
+2026-04-26 08:33:10,987 [INFO] [378/500] PASS ✓             | plan=N score=0.00 R=1.00 | 127 tok | 5.4s | Write a python function to find the highest power of 2 
+2026-04-26 08:33:18,002 [INFO] [379/500] PASS ✓             | plan=N score=0.00 R=1.00 | 163 tok | 6.9s | Write a function to find the n'th lucas number.
+2026-04-26 08:33:21,877 [INFO] [380/500] PASS ✓             | plan=N score=0.00 R=1.00 | 90 tok | 3.8s | Write a function to insert a given string at the beginn
+2026-04-26 08:33:31,973 [INFO] [381/500] PASS ✓             | plan=N score=0.00 R=1.00 | 239 tok | 10.0s | Write a function to convert more than one list to neste
+2026-04-26 08:33:40,985 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:33:59,782 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:33:59,786 [INFO] [382/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 175 tok | 7.3s | Write a function to find the maximum sum possible by us
+2026-04-26 08:34:05,901 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:34:19,170 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:34:19,174 [INFO] [383/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 110 tok | 4.7s | Write a function to find the list with maximum length u
+2026-04-26 08:34:23,928 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:34:32,418 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:34:32,424 [INFO] [384/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 83 tok | 3.6s | Write a function to check if given tuple is distinct or
+2026-04-26 08:34:39,036 [INFO] [385/500] PASS ✓             | plan=N score=0.00 R=1.00 | 157 tok | 6.5s | Write a python function to find the first non-repeated 
+2026-04-26 08:34:43,875 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:34:53,345 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:34:53,351 [INFO] [386/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 88 tok | 3.6s | Write a function to check whether the given string star
+2026-04-26 08:34:56,839 [INFO] [387/500] PASS ✓             | plan=N score=0.00 R=1.00 | 81 tok | 3.4s | Write a function to find the median of three specific n
+2026-04-26 08:35:03,225 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:35:18,414 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:35:18,424 [INFO] [388/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 126 tok | 5.4s | Write a function to compute the sum of digits of each n
+2026-04-26 08:35:25,548 [INFO] [389/500] PASS ✓             | plan=N score=0.00 R=1.00 | 167 tok | 7.0s | Write a function to perform the mathematical bitwise xo
+2026-04-26 08:35:33,790 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:35:49,777 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:35:49,781 [INFO] [390/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 169 tok | 7.2s | Write a function to extract the frequency of unique tup
+2026-04-26 08:35:58,630 [INFO] [391/500] PASS ✓             | plan=N score=0.00 R=1.00 | 207 tok | 8.8s | Write a function to perform index wise addition of tupl
+2026-04-26 08:36:05,702 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:36:18,511 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:36:18,517 [INFO] [392/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 138 tok | 5.8s | Write a function to compute the value of ncr%p.
+2026-04-26 08:36:25,843 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:36:36,652 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:36:36,656 [INFO] [393/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 145 tok | 6.1s | Write a function to check if a url is valid or not usin
+2026-04-26 08:36:37,746 [INFO] [394/500] PASS ✓             | plan=N score=0.00 R=1.00 | 23 tok | 1.0s | Write a python function to find the minimum of two numb
+2026-04-26 08:36:41,783 [INFO] [395/500] PASS ✓             | plan=N score=0.00 R=1.00 | 93 tok | 4.0s | Write a function to check whether an element exists wit
+2026-04-26 08:36:45,312 [INFO] [396/500] PASS ✓             | plan=N score=0.00 R=1.00 | 81 tok | 3.5s | Write a python function to find the parity of a given n
+2026-04-26 08:36:57,158 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:37:21,213 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:37:21,215 [INFO] [397/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 258 tok | 11.0s | Write a function to create the next bigger number by re
+2026-04-26 08:37:30,602 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:37:52,671 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:37:52,674 [INFO] [398/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 202 tok | 8.6s | Write a function to find k number of pairs which consis
+2026-04-26 08:37:58,920 [INFO] [399/500] PASS ✓             | plan=N score=0.00 R=1.00 | 145 tok | 6.2s | Write a function to find the minimum product from the p
+2026-04-26 08:38:04,597 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:38:16,346 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:38:16,348 [INFO] [400/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 115 tok | 4.9s | Write a function to find the minimum value in a given h
+2026-04-26 08:38:21,740 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:38:31,192 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:38:31,197 [INFO] [401/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 93 tok | 4.0s | Write a function to convert the given snake case string
+2026-04-26 08:38:36,659 [INFO] [402/500] PASS ✓             | plan=N score=0.00 R=1.00 | 125 tok | 5.4s | Write a python function to remove odd numbers from a gi
+2026-04-26 08:38:42,365 [INFO] [403/500] PASS ✓             | plan=N score=0.00 R=1.00 | 131 tok | 5.6s | Write a function to extract the nth element from a give
+2026-04-26 08:38:46,082 [INFO] [404/500] PASS ✓             | plan=N score=0.00 R=1.00 | 85 tok | 3.6s | Write a python function to check whether the value exis
+2026-04-26 08:38:54,353 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:39:06,664 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:39:06,667 [INFO] [405/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 169 tok | 7.1s | Write a python function to find a pair with highest pro
+2026-04-26 08:39:12,600 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:39:26,336 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:39:26,346 [INFO] [406/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 111 tok | 4.7s | Write a function to find the maximum sum we can make by
+2026-04-26 08:39:36,178 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:39:52,474 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:39:52,477 [INFO] [407/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 204 tok | 8.6s | Write a function to find common first element in given 
+2026-04-26 08:39:59,236 [INFO] [408/500] PASS ✓             | plan=N score=0.00 R=1.00 | 158 tok | 6.7s | Write a python function to find the sublist having maxi
+2026-04-26 08:40:06,115 [INFO] [409/500] PASS ✓             | plan=N score=0.00 R=1.00 | 161 tok | 6.8s | Write a function to round every number of a given list 
+2026-04-26 08:40:11,326 [INFO] [410/500] PASS ✓             | plan=N score=0.00 R=1.00 | 120 tok | 5.1s | Write a python function to find the cube sum of first n
+2026-04-26 08:40:16,475 [INFO] [411/500] PASS ✓             | plan=N score=0.00 R=1.00 | 120 tok | 5.1s | Write a function to concatenate each element of tuple b
+2026-04-26 08:40:20,906 [INFO] [412/500] PASS ✓             | plan=N score=0.00 R=1.00 | 102 tok | 4.4s | Write a python function to find the average of cubes of
+2026-04-26 08:40:36,131 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:41:02,680 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:41:02,683 [INFO] [413/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 334 tok | 14.0s | Write a function to solve gold mine problem.
+2026-04-26 08:41:07,919 [INFO] [414/500] PASS ✓             | plan=N score=0.00 R=1.00 | 123 tok | 5.2s | Write a function to extract only the rear index element
+2026-04-26 08:41:11,998 [INFO] [415/500] PASS ✓             | plan=N score=0.00 R=1.00 | 95 tok | 4.0s | Write a function to count the number of sublists contai
+2026-04-26 08:41:16,320 [INFO] [416/500] PASS ✓             | plan=N score=0.00 R=1.00 | 102 tok | 4.2s | Write a function to filter odd numbers using lambda fun
+2026-04-26 08:41:22,923 [INFO] [417/500] PASS ✓             | plan=N score=0.00 R=1.00 | 155 tok | 6.5s | Write a function to convert a date of yyyy-mm-dd format
+2026-04-26 08:41:35,454 [INFO] [418/500] PASS ✓             | plan=N score=0.00 R=1.00 | 294 tok | 12.5s | Write a function to sort the given array by using shell
+2026-04-26 08:41:42,406 [INFO] [419/500] PASS ✓             | plan=N score=0.00 R=1.00 | 163 tok | 6.9s | Write a function to extract the elementwise and tuples 
+2026-04-26 08:41:47,042 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:41:59,636 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:41:59,642 [INFO] [420/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 78 tok | 3.4s | Write a function to find the directrix of a parabola.
+2026-04-26 08:42:05,580 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:42:17,000 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:42:17,009 [INFO] [421/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 118 tok | 5.0s | Write a function that takes two lists and returns true 
+2026-04-26 08:42:21,342 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:42:29,835 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:42:29,839 [INFO] [422/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 82 tok | 3.5s | Write a function to find the median of a trapezium.
+2026-04-26 08:42:35,617 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:42:47,583 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:42:47,592 [INFO] [423/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 118 tok | 5.0s | Write a function to check whether the entered number is
+2026-04-26 08:42:52,225 [INFO] [424/500] PASS ✓             | plan=N score=0.00 R=1.00 | 110 tok | 4.6s | Write a function that matches a string that has an a fo
+2026-04-26 08:42:54,992 [INFO] [425/500] PASS ✓             | plan=N score=0.00 R=1.00 | 62 tok | 2.7s | Write a python function to find the last digit of a giv
+2026-04-26 08:42:59,087 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:43:09,438 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:43:09,440 [INFO] [426/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 81 tok | 3.4s | Write a python function to print negative numbers in a 
+2026-04-26 08:43:15,621 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:43:25,408 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:43:25,410 [INFO] [427/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 127 tok | 5.3s | Write a function to remove odd characters in a string.
+2026-04-26 08:43:32,775 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:43:46,483 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:43:46,487 [INFO] [428/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 158 tok | 6.6s | Write a function to count bidirectional tuple pairs.
+2026-04-26 08:43:50,326 [INFO] [429/500] PASS ✓             | plan=N score=0.00 R=1.00 | 89 tok | 3.8s | Write a function to convert a list of multiple integers
+2026-04-26 08:43:56,257 [INFO] [430/500] PASS ✓             | plan=N score=0.00 R=1.00 | 140 tok | 5.9s | Write a function to find all adverbs and their position
+2026-04-26 08:43:59,194 [INFO] [431/500] PASS ✓             | plan=N score=0.00 R=1.00 | 68 tok | 2.9s | Write a function to find the surface area of a cube.
+2026-04-26 08:44:06,509 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:44:19,591 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:44:19,595 [INFO] [432/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 149 tok | 6.2s | Write a function to find the ration of positive numbers
+2026-04-26 08:44:27,691 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:44:39,769 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:44:39,772 [INFO] [433/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 147 tok | 6.2s | Write a python function to find the largest negative nu
+2026-04-26 08:44:49,606 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:45:09,249 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:45:09,254 [INFO] [434/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 207 tok | 8.8s | Write a function to trim each tuple by k in the given t
+2026-04-26 08:45:19,983 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:45:39,778 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:45:39,781 [INFO] [435/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 225 tok | 9.4s | Write a function to perform index wise multiplication o
+2026-04-26 08:45:49,557 [INFO] [436/500] PASS ✓             | plan=N score=0.00 R=1.00 | 230 tok | 9.7s | Write a python function to count the occurence of all e
+2026-04-26 08:45:55,450 [INFO] [437/500] PASS ✓             | plan=N score=0.00 R=1.00 | 137 tok | 5.8s | Write a function to find cubes of individual elements i
+2026-04-26 08:46:06,001 [INFO] [438/500] PASS ✓             | plan=N score=0.00 R=1.00 | 248 tok | 10.5s | Write a function to calculate the sum of perrin numbers
+2026-04-26 08:46:15,578 [INFO] [439/500] PASS ✓             | plan=N score=0.00 R=1.00 | 227 tok | 9.5s | Write a python function to check whether the triangle i
+2026-04-26 08:46:21,745 [INFO] [440/500] PASS ✓             | plan=N score=0.00 R=1.00 | 146 tok | 6.1s | Write a function to extract specified size of strings f
+2026-04-26 08:46:24,828 [INFO] [441/500] PASS ✓             | plan=N score=0.00 R=1.00 | 69 tok | 3.0s | Write a function to remove all whitespaces from the giv
+2026-04-26 08:46:28,711 [INFO] [442/500] PASS ✓             | plan=N score=0.00 R=1.00 | 90 tok | 3.8s | Write a function that gives loss amount if the given am
+2026-04-26 08:46:34,446 [INFO] [443/500] PASS ✓             | plan=N score=0.00 R=1.00 | 135 tok | 5.7s | Write a python function to find the sum of even factors
+2026-04-26 08:46:38,291 [INFO] [444/500] PASS ✓             | plan=N score=0.00 R=1.00 | 90 tok | 3.8s | Write a function that matches a word containing 'z'.
+2026-04-26 08:46:43,053 [INFO] [445/500] PASS ✓             | plan=N score=0.00 R=1.00 | 110 tok | 4.7s | Write a function to check whether the given month numbe
+2026-04-26 08:46:49,082 [INFO] [446/500] PASS ✓             | plan=N score=0.00 R=1.00 | 141 tok | 6.0s | Write a function to reverse strings in a given list of 
+2026-04-26 08:46:58,179 [INFO] [447/500] PASS ✓             | plan=N score=0.00 R=1.00 | 213 tok | 9.0s | Write a python function to find the sublist having mini
+2026-04-26 08:47:00,713 [INFO] [448/500] PASS ✓             | plan=N score=0.00 R=1.00 | 58 tok | 2.5s | Write a function to find the area of a rectangle.
+2026-04-26 08:47:04,252 [INFO] [449/500] PASS ✓             | plan=N score=0.00 R=1.00 | 80 tok | 3.5s | Write a function to remove uppercase substrings from a 
+2026-04-26 08:47:10,159 [INFO] [450/500] PASS ✓             | plan=N score=0.00 R=1.00 | 138 tok | 5.8s | Write a python function to get the first element of eac
+2026-04-26 08:47:15,790 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:47:25,130 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:47:25,135 [INFO] [451/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 109 tok | 4.6s | Write a python function to count the upper case charact
+2026-04-26 08:47:37,267 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:48:26,512 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:48:26,516 [INFO] [452/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 266 tok | 11.2s | Write a function to find all possible combinations of t
+2026-04-26 08:48:35,148 [INFO] [453/500] PASS ✓             | plan=N score=0.00 R=1.00 | 202 tok | 8.6s | Write a function to find the maximum product subarray o
+2026-04-26 08:48:39,570 [INFO] [454/500] PASS ✓             | plan=N score=0.00 R=1.00 | 103 tok | 4.3s | Write a function to check if all values are same in a d
+2026-04-26 08:48:46,154 [INFO] [455/500] PASS ✓             | plan=N score=0.00 R=1.00 | 154 tok | 6.5s | Write a function to drop empty items from a given dicti
+2026-04-26 08:48:54,395 [INFO] [456/500] PASS ✓             | plan=N score=0.00 R=1.00 | 194 tok | 8.2s | Write a function to find the peak element in the given 
+2026-04-26 08:49:01,793 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:49:12,641 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:49:12,645 [INFO] [457/500] FAIL ✗ → FIXED ✓   | plan=N score=0.00 R=0.00 | 153 tok | 6.4s | Write a python function to convert decimal number to oc
+2026-04-26 08:49:23,592 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:49:42,365 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:49:42,369 [INFO] [458/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 237 tok | 9.9s | Write a function to find the maximum product formed by 
+2026-04-26 08:49:56,136 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:50:15,332 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:50:15,333 [INFO] [459/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 298 tok | 12.6s | Write a function to find the maximum profit earned from
+2026-04-26 08:50:22,789 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:50:36,532 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:50:36,536 [INFO] [460/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 157 tok | 6.6s | Write a function to find the pairwise addition of the e
+2026-04-26 08:50:42,336 [INFO] [461/500] PASS ✓             | plan=N score=0.00 R=1.00 | 133 tok | 5.7s | Write a python function to find remainder of array mult
+2026-04-26 08:50:48,216 [INFO] [462/500] PASS ✓             | plan=N score=0.00 R=1.00 | 138 tok | 5.8s | Write a python function to check whether the given list
+2026-04-26 08:50:56,651 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:51:16,047 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:51:16,051 [INFO] [463/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 169 tok | 7.1s | Write a function to find the tuple intersection of elem
+2026-04-26 08:51:22,264 [INFO] [464/500] PASS ✓             | plan=N score=0.00 R=1.00 | 147 tok | 6.1s | Write a function to replace characters in a string.
+2026-04-26 08:51:26,805 [INFO] [465/500] PASS ✓             | plan=N score=0.00 R=1.00 | 106 tok | 4.5s | Write a function to sort counter by value.
+2026-04-26 08:51:33,335 [INFO] [466/500] PASS ✓             | plan=N score=0.00 R=1.00 | 154 tok | 6.5s | Write a python function to find the sum of the largest 
+2026-04-26 08:51:34,142 [INFO] [467/500] PASS ✓             | plan=N score=0.00 R=1.00 | 17 tok | 0.7s | Write a python function to convert the given string to 
+2026-04-26 08:51:39,442 [INFO] [468/500] PASS ✓             | plan=N score=0.00 R=1.00 | 123 tok | 5.2s | Write a function to remove lowercase substrings from a 
+2026-04-26 08:51:43,095 [INFO] [469/500] PASS ✓             | plan=N score=0.00 R=1.00 | 83 tok | 3.6s | Write a python function to find the first digit of a gi
+2026-04-26 08:51:52,096 [INFO] [470/500] PASS ✓             | plan=N score=0.00 R=1.00 | 212 tok | 8.9s | Write a python function to find the maximum occurring c
+2026-04-26 08:52:02,417 [INFO] [471/500] PASS ✓             | plan=N score=0.00 R=1.00 | 243 tok | 10.2s | Write a function to determine if there is a subset of t
+2026-04-26 08:52:05,988 [INFO] [472/500] PASS ✓             | plan=N score=0.00 R=1.00 | 83 tok | 3.5s | Write a function to find sequences of one upper case le
+2026-04-26 08:52:11,736 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:52:25,192 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:52:25,198 [INFO] [473/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 111 tok | 4.7s | Write a python function to find the first natural numbe
+2026-04-26 08:52:30,863 [INFO] [474/500] PASS ✓             | plan=N score=0.00 R=1.00 | 131 tok | 5.6s | Write a function to remove the matching tuples from the
+2026-04-26 08:52:37,347 [INFO] [475/500] PASS ✓             | plan=N score=0.00 R=1.00 | 151 tok | 6.4s | Write a function to find the largest palindromic number
+2026-04-26 08:52:43,586 [INFO] [476/500] PASS ✓             | plan=N score=0.00 R=1.00 | 147 tok | 6.2s | Write a function to compute binomial probability for th
+2026-04-26 08:52:47,932 [INFO] [477/500] PASS ✓             | plan=N score=0.00 R=1.00 | 102 tok | 4.3s | Write a function to sort a list of tuples in increasing
+2026-04-26 08:52:52,247 [INFO] [478/500] PASS ✓             | plan=N score=0.00 R=1.00 | 101 tok | 4.2s | Write a function to find the area of a pentagon.
+2026-04-26 08:52:56,310 [INFO] [479/500] PASS ✓             | plan=N score=0.00 R=1.00 | 94 tok | 4.0s | Write a python function to find the frequency of the la
+2026-04-26 08:53:04,368 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:53:21,056 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:53:21,059 [INFO] [480/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 160 tok | 6.7s | Write a function to extract all the pairs which are sym
+2026-04-26 08:53:24,601 [INFO] [481/500] PASS ✓             | plan=N score=0.00 R=1.00 | 82 tok | 3.5s | Write a function to find the sum of geometric progressi
+2026-04-26 08:53:31,949 [INFO] [482/500] PASS ✓             | plan=N score=0.00 R=1.00 | 174 tok | 7.3s | Write a function to search an element in the given arra
+2026-04-26 08:54:55,560 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:56:21,997 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:56:22,002 [INFO] [483/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 1972 tok | 82.2s | Write a function to calculate a grid of hexagon coordin
+2026-04-26 08:56:26,348 [INFO] [484/500] PASS ✓             | plan=N score=0.00 R=1.00 | 100 tok | 4.3s | Write a function to convert the given binary tuple to i
+2026-04-26 08:56:29,980 [INFO] [485/500] PASS ✓             | plan=N score=0.00 R=1.00 | 83 tok | 3.6s | Write a function to remove lowercase substrings from a 
+2026-04-26 08:56:34,712 [INFO] [486/500] PASS ✓             | plan=N score=0.00 R=1.00 | 110 tok | 4.7s | Write a function to find the smallest integers from a g
+2026-04-26 08:56:40,233 [INFO] [487/500] PASS ✓             | plan=N score=0.00 R=1.00 | 129 tok | 5.5s | Write a function to find the surface area of a cone.
+2026-04-26 08:56:42,682 [INFO] [488/500] PASS ✓             | plan=N score=0.00 R=1.00 | 56 tok | 2.4s | Write a python function to find gcd of two positive int
+2026-04-26 08:56:45,016 [INFO] [489/500] PASS ✓             | plan=N score=0.00 R=1.00 | 53 tok | 2.3s | Write a function to find the diameter of a circle.
+2026-04-26 08:56:50,828 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:57:02,428 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:57:02,433 [INFO] [490/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 115 tok | 4.8s | Write a function to concatenate all elements of the giv
+2026-04-26 08:57:09,290 [INFO] [491/500] PASS ✓             | plan=N score=0.00 R=1.00 | 159 tok | 6.8s | Write a python function to find common divisor between 
+2026-04-26 08:57:10,627 [INFO] [492/500] PASS ✓             | plan=N score=0.00 R=1.00 | 30 tok | 1.3s | Write a python function to find remainder of two number
+2026-04-26 08:57:17,049 [INFO] [493/500] PASS ✓             | plan=N score=0.00 R=1.00 | 151 tok | 6.3s | Write a function to add consecutive numbers of a given 
+2026-04-26 08:57:20,027 [INFO] [494/500] PASS ✓             | plan=N score=0.00 R=1.00 | 68 tok | 2.9s | Write a python function to find the cube sum of first n
+2026-04-26 08:57:27,761 [INFO] [495/500] PASS ✓             | plan=N score=0.00 R=1.00 | 183 tok | 7.7s | Write a function to move all zeroes to the end of the g
+2026-04-26 08:57:32,721 [INFO] [496/500] PASS ✓             | plan=N score=0.00 R=1.00 | 116 tok | 4.9s | Write a function to calculate the permutation coefficie
+2026-04-26 08:57:37,798 [INFO] [497/500] PASS ✓             | plan=N score=0.00 R=1.00 | 119 tok | 5.0s | Write a function to remove specific words from a given 
+2026-04-26 08:57:46,451 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:58:03,267 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:58:03,271 [INFO] [498/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 169 tok | 7.2s | Write a function to check if the common elements betwee
+2026-04-26 08:58:10,129 [INFO] [499/500] PASS ✓             | plan=N score=0.00 R=1.00 | 160 tok | 6.8s | Write a python function to find the average of odd numb
+2026-04-26 08:58:18,903 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:58:34,751 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 08:58:34,757 [INFO] [500/500] FAIL ✗ → still FAIL| plan=N score=0.00 R=0.00 | 180 tok | 7.6s | Write a function to find the number of subsequences hav
+2026-04-26 08:58:34,758 [INFO]   avg plan_decomposition : nan
+2026-04-26 08:58:34,758 [INFO]   avg plan_edge_cases    : nan
+2026-04-26 08:58:34,759 [INFO]   avg plan_approach      : nan
+2026-04-26 08:58:34,759 [INFO]   avg plan_clarity       : nan
+2026-04-26 08:58:34,759 [INFO] 
+RESULTS: test
+2026-04-26 08:58:34,759 [INFO]   pass@1  (attempt 1)     : 303/500 (60.6%)
+2026-04-26 08:58:34,759 [INFO]   pass@1  (after feedback): 356/500 (71.2%)
+2026-04-26 08:58:34,759 [INFO]   tasks entering feedback : 197
+2026-04-26 08:58:34,759 [INFO]   recovered by feedback   : 53 (26.9% of feedback tasks)
+2026-04-26 08:58:34,760 [INFO]   avg plan_score (attempt 1): 0.000
+2026-04-26 08:58:34,760 [INFO]   avg reward (attempt 1)  : 0.606
+2026-04-26 08:58:34,760 [INFO]   avg reward (final)      : 0.712
+2026-04-26 08:58:34,760 [INFO]   Saved: eval_results_optional_no_reward/eval_test.jsonl
+2026-04-26 08:58:34,761 [INFO] 
+FINAL SUMMARY
+2026-04-26 08:58:34,762 [INFO]   Split      pass@1  pass+FB  recovered            judge
+2026-04-26 08:58:34,762 [INFO]   val        67.8%   73.3%          5      gpt-4o-mini
+2026-04-26 08:58:34,762 [INFO]   test       60.6%   71.2%         53      gpt-4o-mini
+2026-04-26 08:58:34,763 [INFO] Summary     → eval_results_optional_no_reward/summary_global_step_230_20260426_064944.json
+2026-04-26 08:58:34,763 [INFO] Raw outputs → eval_results_optional_no_reward/raw_global_step_230_20260426_064944.jsonl

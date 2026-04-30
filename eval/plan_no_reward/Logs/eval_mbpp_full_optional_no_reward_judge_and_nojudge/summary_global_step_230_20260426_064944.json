@@ -1,0 +1,50 @@
+[
+  {
+    "split": "val",
+    "num_tasks": 90,
+    "passed_attempt1": 61,
+    "passed_final": 66,
+    "recovered": 5,
+    "pass_at_1": 0.6777777777777778,
+    "pass_at_1_final": 0.7333333333333333,
+    "feedback_recovery_rate": 0.1724137931034483,
+    "avg_plan_score": 0.0,
+    "avg_plan_dims": {
+      "decomposition": 0.0,
+      "edge_cases": 0.0,
+      "approach": 0.0,
+      "clarity": 0.0
+    },
+    "avg_reward_attempt1": 0.6777777777777778,
+    "avg_reward_final": 0.7333333333333333,
+    "has_plan_rate": 0.0,
+    "judge_mode": "gpt-4o-mini",
+    "alpha": 0.0,
+    "beta": 1.0,
+    "out_path": "eval_results_optional_no_reward/eval_val.jsonl"
+  },
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed_attempt1": 303,
+    "passed_final": 356,
+    "recovered": 53,
+    "pass_at_1": 0.606,
+    "pass_at_1_final": 0.712,
+    "feedback_recovery_rate": 0.26903553299492383,
+    "avg_plan_score": 0.0,
+    "avg_plan_dims": {
+      "decomposition": 0.0,
+      "edge_cases": 0.0,
+      "approach": 0.0,
+      "clarity": 0.0
+    },
+    "avg_reward_attempt1": 0.606,
+    "avg_reward_final": 0.712,
+    "has_plan_rate": 0.0,
+    "judge_mode": "gpt-4o-mini",
+    "alpha": 0.0,
+    "beta": 1.0,
+    "out_path": "eval_results_optional_no_reward/eval_test.jsonl"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "checkpoint": "checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140",
+  "dataset": "humaneval_plus",
+  "num_tasks": 164,
+  "num_samples": 5,
+  "temperature": 0.8,
+  "k_values": [
+    5
+  ],
+  "results": {
+    "pass@5": 87.1951219512195
+  },
+  "raw_path": "eval_results_humaneval_passk/raw_huggingface_merged_step140_20260425_232208.jsonl"
+}

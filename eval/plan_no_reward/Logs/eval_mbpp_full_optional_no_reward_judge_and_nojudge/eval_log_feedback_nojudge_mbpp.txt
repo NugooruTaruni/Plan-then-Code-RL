@@ -1,0 +1,641 @@
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.2.0)/charset_normalizer (3.4.6) doesn't match a supported version!
+  warnings.warn(
+2026-04-26 01:33:58,485 [INFO] [EXP1_FULL] checkpoint=checkpoints_mbpp_full/checkpoints/global_step_230 | split=all
+2026-04-26 01:33:58,485 [INFO] alpha=0.0 beta=1.0 judge=rule-based (no GPT) feedback=on (max=1)
+2026-04-26 01:33:58,486 [INFO] raw generations → eval_results_optional_no_reward/raw_global_step_230_20260426_013358.jsonl
+2026-04-26 01:33:58,486 [INFO] Loading tokenizer: Qwen/Qwen2.5-Coder-3B-Instruct
+2026-04-26 01:33:59,062 [INFO] Loading HF model: checkpoints_mbpp_full/checkpoints/global_step_230/actor/huggingface
+2026-04-26 01:34:00,220 [INFO] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.02s/it]
+2026-04-26 01:34:02,333 [INFO]   ✓ HF model loaded
+2026-04-26 01:34:02,335 [INFO] policy device: cuda:0
+2026-04-26 01:34:02,368 [INFO] Loaded 90 rows from data/mbpp_val_full.parquet
+2026-04-26 01:34:02,375 [INFO] 
+============================================================
+EVALUATING: val (90 tasks)
+============================================================
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+2026-04-26 01:34:27,852 [INFO] [  1/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 171 tok | 8.0s | Write a python function to find minimum sum of factors 
+2026-04-26 01:34:38,120 [INFO] [  2/90] PASS ✓             | plan=N score=N/A R=1.00 | 243 tok | 10.2s | Write a function to count the element frequency in the 
+2026-04-26 01:34:45,016 [INFO] [  3/90] PASS ✓             | plan=N score=N/A R=1.00 | 159 tok | 6.8s | Write a function to convert tuple into list by adding t
+2026-04-26 01:34:58,961 [INFO] [  4/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 109 tok | 4.6s | Write a function to find the summation of tuple element
+2026-04-26 01:35:23,934 [INFO] [  5/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 174 tok | 7.3s | Write a function to check if there is a subset with sum
+2026-04-26 01:35:38,834 [INFO] [  6/90] PASS ✓             | plan=N score=N/A R=1.00 | 351 tok | 14.8s | Write a function to sort a list of elements using radix
+2026-04-26 01:35:44,109 [INFO] [  7/90] PASS ✓             | plan=N score=N/A R=1.00 | 123 tok | 5.2s | Write a python function to find the largest postive num
+2026-04-26 01:35:50,905 [INFO] [  8/90] PASS ✓             | plan=N score=N/A R=1.00 | 158 tok | 6.7s | Write a function to find the square root of a perfect n
+2026-04-26 01:36:08,297 [INFO] [  9/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 90 tok | 3.8s | Write a function to calculate volume of a tetrahedron.
+2026-04-26 01:36:13,576 [INFO] [ 10/90] PASS ✓             | plan=N score=N/A R=1.00 | 121 tok | 5.2s | Write a function to find the lcm of the given array ele
+2026-04-26 01:36:31,348 [INFO] [ 11/90] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 104 tok | 4.5s | Write a function to print check if the triangle is scal
+2026-04-26 01:36:44,736 [INFO] [ 12/90] PASS ✓             | plan=N score=N/A R=1.00 | 313 tok | 13.3s | Write a function to find the longest bitonic subsequenc
+2026-04-26 01:37:11,699 [INFO] [ 13/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 224 tok | 9.5s | Write a function to check whether a given string has a 
+2026-04-26 01:37:21,252 [INFO] [ 14/90] PASS ✓             | plan=N score=N/A R=1.00 | 220 tok | 9.5s | Write a function to find the sum of maximum increasing 
+2026-04-26 01:37:25,197 [INFO] [ 15/90] PASS ✓             | plan=N score=N/A R=1.00 | 88 tok | 3.9s | Write a python function to check whether two given line
+2026-04-26 01:37:30,756 [INFO] [ 16/90] PASS ✓             | plan=N score=N/A R=1.00 | 126 tok | 5.5s | Write a python function to capitalize first and last le
+2026-04-26 01:37:38,388 [INFO] [ 17/90] PASS ✓             | plan=N score=N/A R=1.00 | 169 tok | 7.6s | Write a function to find all pairs in an integer array 
+2026-04-26 01:37:46,773 [INFO] [ 18/90] PASS ✓             | plan=N score=N/A R=1.00 | 184 tok | 8.3s | Write a function to find the list of lists with minimum
+2026-04-26 01:38:06,750 [INFO] [ 19/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 152 tok | 6.6s | Write a function to find the nth jacobsthal-lucas numbe
+2026-04-26 01:38:27,869 [INFO] [ 20/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 155 tok | 6.9s | Write a function to find the ration of negative numbers
+2026-04-26 01:38:37,387 [INFO] [ 21/90] PASS ✓             | plan=N score=N/A R=1.00 | 220 tok | 9.4s | Write a function to find minimum number of coins that m
+2026-04-26 01:38:42,051 [INFO] [ 22/90] PASS ✓             | plan=N score=N/A R=1.00 | 108 tok | 4.6s | Write a function to check if the two given strings are 
+2026-04-26 01:38:48,928 [INFO] [ 23/90] PASS ✓             | plan=N score=N/A R=1.00 | 153 tok | 6.8s | Write a function to remove particular data type element
+2026-04-26 01:39:06,022 [INFO] [ 24/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 86 tok | 3.8s | Write a function to search a literals string in a strin
+2026-04-26 01:39:22,452 [INFO] [ 25/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 85 tok | 3.8s | Write a function to find the top or bottom surface area
+2026-04-26 01:39:29,039 [INFO] [ 26/90] PASS ✓             | plan=N score=N/A R=1.00 | 151 tok | 6.5s | Write a function to select the nth items of a list.
+2026-04-26 01:39:51,753 [INFO] [ 27/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 153 tok | 6.6s | Write a python function to find the first repeated word
+2026-04-26 01:40:08,093 [INFO] [ 28/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 109 tok | 4.7s | Write a python function to convert a given string list 
+2026-04-26 01:40:20,188 [INFO] [ 29/90] PASS ✓             | plan=N score=N/A R=1.00 | 278 tok | 12.0s | Write a function to create a list containing the power 
+2026-04-26 01:40:29,949 [INFO] [ 30/90] PASS ✓             | plan=N score=N/A R=1.00 | 220 tok | 9.7s | Write a python function to find the difference between 
+2026-04-26 01:40:36,112 [INFO] [ 31/90] PASS ✓             | plan=N score=N/A R=1.00 | 140 tok | 6.1s | Write a function to find if the given number is abundan
+2026-04-26 01:40:39,827 [INFO] [ 32/90] PASS ✓             | plan=N score=N/A R=1.00 | 84 tok | 3.6s | Write a function to replace all occurrences of spaces, 
+2026-04-26 01:40:44,364 [INFO] [ 33/90] PASS ✓             | plan=N score=N/A R=1.00 | 102 tok | 4.5s | Write a function to add two numbers and print number of
+2026-04-26 01:40:51,234 [INFO] [ 34/90] PASS ✓             | plan=N score=N/A R=1.00 | 157 tok | 6.8s | Write a function to flatten the tuple list to a string.
+2026-04-26 01:40:56,223 [INFO] [ 35/90] PASS ✓             | plan=N score=N/A R=1.00 | 113 tok | 4.9s | Write a python function to toggle only first and last b
+2026-04-26 01:41:08,908 [INFO] [ 36/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 107 tok | 4.7s | Write a function to find the last occurrence of a chara
+2026-04-26 01:41:27,060 [INFO] [ 37/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 90 tok | 3.9s | Write a python function to find the sum of hamming dist
+2026-04-26 01:41:35,139 [INFO] [ 38/90] PASS ✓             | plan=N score=N/A R=1.00 | 185 tok | 8.0s | Write a function to find the length of the longest incr
+2026-04-26 01:41:39,901 [INFO] [ 39/90] PASS ✓             | plan=N score=N/A R=1.00 | 107 tok | 4.7s | Write a python function to find the sum of fifth power 
+2026-04-26 01:42:08,278 [INFO] [ 40/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 181 tok | 7.8s | Write a python function to find the maximum element in 
+2026-04-26 01:42:14,334 [INFO] [ 41/90] PASS ✓             | plan=N score=N/A R=1.00 | 138 tok | 6.0s | Write a function to extract a specified column from a g
+2026-04-26 01:42:36,645 [INFO] [ 42/90] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 210 tok | 9.1s | Write a python function to check whether a given sequen
+2026-04-26 01:42:39,854 [INFO] [ 43/90] PASS ✓             | plan=N score=N/A R=1.00 | 72 tok | 3.1s | Write a function to convert the given tuple to a floati
+2026-04-26 01:42:45,889 [INFO] [ 44/90] PASS ✓             | plan=N score=N/A R=1.00 | 138 tok | 6.0s | Write a python function to find odd numbers from a mixe
+2026-04-26 01:42:50,953 [INFO] [ 45/90] PASS ✓             | plan=N score=N/A R=1.00 | 115 tok | 5.0s | Write a python function to find the difference between 
+2026-04-26 01:42:57,036 [INFO] [ 46/90] PASS ✓             | plan=N score=N/A R=1.00 | 139 tok | 6.0s | Write a python function to count the pairs with xor as 
+2026-04-26 01:43:03,019 [INFO] [ 47/90] PASS ✓             | plan=N score=N/A R=1.00 | 136 tok | 5.9s | Write a function to toggle characters case in a string.
+2026-04-26 01:43:13,178 [INFO] [ 48/90] PASS ✓             | plan=N score=N/A R=1.00 | 236 tok | 10.1s | Write a python function to find the digit distance betw
+2026-04-26 01:43:21,154 [INFO] [ 49/90] PASS ✓             | plan=N score=N/A R=1.00 | 181 tok | 7.9s | Write a function to find the largest sum of contiguous 
+2026-04-26 01:43:26,434 [INFO] [ 50/90] PASS ✓             | plan=N score=N/A R=1.00 | 121 tok | 5.2s | Write a function to find the union of elements of the g
+2026-04-26 01:43:55,735 [INFO] [ 51/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 187 tok | 8.0s | Write a function to assign with each element, its pair 
+2026-04-26 01:44:01,365 [INFO] [ 52/90] PASS ✓             | plan=N score=N/A R=1.00 | 129 tok | 5.6s | Write a python function to find the maximum length of s
+2026-04-26 01:44:16,652 [INFO] [ 53/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 96 tok | 4.1s | Write a function to extract values between quotation ma
+2026-04-26 01:44:22,400 [INFO] [ 54/90] PASS ✓             | plan=N score=N/A R=1.00 | 130 tok | 5.7s | Write a python function to count unequal element pairs 
+2026-04-26 01:44:26,962 [INFO] [ 55/90] PASS ✓             | plan=N score=N/A R=1.00 | 105 tok | 4.5s | Write a python function to split a string into characte
+2026-04-26 01:44:31,625 [INFO] [ 56/90] PASS ✓             | plan=N score=N/A R=1.00 | 107 tok | 4.6s | Write a function to get the sum of a non-negative integ
+2026-04-26 01:44:39,294 [INFO] [ 57/90] PASS ✓             | plan=N score=N/A R=1.00 | 178 tok | 7.6s | Write a function to check whether a specified list is s
+2026-04-26 01:44:42,793 [INFO] [ 58/90] PASS ✓             | plan=N score=N/A R=1.00 | 78 tok | 3.4s | Write a function to create a list of empty dictionaries
+2026-04-26 01:44:47,764 [INFO] [ 59/90] PASS ✓             | plan=N score=N/A R=1.00 | 114 tok | 4.9s | Write a function to sort each sublist of strings in a g
+2026-04-26 01:45:11,915 [INFO] [ 60/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 211 tok | 8.9s | Write a function to remove words from a given list of s
+2026-04-26 01:45:47,041 [INFO] [ 61/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 259 tok | 11.3s | Write a function to find maximum possible sum of disjoi
+2026-04-26 01:45:53,792 [INFO] [ 62/90] PASS ✓             | plan=N score=N/A R=1.00 | 158 tok | 6.7s | Write a python function to remove two duplicate numbers
+2026-04-26 01:45:59,665 [INFO] [ 63/90] PASS ✓             | plan=N score=N/A R=1.00 | 137 tok | 5.8s | Write a python function to calculate the product of the
+2026-04-26 01:46:15,389 [INFO] [ 64/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 93 tok | 4.0s | Write a function to find the surface area of a cylinder
+2026-04-26 01:46:38,864 [INFO] [ 65/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 142 tok | 6.1s | Write a python function to find nth number in a sequenc
+2026-04-26 01:46:46,128 [INFO] [ 66/90] PASS ✓             | plan=N score=N/A R=1.00 | 169 tok | 7.2s | Write a python function to check whether an array is su
+2026-04-26 01:46:51,693 [INFO] [ 67/90] PASS ✓             | plan=N score=N/A R=1.00 | 127 tok | 5.5s | Write a python function to find the last digit in facto
+2026-04-26 01:47:03,350 [INFO] [ 68/90] PASS ✓             | plan=N score=N/A R=1.00 | 273 tok | 11.6s | Write a function to interleave lists of the same length
+2026-04-26 01:47:09,834 [INFO] [ 69/90] PASS ✓             | plan=N score=N/A R=1.00 | 149 tok | 6.4s | Write a function to find the dissimilar elements in the
+2026-04-26 01:47:38,878 [INFO] [ 70/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 211 tok | 9.0s | Write a function to extract the even elements in the ne
+2026-04-26 01:47:44,471 [INFO] [ 71/90] PASS ✓             | plan=N score=N/A R=1.00 | 125 tok | 5.5s | Write a python function to find the surface area of the
+2026-04-26 01:47:46,634 [INFO] [ 72/90] PASS ✓             | plan=N score=N/A R=1.00 | 49 tok | 2.1s | Write a function to check if a dictionary is empty or n
+2026-04-26 01:47:54,064 [INFO] [ 73/90] PASS ✓             | plan=N score=N/A R=1.00 | 173 tok | 7.4s | Write a function for nth catalan number.
+2026-04-26 01:48:21,063 [INFO] [ 74/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 184 tok | 8.0s | Write a function to find all adverbs and their position
+2026-04-26 01:48:26,661 [INFO] [ 75/90] PASS ✓             | plan=N score=N/A R=1.00 | 124 tok | 5.5s | Write a function to find the n - expensive price items 
+2026-04-26 01:48:32,460 [INFO] [ 76/90] PASS ✓             | plan=N score=N/A R=1.00 | 132 tok | 5.7s | Write a python function to split the array and add the 
+2026-04-26 01:48:36,569 [INFO] [ 77/90] PASS ✓             | plan=N score=N/A R=1.00 | 94 tok | 4.0s | Write a function to convert a list to a tuple.
+2026-04-26 01:48:42,446 [INFO] [ 78/90] PASS ✓             | plan=N score=N/A R=1.00 | 137 tok | 5.8s | Write a python function to find the difference between 
+2026-04-26 01:48:48,918 [INFO] [ 79/90] PASS ✓             | plan=N score=N/A R=1.00 | 150 tok | 6.4s | Write a function to find perfect squares between two gi
+2026-04-26 01:49:13,760 [INFO] [ 80/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 112 tok | 4.8s | Write a function to convert polar coordinates to rectan
+2026-04-26 01:49:19,375 [INFO] [ 81/90] PASS ✓             | plan=N score=N/A R=1.00 | 129 tok | 5.5s | Write a python function to interchange the first and la
+2026-04-26 01:49:36,801 [INFO] [ 82/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 157 tok | 6.8s | Write a python function to find sum of product of binom
+2026-04-26 01:49:41,832 [INFO] [ 83/90] PASS ✓             | plan=N score=N/A R=1.00 | 117 tok | 4.9s | Write a function to remove leading zeroes from an ip ad
+2026-04-26 01:49:50,241 [INFO] [ 84/90] PASS ✓             | plan=N score=N/A R=1.00 | 190 tok | 8.3s | Write a function to find the difference of first even a
+2026-04-26 01:50:24,028 [INFO] [ 85/90] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 275 tok | 11.8s | Write a python function to count minimum number of swap
+2026-04-26 01:50:38,960 [INFO] [ 86/90] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 92 tok | 4.0s | Write a function to find the size of the given tuple.
+2026-04-26 01:51:29,108 [INFO] [ 87/90] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 315 tok | 13.4s | Write a function to find kth element from the given two
+2026-04-26 01:51:36,288 [INFO] [ 88/90] PASS ✓             | plan=N score=N/A R=1.00 | 166 tok | 7.1s | Write a function to check whether the given number is a
+2026-04-26 01:51:41,314 [INFO] [ 89/90] PASS ✓             | plan=N score=N/A R=1.00 | 116 tok | 5.0s | Write a function to find sum and average of first n nat
+2026-04-26 01:51:44,878 [INFO] [ 90/90] PASS ✓             | plan=N score=N/A R=1.00 | 80 tok | 3.5s | Write a python function to check whether the given numb
+2026-04-26 01:51:44,879 [INFO] 
+RESULTS: val
+2026-04-26 01:51:44,879 [INFO]   pass@1  (attempt 1)     : 61/90 (67.8%)
+2026-04-26 01:51:44,879 [INFO]   pass@1  (after feedback): 65/90 (72.2%)
+2026-04-26 01:51:44,879 [INFO]   tasks entering feedback : 29
+2026-04-26 01:51:44,879 [INFO]   recovered by feedback   : 4 (13.8% of feedback tasks)
+2026-04-26 01:51:44,879 [INFO]   avg plan_score: N/A (judge disabled)
+2026-04-26 01:51:44,879 [INFO]   avg reward (attempt 1)  : 0.678
+2026-04-26 01:51:44,879 [INFO]   avg reward (final)      : 0.722
+2026-04-26 01:51:44,880 [INFO]   Saved: eval_results_optional_no_reward/eval_val.jsonl
+2026-04-26 01:51:44,892 [INFO] Loaded 500 rows from data/mbpp_test_full.parquet
+2026-04-26 01:51:44,895 [INFO] 
+============================================================
+EVALUATING: test (500 tasks)
+============================================================
+2026-04-26 01:52:05,968 [INFO] [  1/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 158 tok | 6.8s | Write a python function to remove first and last occurr
+2026-04-26 01:52:10,725 [INFO] [  2/500] PASS ✓             | plan=N score=N/A R=1.00 | 108 tok | 4.7s | Write a function to sort a given matrix in ascending or
+2026-04-26 01:52:35,465 [INFO] [  3/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 193 tok | 8.6s | Write a function to count the most common words in a di
+2026-04-26 01:52:39,461 [INFO] [  4/500] PASS ✓             | plan=N score=N/A R=1.00 | 92 tok | 3.9s | Write a python function to find the volume of a triangu
+2026-04-26 01:52:54,900 [INFO] [  5/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 99 tok | 4.3s | Write a function to split a string at lowercase letters
+2026-04-26 01:53:12,455 [INFO] [  6/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 118 tok | 5.1s | Write a function to find sequences of lowercase letters
+2026-04-26 01:53:15,084 [INFO] [  7/500] PASS ✓             | plan=N score=N/A R=1.00 | 60 tok | 2.6s | Write a function to find the perimeter of a square.
+2026-04-26 01:53:19,855 [INFO] [  8/500] PASS ✓             | plan=N score=N/A R=1.00 | 108 tok | 4.7s | Write a function to remove characters from the first st
+2026-04-26 01:53:25,549 [INFO] [  9/500] PASS ✓             | plan=N score=N/A R=1.00 | 130 tok | 5.6s | Write a function to find whether a given array of integ
+2026-04-26 01:53:33,739 [INFO] [ 10/500] PASS ✓             | plan=N score=N/A R=1.00 | 188 tok | 8.1s | Write a function to check if the given number is woodba
+2026-04-26 01:53:39,797 [INFO] [ 11/500] PASS ✓             | plan=N score=N/A R=1.00 | 140 tok | 6.0s | Write a function to find m number of multiples of n.
+2026-04-26 01:53:43,292 [INFO] [ 12/500] PASS ✓             | plan=N score=N/A R=1.00 | 80 tok | 3.4s | Write a function to find the first duplicate element in
+2026-04-26 01:53:50,045 [INFO] [ 13/500] PASS ✓             | plan=N score=N/A R=1.00 | 155 tok | 6.7s | Write a python function to find the maximum sum of elem
+2026-04-26 01:54:08,353 [INFO] [ 14/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 157 tok | 6.7s | Write a function to convert the given binary number to 
+2026-04-26 01:54:15,439 [INFO] [ 15/500] PASS ✓             | plan=N score=N/A R=1.00 | 163 tok | 7.0s | Write a python function to find the product of non-repe
+2026-04-26 01:54:30,295 [INFO] [ 16/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 102 tok | 4.4s | Write a function to check if the given tuple list has a
+2026-04-26 01:54:36,348 [INFO] [ 17/500] PASS ✓             | plan=N score=N/A R=1.00 | 143 tok | 6.0s | Write a python function to remove all digits from a lis
+2026-04-26 01:55:00,795 [INFO] [ 18/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 188 tok | 8.1s | Write a python function to find binomial co-efficient.
+2026-04-26 01:55:05,992 [INFO] [ 19/500] PASS ✓             | plan=N score=N/A R=1.00 | 119 tok | 5.1s | Write a python function to find the element occurring o
+2026-04-26 01:55:12,015 [INFO] [ 20/500] PASS ✓             | plan=N score=N/A R=1.00 | 135 tok | 6.0s | Write a python function to count all the substrings sta
+2026-04-26 01:55:50,217 [INFO] [ 21/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 259 tok | 11.0s | Write a function to find the top k integers that occur 
+2026-04-26 01:55:59,018 [INFO] [ 22/500] PASS ✓             | plan=N score=N/A R=1.00 | 206 tok | 8.7s | Write a python function to find the largest prime facto
+2026-04-26 01:56:15,682 [INFO] [ 23/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 154 tok | 6.6s | Write a python function to convert a decimal number to 
+2026-04-26 01:56:38,211 [INFO] [ 24/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 119 tok | 5.2s | Write a python function to find the missing number in a
+2026-04-26 01:56:40,994 [INFO] [ 25/500] PASS ✓             | plan=N score=N/A R=1.00 | 64 tok | 2.7s | Write a function to find the n-th rectangular number.
+2026-04-26 01:57:28,233 [INFO] [ 26/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 357 tok | 14.9s | Write a python function to find the nth digit in the pr
+2026-04-26 01:57:35,288 [INFO] [ 27/500] PASS ✓             | plan=N score=N/A R=1.00 | 163 tok | 7.0s | Write a function to sort a given mixed list of integers
+2026-04-26 01:57:43,495 [INFO] [ 28/500] PASS ✓             | plan=N score=N/A R=1.00 | 192 tok | 8.1s | Write a function to find the division of first even and
+2026-04-26 01:58:16,116 [INFO] [ 29/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 293 tok | 12.2s | Write a function to check if the letters of a given str
+2026-04-26 01:58:23,596 [INFO] [ 30/500] PASS ✓             | plan=N score=N/A R=1.00 | 174 tok | 7.4s | Write a function to find frequency of the elements in a
+2026-04-26 01:58:28,070 [INFO] [ 31/500] PASS ✓             | plan=N score=N/A R=1.00 | 103 tok | 4.4s | Write a function to filter even numbers using lambda fu
+2026-04-26 01:58:36,564 [INFO] [ 32/500] PASS ✓             | plan=N score=N/A R=1.00 | 197 tok | 8.4s | Write a python function to find the sum of repeated ele
+2026-04-26 01:58:52,831 [INFO] [ 33/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 109 tok | 4.6s | Write a function to find sequences of lowercase letters
+2026-04-26 01:59:03,858 [INFO] [ 34/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 70 tok | 3.0s | Write a function that matches a word at the beginning o
+2026-04-26 01:59:08,996 [INFO] [ 35/500] PASS ✓             | plan=N score=N/A R=1.00 | 119 tok | 5.1s | Write a function to find the gcd of the given array ele
+2026-04-26 01:59:12,124 [INFO] [ 36/500] PASS ✓             | plan=N score=N/A R=1.00 | 71 tok | 3.0s | Write a python function to determine whether all the nu
+2026-04-26 01:59:55,665 [INFO] [ 37/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 510 tok | 21.4s | Write a python function to find the last digit when fac
+2026-04-26 02:00:19,086 [INFO] [ 38/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 136 tok | 5.8s | Write a python function to set all odd bits of a given 
+2026-04-26 02:00:24,954 [INFO] [ 39/500] PASS ✓             | plan=N score=N/A R=1.00 | 136 tok | 5.8s | Write a function to extract every first or specified el
+2026-04-26 02:00:42,151 [INFO] [ 40/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 101 tok | 4.4s | Write a function to find the list with minimum length u
+2026-04-26 02:00:45,419 [INFO] [ 41/500] PASS ✓             | plan=N score=N/A R=1.00 | 72 tok | 3.2s | Write a function to print check if the triangle is equi
+2026-04-26 02:00:48,444 [INFO] [ 42/500] PASS ✓             | plan=N score=N/A R=1.00 | 69 tok | 3.0s | Write a function to caluclate area of a parallelogram.
+2026-04-26 02:00:51,813 [INFO] [ 43/500] PASS ✓             | plan=N score=N/A R=1.00 | 75 tok | 3.3s | Write a python function to check whether the first and 
+2026-04-26 02:01:00,219 [INFO] [ 44/500] PASS ✓             | plan=N score=N/A R=1.00 | 196 tok | 8.3s | Write a function to sort the given array by using count
+2026-04-26 02:01:03,313 [INFO] [ 45/500] PASS ✓             | plan=N score=N/A R=1.00 | 69 tok | 3.0s | Write a function to find t-nth term of geometric series
+2026-04-26 02:01:06,578 [INFO] [ 46/500] PASS ✓             | plan=N score=N/A R=1.00 | 76 tok | 3.2s | Write a python function to check if a given number is o
+2026-04-26 02:01:11,459 [INFO] [ 47/500] PASS ✓             | plan=N score=N/A R=1.00 | 114 tok | 4.8s | Write a python function to find the largest number that
+2026-04-26 02:01:16,072 [INFO] [ 48/500] PASS ✓             | plan=N score=N/A R=1.00 | 104 tok | 4.5s | Write a python function to check whether the given two 
+2026-04-26 02:01:26,527 [INFO] [ 49/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 63 tok | 2.7s | Write a function to find the nth octagonal number.
+2026-04-26 02:01:54,852 [INFO] [ 50/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 189 tok | 8.0s | Write a function to find the maximum length of the subs
+2026-04-26 02:02:01,594 [INFO] [ 51/500] PASS ✓             | plan=N score=N/A R=1.00 | 158 tok | 6.7s | Write a python function to count number of substrings w
+2026-04-26 02:02:06,573 [INFO] [ 52/500] PASS ✓             | plan=N score=N/A R=1.00 | 116 tok | 4.9s | Write a python function to find smallest number in a li
+2026-04-26 02:02:28,473 [INFO] [ 53/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 186 tok | 7.9s | Write a function to find the maximum difference between
+2026-04-26 02:02:33,771 [INFO] [ 54/500] PASS ✓             | plan=N score=N/A R=1.00 | 121 tok | 5.2s | Write a function to sort a list of tuples using lambda.
+2026-04-26 02:02:37,575 [INFO] [ 55/500] PASS ✓             | plan=N score=N/A R=1.00 | 87 tok | 3.7s | Write a function of recursion list sum.
+2026-04-26 02:02:42,660 [INFO] [ 56/500] PASS ✓             | plan=N score=N/A R=1.00 | 119 tok | 5.0s | Write a python function to count positive numbers in a 
+2026-04-26 02:03:10,514 [INFO] [ 57/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 135 tok | 5.7s | Write a function to find the number of ways to partitio
+2026-04-26 02:03:15,333 [INFO] [ 58/500] PASS ✓             | plan=N score=N/A R=1.00 | 110 tok | 4.8s | Write a python function to check whether the given arra
+2026-04-26 02:03:22,363 [INFO] [ 59/500] PASS ✓             | plan=N score=N/A R=1.00 | 161 tok | 7.0s | Write a function to check whether a list contains the g
+2026-04-26 02:03:39,938 [INFO] [ 60/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 132 tok | 5.7s | Write a function to find whether all the given tuples h
+2026-04-26 02:03:47,402 [INFO] [ 61/500] PASS ✓             | plan=N score=N/A R=1.00 | 172 tok | 7.4s | Write a function to sort a list of elements using comb 
+2026-04-26 02:04:11,390 [INFO] [ 62/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 177 tok | 7.5s | Write a python function to check whether the given numb
+2026-04-26 02:04:33,397 [INFO] [ 63/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 91 tok | 3.9s | Write a function to split the given string with multipl
+2026-04-26 02:04:59,274 [INFO] [ 64/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 205 tok | 8.8s | Write a function to check whether it follows the sequen
+2026-04-26 02:05:25,922 [INFO] [ 65/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 181 tok | 7.7s | Write a function to find tuples which have all elements
+2026-04-26 02:05:42,302 [INFO] [ 66/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 101 tok | 4.4s | Write a python function to count the number of squares 
+2026-04-26 02:06:07,151 [INFO] [ 67/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 193 tok | 8.2s | Write a python function to find the difference between 
+2026-04-26 02:06:13,423 [INFO] [ 68/500] PASS ✓             | plan=N score=N/A R=1.00 | 145 tok | 6.2s | Write a python function to find number of integers with
+2026-04-26 02:06:18,753 [INFO] [ 69/500] PASS ✓             | plan=N score=N/A R=1.00 | 124 tok | 5.3s | Write a python function to check whether the length of 
+2026-04-26 02:06:22,769 [INFO] [ 70/500] PASS ✓             | plan=N score=N/A R=1.00 | 91 tok | 4.0s | Write a function to find the nth tetrahedral number.
+2026-04-26 02:06:51,436 [INFO] [ 71/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 195 tok | 8.3s | Write a function to zip the two given tuples.
+2026-04-26 02:06:55,497 [INFO] [ 72/500] PASS ✓             | plan=N score=N/A R=1.00 | 94 tok | 4.0s | Write a function to find the volume of a sphere.
+2026-04-26 02:07:11,413 [INFO] [ 73/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 105 tok | 4.5s | Write a python function to find the character made by a
+2026-04-26 02:07:17,380 [INFO] [ 74/500] PASS ✓             | plan=N score=N/A R=1.00 | 139 tok | 5.9s | Write a function to find the n-th number in newman conw
+2026-04-26 02:07:21,113 [INFO] [ 75/500] PASS ✓             | plan=N score=N/A R=1.00 | 86 tok | 3.7s | Write a function to find the surface area of a sphere.
+2026-04-26 02:07:24,056 [INFO] [ 76/500] PASS ✓             | plan=N score=N/A R=1.00 | 67 tok | 2.9s | Write a function to find nth centered hexagonal number.
+2026-04-26 02:07:50,826 [INFO] [ 77/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 173 tok | 7.5s | Write a function to merge three dictionaries into a sin
+2026-04-26 02:08:00,598 [INFO] [ 78/500] PASS ✓             | plan=N score=N/A R=1.00 | 229 tok | 9.7s | Write a function to get the frequency of the elements i
+2026-04-26 02:08:06,226 [INFO] [ 79/500] PASS ✓             | plan=N score=N/A R=1.00 | 130 tok | 5.6s | Write a function to find the closest smaller number tha
+2026-04-26 02:08:11,324 [INFO] [ 80/500] PASS ✓             | plan=N score=N/A R=1.00 | 116 tok | 5.0s | Write a python function to find the length of the longe
+2026-04-26 02:08:16,138 [INFO] [ 81/500] PASS ✓             | plan=N score=N/A R=1.00 | 112 tok | 4.8s | Write a function to check if a substring is present in 
+2026-04-26 02:08:23,288 [INFO] [ 82/500] PASS ✓             | plan=N score=N/A R=1.00 | 165 tok | 7.1s | Write a function to check whether the given number is u
+2026-04-26 02:08:25,815 [INFO] [ 83/500] PASS ✓             | plan=N score=N/A R=1.00 | 58 tok | 2.5s | Write a function to calculate the value of 'a' to the p
+2026-04-26 02:08:32,977 [INFO] [ 84/500] PASS ✓             | plan=N score=N/A R=1.00 | 166 tok | 7.1s | Write a function to extract the index minimum value rec
+2026-04-26 02:08:37,997 [INFO] [ 85/500] PASS ✓             | plan=N score=N/A R=1.00 | 116 tok | 5.0s | Write a python function to find the minimum length of s
+2026-04-26 02:08:40,991 [INFO] [ 86/500] PASS ✓             | plan=N score=N/A R=1.00 | 69 tok | 2.9s | Write a python function to find the number of divisors 
+2026-04-26 02:08:50,890 [INFO] [ 87/500] PASS ✓             | plan=N score=N/A R=1.00 | 235 tok | 9.8s | Write a function to find frequency count of list of lis
+2026-04-26 02:08:55,162 [INFO] [ 88/500] PASS ✓             | plan=N score=N/A R=1.00 | 98 tok | 4.2s | Write a function to multiply all the numbers in a list 
+2026-04-26 02:09:01,954 [INFO] [ 89/500] PASS ✓             | plan=N score=N/A R=1.00 | 156 tok | 6.7s | Write a function to convert the given decimal number to
+2026-04-26 02:09:05,727 [INFO] [ 90/500] PASS ✓             | plan=N score=N/A R=1.00 | 87 tok | 3.7s | Write a function to find the next smallest palindrome o
+2026-04-26 02:09:20,629 [INFO] [ 91/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 89 tok | 3.8s | Write a function to find the kth element in the given a
+2026-04-26 02:09:24,803 [INFO] [ 92/500] PASS ✓             | plan=N score=N/A R=1.00 | 96 tok | 4.1s | Write a function to convert snake case string to camel 
+2026-04-26 02:09:45,863 [INFO] [ 93/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 158 tok | 6.7s | Write a function to find eulerian number a(n, m).
+2026-04-26 02:09:50,716 [INFO] [ 94/500] PASS ✓             | plan=N score=N/A R=1.00 | 111 tok | 4.8s | Write a function to sort each sublist of strings in a g
+2026-04-26 02:09:55,669 [INFO] [ 95/500] PASS ✓             | plan=N score=N/A R=1.00 | 114 tok | 4.9s | Write a python function to count true booleans in the g
+2026-04-26 02:09:59,539 [INFO] [ 96/500] PASS ✓             | plan=N score=N/A R=1.00 | 88 tok | 3.8s | Write a function to add the given list to the given tup
+2026-04-26 02:10:26,977 [INFO] [ 97/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 139 tok | 5.9s | Write a python function to count hexadecimal numbers fo
+2026-04-26 02:11:04,239 [INFO] [ 98/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 223 tok | 9.4s | Write a function to merge multiple sorted inputs into a
+2026-04-26 02:11:19,835 [INFO] [ 99/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 128 tok | 5.5s | Write a python function to find the count of rotations 
+2026-04-26 02:11:56,878 [INFO] [100/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 296 tok | 12.6s | Write a function to extract the ranges that are missing
+2026-04-26 02:12:26,186 [INFO] [101/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 185 tok | 7.9s | Write a function to find common elements in given neste
+2026-04-26 02:12:49,693 [INFO] [102/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 110 tok | 4.7s | Write a python function to find the perimeter of a cyli
+2026-04-26 02:12:53,417 [INFO] [103/500] PASS ✓             | plan=N score=N/A R=1.00 | 84 tok | 3.7s | Write a function to check if a string represents an int
+2026-04-26 02:13:29,696 [INFO] [104/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 220 tok | 9.3s | Write a function to assign frequency to each tuple in t
+2026-04-26 02:13:32,351 [INFO] [105/500] PASS ✓             | plan=N score=N/A R=1.00 | 61 tok | 2.6s | Write a function to check whether all dictionaries in a
+2026-04-26 02:13:35,963 [INFO] [106/500] PASS ✓             | plan=N score=N/A R=1.00 | 84 tok | 3.5s | Write a function to convert a given tuple of positive i
+2026-04-26 02:14:07,327 [INFO] [107/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 183 tok | 7.8s | Write a function to convert all possible convertible el
+2026-04-26 02:14:09,780 [INFO] [108/500] PASS ✓             | plan=N score=N/A R=1.00 | 56 tok | 2.4s | [link text](https:// [link text](https:// [link text](h
+2026-04-26 02:14:42,451 [INFO] [109/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 198 tok | 8.4s | Write a python function to find the element that appear
+2026-04-26 02:14:48,823 [INFO] [110/500] PASS ✓             | plan=N score=N/A R=1.00 | 147 tok | 6.3s | Write a function to find the maximum product from the p
+2026-04-26 02:14:58,615 [INFO] [111/500] PASS ✓             | plan=N score=N/A R=1.00 | 230 tok | 9.7s | Write a function to find the triplet with sum of the gi
+2026-04-26 02:15:24,850 [INFO] [112/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 197 tok | 8.3s | Write a function to find n’th smart number.
+2026-04-26 02:15:35,213 [INFO] [113/500] PASS ✓             | plan=N score=N/A R=1.00 | 126 tok | 5.4s | Write a function to sum all amicable numbers from 1 to 
+2026-04-26 02:15:54,397 [INFO] [114/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 115 tok | 4.9s | Write a function to get the angle of a complex number.
+2026-04-26 02:16:18,892 [INFO] [115/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 157 tok | 6.7s | Write a function to find the maximum difference between
+2026-04-26 02:16:34,576 [INFO] [116/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 150 tok | 6.4s | Write a python function to find the sum of common divis
+2026-04-26 02:16:42,557 [INFO] [117/500] PASS ✓             | plan=N score=N/A R=1.00 | 185 tok | 7.9s | Write a function to multiply two integers without using
+2026-04-26 02:17:02,982 [INFO] [118/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 138 tok | 5.9s | Write a function to shortlist words that are longer tha
+2026-04-26 02:17:12,686 [INFO] [119/500] PASS ✓             | plan=N score=N/A R=1.00 | 229 tok | 9.6s | Write a function to calculate magic square.
+2026-04-26 02:17:18,764 [INFO] [120/500] PASS ✓             | plan=N score=N/A R=1.00 | 142 tok | 6.0s | Write a function to find the item with maximum frequenc
+2026-04-26 02:17:30,126 [INFO] [121/500] PASS ✓             | plan=N score=N/A R=1.00 | 266 tok | 11.3s | Write a python function to reverse only the vowels of a
+2026-04-26 02:17:33,567 [INFO] [122/500] PASS ✓             | plan=N score=N/A R=1.00 | 78 tok | 3.4s | Write a function to convert tuple to a string.
+2026-04-26 02:17:37,718 [INFO] [123/500] PASS ✓             | plan=N score=N/A R=1.00 | 96 tok | 4.1s | Write a function to calculate the sum of the negative n
+2026-04-26 02:17:57,533 [INFO] [124/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 135 tok | 5.7s | Write a python function to check whether the last eleme
+2026-04-26 02:18:00,207 [INFO] [125/500] PASS ✓             | plan=N score=N/A R=1.00 | 60 tok | 2.6s | Write a function to find the nth hexagonal number.
+2026-04-26 02:18:18,377 [INFO] [126/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 134 tok | 5.6s | Write a function to calculate electricity bill.
+2026-04-26 02:18:45,246 [INFO] [127/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 147 tok | 6.2s | Write a function to find the ration of zeroes in an arr
+2026-04-26 02:19:13,415 [INFO] [128/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 201 tok | 8.6s | Write a python function to check whether the given numb
+2026-04-26 02:19:28,753 [INFO] [129/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 84 tok | 3.7s | Write a function to find the circumference of a circle.
+2026-04-26 02:20:01,118 [INFO] [130/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 261 tok | 11.1s | Write a function to extract elements that occur singly 
+2026-04-26 02:20:08,780 [INFO] [131/500] PASS ✓             | plan=N score=N/A R=1.00 | 180 tok | 7.6s | Write a function to sort a list of elements using panca
+2026-04-26 02:20:31,808 [INFO] [132/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 186 tok | 7.9s | Write a function to count the same pair in three given 
+2026-04-26 02:20:47,942 [INFO] [133/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 134 tok | 5.7s | Write a function to find number of lists present in the
+2026-04-26 02:20:53,724 [INFO] [134/500] PASS ✓             | plan=N score=N/A R=1.00 | 133 tok | 5.7s | Write a python function to find the sum of absolute dif
+2026-04-26 02:21:01,202 [INFO] [135/500] PASS ✓             | plan=N score=N/A R=1.00 | 177 tok | 7.4s | Write a python function to find the maximum difference 
+2026-04-26 02:21:13,854 [INFO] [136/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 102 tok | 4.3s | Write a function to find the ascii value of total chara
+2026-04-26 02:21:42,320 [INFO] [137/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 169 tok | 7.2s | Write a function to find the maximum total path sum in 
+2026-04-26 02:22:12,636 [INFO] [138/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 254 tok | 10.8s | Write a function to divide a number into two parts such
+2026-04-26 02:22:45,883 [INFO] [139/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 239 tok | 10.3s | Write a function to find the longest subsequence such t
+2026-04-26 02:22:53,050 [INFO] [140/500] PASS ✓             | plan=N score=N/A R=1.00 | 169 tok | 7.1s | Write a python function to find whether the given numbe
+2026-04-26 02:22:58,620 [INFO] [141/500] PASS ✓             | plan=N score=N/A R=1.00 | 128 tok | 5.5s | Write a python function to check whether the given numb
+2026-04-26 02:23:12,440 [INFO] [142/500] PASS ✓             | plan=N score=N/A R=1.00 | 328 tok | 13.8s | Write a function to sort the given array by using merge
+2026-04-26 02:23:18,899 [INFO] [143/500] PASS ✓             | plan=N score=N/A R=1.00 | 152 tok | 6.4s | Write a function to find the vertex of a parabola.
+2026-04-26 02:23:24,767 [INFO] [144/500] PASS ✓             | plan=N score=N/A R=1.00 | 137 tok | 5.8s | Write a function to extract every specified element fro
+2026-04-26 02:23:46,729 [INFO] [145/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 140 tok | 5.9s | Write a python function to toggle all even bits of a gi
+2026-04-26 02:23:53,204 [INFO] [146/500] PASS ✓             | plan=N score=N/A R=1.00 | 152 tok | 6.4s | Write a function to convert a tuple of string values to
+2026-04-26 02:24:31,470 [INFO] [147/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 272 tok | 11.4s | Write a function to reflect the run-length encoding fro
+2026-04-26 02:24:58,117 [INFO] [148/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 202 tok | 8.6s | Write a python function to find k number of operations 
+2026-04-26 02:25:16,642 [INFO] [149/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 130 tok | 5.6s | Write a function to print the season for the given mont
+2026-04-26 02:25:45,795 [INFO] [150/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 229 tok | 9.8s | Write a function to find x and y that satisfies ax + by
+2026-04-26 02:25:52,369 [INFO] [151/500] PASS ✓             | plan=N score=N/A R=1.00 | 153 tok | 6.5s | Write a function to remove all elements from a given li
+2026-04-26 02:25:57,220 [INFO] [152/500] PASS ✓             | plan=N score=N/A R=1.00 | 112 tok | 4.8s | Write a function to calculate the sum of the positive i
+2026-04-26 02:26:01,676 [INFO] [153/500] PASS ✓             | plan=N score=N/A R=1.00 | 103 tok | 4.4s | Write a function to calculate the area of a regular pol
+2026-04-26 02:26:20,991 [INFO] [154/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 163 tok | 7.0s | Write a python function to check whether the sum of div
+2026-04-26 02:26:28,439 [INFO] [155/500] PASS ✓             | plan=N score=N/A R=1.00 | 175 tok | 7.4s | Write a python function to count characters at same pos
+2026-04-26 02:26:34,340 [INFO] [156/500] PASS ✓             | plan=N score=N/A R=1.00 | 137 tok | 5.8s | Write a python function to count the pairs with xor as 
+2026-04-26 02:26:42,193 [INFO] [157/500] PASS ✓             | plan=N score=N/A R=1.00 | 179 tok | 7.8s | Write a python function to find smallest power of 2 gre
+2026-04-26 02:26:46,736 [INFO] [158/500] PASS ✓             | plan=N score=N/A R=1.00 | 106 tok | 4.5s | Write a python function to find the frequency of a numb
+2026-04-26 02:26:53,891 [INFO] [159/500] PASS ✓             | plan=N score=N/A R=1.00 | 166 tok | 7.1s | Write a function to calculate the nth pell number.
+2026-04-26 02:27:00,433 [INFO] [160/500] PASS ✓             | plan=N score=N/A R=1.00 | 152 tok | 6.5s | Write a function to find sum of the numbers in a list b
+2026-04-26 02:27:03,420 [INFO] [161/500] PASS ✓             | plan=N score=N/A R=1.00 | 67 tok | 2.9s | Write a function to find the perimeter of a pentagon.
+2026-04-26 02:27:07,821 [INFO] [162/500] PASS ✓             | plan=N score=N/A R=1.00 | 103 tok | 4.3s | Write a function to find the occurence of characters 's
+2026-04-26 02:27:11,574 [INFO] [163/500] PASS ✓             | plan=N score=N/A R=1.00 | 88 tok | 3.7s | Write a function to remove everything except alphanumer
+2026-04-26 02:27:19,599 [INFO] [164/500] PASS ✓             | plan=N score=N/A R=1.00 | 190 tok | 8.0s | Write a function to group a sequence of key-value pairs
+2026-04-26 02:27:40,811 [INFO] [165/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 216 tok | 9.2s | Write a function to verify validity of a string of pare
+2026-04-26 02:27:43,812 [INFO] [166/500] PASS ✓             | plan=N score=N/A R=1.00 | 68 tok | 2.9s | Write a function to find the perimeter of a triangle.
+2026-04-26 02:28:13,598 [INFO] [167/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 211 tok | 8.9s | Write a python function to find two distinct numbers su
+2026-04-26 02:28:17,989 [INFO] [168/500] PASS ✓             | plan=N score=N/A R=1.00 | 102 tok | 4.3s | Write a function to search some literals strings in a s
+2026-04-26 02:29:02,305 [INFO] [169/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 198 tok | 8.4s | Write a function to find if the given number is a keith
+2026-04-26 02:29:28,357 [INFO] [170/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 241 tok | 10.2s | Write a function to calculate distance between two poin
+2026-04-26 02:29:35,654 [INFO] [171/500] PASS ✓             | plan=N score=N/A R=1.00 | 171 tok | 7.2s | Write a function to find the longest common prefix in t
+2026-04-26 02:30:07,488 [INFO] [172/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 226 tok | 9.6s | Write a function to find uppercase, lowercase, special 
+2026-04-26 02:30:31,329 [INFO] [173/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 154 tok | 6.6s | Write a function to count all the distinct pairs having
+2026-04-26 02:30:46,817 [INFO] [174/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 111 tok | 4.8s | Write a function to find all the values in a list that 
+2026-04-26 02:31:08,298 [INFO] [175/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 154 tok | 6.6s | Write a function to find the focus of a parabola.
+2026-04-26 02:31:12,676 [INFO] [176/500] PASS ✓             | plan=N score=N/A R=1.00 | 99 tok | 4.3s | Write a function to search some literals strings in a s
+2026-04-26 02:31:22,479 [INFO] [177/500] PASS ✓             | plan=N score=N/A R=1.00 | 226 tok | 9.7s | Write a function to find the longest common subsequence
+2026-04-26 02:31:45,787 [INFO] [178/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 131 tok | 5.6s | Write a python function to check whether the given numb
+2026-04-26 02:32:09,389 [INFO] [179/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 222 tok | 9.6s | Write a python function to find the first missing posit
+2026-04-26 02:32:28,702 [INFO] [180/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 94 tok | 4.0s | Write a python function to count the number of integral
+2026-04-26 02:32:32,792 [INFO] [181/500] PASS ✓             | plan=N score=N/A R=1.00 | 94 tok | 4.0s | Write a function to check whether the given month name 
+2026-04-26 02:32:35,906 [INFO] [182/500] PASS ✓             | plan=N score=N/A R=1.00 | 72 tok | 3.0s | Write a python function to check whether a string has a
+2026-04-26 02:32:40,131 [INFO] [183/500] PASS ✓             | plan=N score=N/A R=1.00 | 98 tok | 4.2s | Write a function to remove the duplicates from the give
+2026-04-26 02:32:48,891 [INFO] [184/500] PASS ✓             | plan=N score=N/A R=1.00 | 208 tok | 8.7s | Write a python function to convert octal number to deci
+2026-04-26 02:33:19,874 [INFO] [185/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 194 tok | 8.2s | Write a python function to find the first position of a
+2026-04-26 02:33:28,115 [INFO] [186/500] PASS ✓             | plan=N score=N/A R=1.00 | 196 tok | 8.2s | Write a function to remove all the tuples with length k
+2026-04-26 02:33:54,614 [INFO] [187/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 185 tok | 7.8s | Write a function to perform the exponentiation of the g
+2026-04-26 02:34:34,632 [INFO] [188/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 488 tok | 20.6s | Write a function to find the largest triangle that can 
+2026-04-26 02:34:40,068 [INFO] [189/500] PASS ✓             | plan=N score=N/A R=1.00 | 127 tok | 5.4s | Write a python function to find highest power of 2 less
+2026-04-26 02:35:09,196 [INFO] [190/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 174 tok | 7.3s | Write a function to find all index positions of the max
+2026-04-26 02:35:11,762 [INFO] [191/500] PASS ✓             | plan=N score=N/A R=1.00 | 60 tok | 2.5s | Write a python function to check whether the elements i
+2026-04-26 02:35:25,947 [INFO] [192/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 121 tok | 5.3s | Write a function to remove even characters in a string.
+2026-04-26 02:35:32,256 [INFO] [193/500] PASS ✓             | plan=N score=N/A R=1.00 | 145 tok | 6.2s | Write a python function to find the hamming distance be
+2026-04-26 02:35:36,823 [INFO] [194/500] PASS ✓             | plan=N score=N/A R=1.00 | 106 tok | 4.5s | Write a python function to count the occurrence of a gi
+2026-04-26 02:35:56,128 [INFO] [195/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 131 tok | 5.6s | Write a function to find the inversions of tuple elemen
+2026-04-26 02:36:24,444 [INFO] [196/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 170 tok | 7.3s | Write a function to perform the adjacent element concat
+2026-04-26 02:36:34,042 [INFO] [197/500] PASS ✓             | plan=N score=N/A R=1.00 | 226 tok | 9.5s | Write a function to count the longest repeating subsequ
+2026-04-26 02:36:38,773 [INFO] [198/500] PASS ✓             | plan=N score=N/A R=1.00 | 110 tok | 4.7s | Write a function to check the given decimal with a prec
+2026-04-26 02:37:00,109 [INFO] [199/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 113 tok | 4.9s | Write a function to delete the smallest element from th
+2026-04-26 02:37:05,060 [INFO] [200/500] PASS ✓             | plan=N score=N/A R=1.00 | 113 tok | 4.9s | Write a function to check that the given string contain
+2026-04-26 02:37:32,834 [INFO] [201/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 118 tok | 5.1s | Write a python function to count numbers whose oth and 
+2026-04-26 02:37:37,905 [INFO] [202/500] PASS ✓             | plan=N score=N/A R=1.00 | 116 tok | 5.0s | Write a python function to find the sum of fourth power
+2026-04-26 02:38:01,379 [INFO] [203/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 167 tok | 7.0s | Write a function to perform the concatenation of two st
+2026-04-26 02:38:05,779 [INFO] [204/500] PASS ✓             | plan=N score=N/A R=1.00 | 102 tok | 4.3s | Write a function to convert radians to degrees.
+2026-04-26 02:38:11,170 [INFO] [205/500] PASS ✓             | plan=N score=N/A R=1.00 | 125 tok | 5.3s | Write a function to decode a run-length encoded given l
+2026-04-26 02:38:41,695 [INFO] [206/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 186 tok | 7.8s | Write a function to check if a nested list is a subset 
+2026-04-26 02:38:58,383 [INFO] [207/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 131 tok | 5.5s | Write a python function to find the first repeated char
+2026-04-26 02:39:21,857 [INFO] [208/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 171 tok | 7.2s | Write a python function to find the minimum operations 
+2026-04-26 02:39:49,321 [INFO] [209/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 155 tok | 6.6s | Write a function to extract maximum and minimum k eleme
+2026-04-26 02:40:10,076 [INFO] [210/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 147 tok | 6.3s | Write a function to replace maximum n occurrences of sp
+2026-04-26 02:40:15,579 [INFO] [211/500] PASS ✓             | plan=N score=N/A R=1.00 | 127 tok | 5.4s | Write a python function to find the first even number i
+2026-04-26 02:40:19,251 [INFO] [212/500] PASS ✓             | plan=N score=N/A R=1.00 | 83 tok | 3.6s | Write a function to check if all the elements in tuple 
+2026-04-26 02:40:42,727 [INFO] [213/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 150 tok | 6.4s | Write a function to check for majority element in the g
+2026-04-26 02:40:45,508 [INFO] [214/500] PASS ✓             | plan=N score=N/A R=1.00 | 64 tok | 2.7s | Write a python function to count set bits of a given nu
+2026-04-26 02:40:54,140 [INFO] [215/500] PASS ✓             | plan=N score=N/A R=1.00 | 200 tok | 8.6s | Write a python function to find the minimum element in 
+2026-04-26 02:40:59,675 [INFO] [216/500] PASS ✓             | plan=N score=N/A R=1.00 | 128 tok | 5.5s | Write a python function to remove the characters which 
+2026-04-26 02:41:04,748 [INFO] [217/500] PASS ✓             | plan=N score=N/A R=1.00 | 117 tok | 5.0s | Write a function to find minimum of three numbers.
+2026-04-26 02:41:10,030 [INFO] [218/500] PASS ✓             | plan=N score=N/A R=1.00 | 123 tok | 5.2s | Write a python function to check whether all the bits a
+2026-04-26 02:41:40,160 [INFO] [219/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 204 tok | 8.8s | Write a function to re-arrange the elements of the give
+2026-04-26 02:41:42,869 [INFO] [220/500] PASS ✓             | plan=N score=N/A R=1.00 | 61 tok | 2.6s | Write a function to replace blank spaces with any chara
+2026-04-26 02:41:49,668 [INFO] [221/500] PASS ✓             | plan=N score=N/A R=1.00 | 157 tok | 6.7s | Write a function to find the maximum sum in the given r
+2026-04-26 02:41:55,148 [INFO] [222/500] PASS ✓             | plan=N score=N/A R=1.00 | 125 tok | 5.4s | Write a function to get the n largest items from a data
+2026-04-26 02:41:59,577 [INFO] [223/500] PASS ✓             | plan=N score=N/A R=1.00 | 102 tok | 4.4s | Write a function to find the lateral surface area of a 
+2026-04-26 02:42:02,178 [INFO] [224/500] PASS ✓             | plan=N score=N/A R=1.00 | 59 tok | 2.5s | Write a function to find the volume of a cube.
+2026-04-26 02:42:26,092 [INFO] [225/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 136 tok | 5.8s | Write a python function to set all even bits of a given
+2026-04-26 02:42:58,121 [INFO] [226/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 266 tok | 11.2s | Write a python function to count the maximum number of 
+2026-04-26 02:43:31,202 [INFO] [227/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 211 tok | 8.9s | Write a function to check the occurrences of records wh
+2026-04-26 02:43:34,696 [INFO] [228/500] PASS ✓             | plan=N score=N/A R=1.00 | 80 tok | 3.4s | Write a python function to count number of non-empty su
+2026-04-26 02:44:06,689 [INFO] [229/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 221 tok | 9.4s | Write a function to find the number of possible sequenc
+2026-04-26 02:44:27,331 [INFO] [230/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 150 tok | 6.4s | Write a function to replace the last element of the lis
+2026-04-26 02:44:35,004 [INFO] [231/500] PASS ✓             | plan=N score=N/A R=1.00 | 181 tok | 7.6s | Write a function to generate a 3d array having each ele
+2026-04-26 02:44:39,209 [INFO] [232/500] PASS ✓             | plan=N score=N/A R=1.00 | 97 tok | 4.1s | Write a function to count total characters in a string.
+2026-04-26 02:45:07,269 [INFO] [233/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 217 tok | 9.2s | Write a function to sort the given list based on the oc
+2026-04-26 02:45:12,791 [INFO] [234/500] PASS ✓             | plan=N score=N/A R=1.00 | 126 tok | 5.5s | Write a python function to find the next perfect square
+2026-04-26 02:45:25,842 [INFO] [235/500] PASS ✓             | plan=N score=N/A R=1.00 | 304 tok | 13.0s | Write a function to find the maximum sum of bi-tonic su
+2026-04-26 02:45:32,790 [INFO] [236/500] PASS ✓             | plan=N score=N/A R=1.00 | 161 tok | 6.9s | Write a function for computing square roots using the b
+2026-04-26 02:45:43,361 [INFO] [237/500] PASS ✓             | plan=N score=N/A R=1.00 | 249 tok | 10.5s | Write a function to find the longest palindromic subseq
+2026-04-26 02:46:01,153 [INFO] [238/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 122 tok | 5.2s | Write a function to calculate the harmonic sum of n-1.
+2026-04-26 02:46:07,531 [INFO] [239/500] PASS ✓             | plan=N score=N/A R=1.00 | 147 tok | 6.3s | Write a function to find the intersection of two arrays
+2026-04-26 02:46:13,731 [INFO] [240/500] PASS ✓             | plan=N score=N/A R=1.00 | 143 tok | 6.1s | Write a python function to count the occcurences of an 
+2026-04-26 02:46:19,415 [INFO] [241/500] PASS ✓             | plan=N score=N/A R=1.00 | 131 tok | 5.6s | Write a function to insert an element before each eleme
+2026-04-26 02:46:22,017 [INFO] [242/500] PASS ✓             | plan=N score=N/A R=1.00 | 59 tok | 2.5s | Write a python function to convert complex numbers to p
+2026-04-26 02:46:27,380 [INFO] [243/500] PASS ✓             | plan=N score=N/A R=1.00 | 123 tok | 5.3s | Write a python function to count integers from a given 
+2026-04-26 02:46:47,193 [INFO] [244/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 161 tok | 6.8s | Write a function to find all words starting with 'a' or
+2026-04-26 02:46:56,337 [INFO] [245/500] PASS ✓             | plan=N score=N/A R=1.00 | 215 tok | 9.1s | Write a function to choose specified number of colours 
+2026-04-26 02:47:03,921 [INFO] [246/500] PASS ✓             | plan=N score=N/A R=1.00 | 178 tok | 7.5s | Write a python function to count the number of prime nu
+2026-04-26 02:47:07,128 [INFO] [247/500] PASS ✓             | plan=N score=N/A R=1.00 | 74 tok | 3.1s | Write a function to swap two numbers.
+2026-04-26 02:47:11,692 [INFO] [248/500] PASS ✓             | plan=N score=N/A R=1.00 | 106 tok | 4.5s | Write a function to find number of odd elements in the 
+2026-04-26 02:47:42,328 [INFO] [249/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 202 tok | 8.5s | Write a function to maximize the given two tuples.
+2026-04-26 02:48:02,414 [INFO] [250/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 131 tok | 5.5s | Write a function to find the nth newman–shanks–williams
+2026-04-26 02:48:25,239 [INFO] [251/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 151 tok | 6.5s | Write a function to perform mathematical division opera
+2026-04-26 02:48:31,374 [INFO] [252/500] PASS ✓             | plan=N score=N/A R=1.00 | 144 tok | 6.1s | Write a function to split a given list into two parts w
+2026-04-26 02:48:37,559 [INFO] [253/500] PASS ✓             | plan=N score=N/A R=1.00 | 144 tok | 6.1s | Write a function to merge two dictionaries.
+2026-04-26 02:48:42,550 [INFO] [254/500] PASS ✓             | plan=N score=N/A R=1.00 | 117 tok | 4.9s | Write a function to calculate a dog's age in dog's year
+2026-04-26 02:49:09,585 [INFO] [255/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 183 tok | 7.9s | Write a function to split a list for every nth element.
+2026-04-26 02:49:12,667 [INFO] [256/500] PASS ✓             | plan=N score=N/A R=1.00 | 70 tok | 3.0s | Write a function to find the lateral surface area of a 
+2026-04-26 02:49:17,203 [INFO] [257/500] PASS ✓             | plan=N score=N/A R=1.00 | 104 tok | 4.5s | Write a python function to find the sum of squares of f
+2026-04-26 02:49:20,939 [INFO] [258/500] PASS ✓             | plan=N score=N/A R=1.00 | 87 tok | 3.7s | Write a function to find the n'th star number.
+2026-04-26 02:49:23,150 [INFO] [259/500] PASS ✓             | plan=N score=N/A R=1.00 | 49 tok | 2.1s | Write a function to find the ascii value of a character
+2026-04-26 02:49:28,567 [INFO] [260/500] PASS ✓             | plan=N score=N/A R=1.00 | 125 tok | 5.3s | Write a python function to find the sum of even numbers
+2026-04-26 02:49:34,172 [INFO] [261/500] PASS ✓             | plan=N score=N/A R=1.00 | 129 tok | 5.5s | Write a python function to find the sum of fifth power 
+2026-04-26 02:49:38,317 [INFO] [262/500] PASS ✓             | plan=N score=N/A R=1.00 | 96 tok | 4.1s | Write a function to perfom the rear element extraction 
+2026-04-26 02:49:44,066 [INFO] [263/500] PASS ✓             | plan=N score=N/A R=1.00 | 133 tok | 5.7s | Write a function to substract the contents of one tuple
+2026-04-26 02:49:51,891 [INFO] [264/500] PASS ✓             | plan=N score=N/A R=1.00 | 183 tok | 7.8s | Write a python function to find sum of even index binom
+2026-04-26 02:50:15,330 [INFO] [265/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 158 tok | 6.7s | Write a python function to find the position of the las
+2026-04-26 02:50:32,234 [INFO] [266/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 96 tok | 4.1s | Write a function to find the volume of a cylinder.
+2026-04-26 02:50:59,418 [INFO] [267/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 204 tok | 8.7s | Write a function to filter a dictionary based on values
+2026-04-26 02:51:05,948 [INFO] [268/500] PASS ✓             | plan=N score=N/A R=1.00 | 147 tok | 6.5s | Write a function to find the element count that occurs 
+2026-04-26 02:51:16,568 [INFO] [269/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 65 tok | 2.8s | Write a function to find the nth decagonal number.
+2026-04-26 02:51:23,182 [INFO] [270/500] PASS ✓             | plan=N score=N/A R=1.00 | 155 tok | 6.5s | Write a function to search an element in the given arra
+2026-04-26 02:51:28,569 [INFO] [271/500] PASS ✓             | plan=N score=N/A R=1.00 | 124 tok | 5.3s | Write a python function to check if the elements of a g
+2026-04-26 02:51:32,913 [INFO] [272/500] PASS ✓             | plan=N score=N/A R=1.00 | 98 tok | 4.3s | Write a function to substaract two lists using map and 
+2026-04-26 02:51:55,011 [INFO] [273/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 208 tok | 8.9s | Write a python function to check whether the frequency 
+2026-04-26 02:51:58,291 [INFO] [274/500] PASS ✓             | plan=N score=N/A R=1.00 | 74 tok | 3.2s | Write a function to check whether all items of a list a
+2026-04-26 02:52:13,042 [INFO] [275/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 116 tok | 5.1s | Write a function that matches a string that has an a fo
+2026-04-26 02:52:25,165 [INFO] [276/500] PASS ✓             | plan=N score=N/A R=1.00 | 277 tok | 12.1s | Write a function to find the largest sum of contiguous 
+2026-04-26 02:52:30,277 [INFO] [277/500] PASS ✓             | plan=N score=N/A R=1.00 | 118 tok | 5.0s | Write a python function to find the sum of squares of f
+2026-04-26 02:52:54,729 [INFO] [278/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 166 tok | 7.0s | Write a function to count array elements having modular
+2026-04-26 02:53:00,053 [INFO] [279/500] PASS ✓             | plan=N score=N/A R=1.00 | 122 tok | 5.3s | Write a python function to calculate the number of odd 
+2026-04-26 02:53:08,350 [INFO] [280/500] PASS ✓             | plan=N score=N/A R=1.00 | 193 tok | 8.2s | Write a function to find the list of lists with maximum
+2026-04-26 02:53:17,190 [INFO] [281/500] PASS ✓             | plan=N score=N/A R=1.00 | 206 tok | 8.8s | Write a function to find out the number of ways of pain
+2026-04-26 02:53:19,419 [INFO] [282/500] PASS ✓             | plan=N score=N/A R=1.00 | 51 tok | 2.2s | Write a python function to find quotient of two numbers
+2026-04-26 02:53:24,565 [INFO] [283/500] PASS ✓             | plan=N score=N/A R=1.00 | 118 tok | 5.1s | Write a function to find the third side of a right angl
+2026-04-26 02:53:38,800 [INFO] [284/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 118 tok | 5.1s | Write a function to find the maximum value in a given h
+2026-04-26 02:54:01,065 [INFO] [285/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 116 tok | 5.0s | Write a function to return the sum of all divisors of a
+2026-04-26 02:54:16,794 [INFO] [286/500] PASS ✓             | plan=N score=N/A R=1.00 | 373 tok | 15.7s | Write a python function to count inversions in an array
+2026-04-26 02:54:27,036 [INFO] [287/500] PASS ✓             | plan=N score=N/A R=1.00 | 239 tok | 10.2s | Write a function to flatten a given nested list structu
+2026-04-26 02:54:55,998 [INFO] [288/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 255 tok | 10.8s | Write a function to find the nested list elements which
+2026-04-26 02:55:20,281 [INFO] [289/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 173 tok | 7.4s | Write a function to calculate the maximum aggregate fro
+2026-04-26 02:55:47,009 [INFO] [290/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 170 tok | 7.2s | Write a function to find the count of all binary sequen
+2026-04-26 02:56:08,567 [INFO] [291/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 170 tok | 7.3s | Write a function to find the depth of a dictionary.
+2026-04-26 02:56:30,214 [INFO] [292/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 125 tok | 5.4s | Write a python function to find the most significant bi
+2026-04-26 02:56:50,477 [INFO] [293/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 184 tok | 7.7s | Write a python function to check whether the count of i
+2026-04-26 02:57:06,745 [INFO] [294/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 108 tok | 4.6s | Write a python function to find element at a given inde
+2026-04-26 02:57:18,648 [INFO] [295/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 84 tok | 3.6s | Write a function to match two words from a list of word
+2026-04-26 02:57:57,083 [INFO] [296/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 267 tok | 11.6s | Write a function to find the maximum sum of increasing 
+2026-04-26 02:58:21,535 [INFO] [297/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 122 tok | 5.2s | Write a function to get a colon of a tuple.
+2026-04-26 02:58:32,931 [INFO] [298/500] PASS ✓             | plan=N score=N/A R=1.00 | 259 tok | 11.3s | Write a function to find the specified number of larges
+2026-04-26 02:58:34,496 [INFO] [299/500] PASS ✓             | plan=N score=N/A R=1.00 | 35 tok | 1.5s | Write a python function to find the maximum of two numb
+2026-04-26 02:58:46,322 [INFO] [300/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 82 tok | 3.5s | Write a function to convert a given string to a tuple.
+2026-04-26 02:59:05,635 [INFO] [301/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 82 tok | 3.5s | Write a python function to set the left most unset bit.
+2026-04-26 02:59:26,770 [INFO] [302/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 106 tok | 4.5s | Write a function to find the volume of a cone.
+2026-04-26 02:59:38,216 [INFO] [303/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 104 tok | 4.4s | Write a python function to print positive numbers in a 
+2026-04-26 03:00:12,515 [INFO] [304/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 191 tok | 8.1s | Write a function to find out the maximum sum such that 
+2026-04-26 03:00:34,149 [INFO] [305/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 168 tok | 7.2s | Write a python function to find the first maximum lengt
+2026-04-26 03:00:41,558 [INFO] [306/500] PASS ✓             | plan=N score=N/A R=1.00 | 170 tok | 7.3s | Write a function to find the index of the last occurren
+2026-04-26 03:00:49,764 [INFO] [307/500] PASS ✓             | plan=N score=N/A R=1.00 | 192 tok | 8.1s | Write a function to reflect the modified run-length enc
+2026-04-26 03:01:21,567 [INFO] [308/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 189 tok | 8.1s | Write a python function to find the maximum volume of a
+2026-04-26 03:01:24,855 [INFO] [309/500] PASS ✓             | plan=N score=N/A R=1.00 | 75 tok | 3.2s | Write a function to find all five characters long word 
+2026-04-26 03:01:31,830 [INFO] [310/500] PASS ✓             | plan=N score=N/A R=1.00 | 163 tok | 6.9s | Write a function to calculate the difference between th
+2026-04-26 03:01:54,035 [INFO] [311/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 159 tok | 6.8s | Write a function to find the demlo number for the given
+2026-04-26 03:02:02,461 [INFO] [312/500] PASS ✓             | plan=N score=N/A R=1.00 | 197 tok | 8.4s | Write a function to find all index positions of the min
+2026-04-26 03:02:34,314 [INFO] [313/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 238 tok | 10.1s | Write a function to re-arrange the given array in alter
+2026-04-26 03:02:55,524 [INFO] [314/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 170 tok | 7.2s | Write a function to extract the sum of alternate chains
+2026-04-26 03:03:03,760 [INFO] [315/500] PASS ✓             | plan=N score=N/A R=1.00 | 192 tok | 8.2s | Write a python function to find the minimum number of s
+2026-04-26 03:03:10,675 [INFO] [316/500] PASS ✓             | plan=N score=N/A R=1.00 | 163 tok | 6.8s | Write a function to get the word with most number of oc
+2026-04-26 03:03:14,414 [INFO] [317/500] PASS ✓             | plan=N score=N/A R=1.00 | 86 tok | 3.7s | Write a function to print check if the triangle is isos
+2026-04-26 03:03:41,972 [INFO] [318/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 144 tok | 6.2s | Write a function to rotate a given list by specified nu
+2026-04-26 03:03:47,235 [INFO] [319/500] PASS ✓             | plan=N score=N/A R=1.00 | 122 tok | 5.2s | Write a python function to count negative numbers in a 
+2026-04-26 03:03:51,456 [INFO] [320/500] PASS ✓             | plan=N score=N/A R=1.00 | 97 tok | 4.2s | Write a function to find all three, four, five characte
+2026-04-26 03:04:07,501 [INFO] [321/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 131 tok | 5.6s | Write a python function to count unset bits of a given 
+2026-04-26 03:04:14,964 [INFO] [322/500] PASS ✓             | plan=N score=N/A R=1.00 | 175 tok | 7.4s | Write a function to count character frequency of a give
+2026-04-26 03:04:19,600 [INFO] [323/500] PASS ✓             | plan=N score=N/A R=1.00 | 108 tok | 4.6s | Write a python function to sort a list according to the
+2026-04-26 03:04:24,448 [INFO] [324/500] PASS ✓             | plan=N score=N/A R=1.00 | 112 tok | 4.8s | Write a python function to check whether the triangle i
+2026-04-26 03:04:28,554 [INFO] [325/500] PASS ✓             | plan=N score=N/A R=1.00 | 95 tok | 4.0s | Write a function to find the sum of arithmetic progress
+2026-04-26 03:04:32,361 [INFO] [326/500] PASS ✓             | plan=N score=N/A R=1.00 | 88 tok | 3.7s | Write a function to check whether the given month name 
+2026-04-26 03:04:54,925 [INFO] [327/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 112 tok | 4.8s | Write a function that matches a word at the end of a st
+2026-04-26 03:05:00,768 [INFO] [328/500] PASS ✓             | plan=N score=N/A R=1.00 | 135 tok | 5.8s | Write a python function to count the number of substrin
+2026-04-26 03:05:34,707 [INFO] [329/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 279 tok | 11.8s | Write a python function to find the maximum occuring di
+2026-04-26 03:05:54,059 [INFO] [330/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 96 tok | 4.1s | Write a python function to find the sum of the three lo
+2026-04-26 03:05:58,483 [INFO] [331/500] PASS ✓             | plan=N score=N/A R=1.00 | 100 tok | 4.3s | Write a function to convert the given set into ordered 
+2026-04-26 03:06:40,225 [INFO] [332/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 309 tok | 13.3s | Write a function to find the smallest range that includ
+2026-04-26 03:06:56,176 [INFO] [333/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 139 tok | 5.9s | Write a function to calculate the number of digits and 
+2026-04-26 03:07:14,913 [INFO] [334/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 146 tok | 6.2s | Write a python function to find number of elements with
+2026-04-26 03:07:22,066 [INFO] [335/500] PASS ✓             | plan=N score=N/A R=1.00 | 164 tok | 7.1s | Write a function to find the difference between two con
+2026-04-26 03:07:41,402 [INFO] [336/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 112 tok | 4.8s | Write a function to find entringer number e(n, k).
+2026-04-26 03:08:04,338 [INFO] [337/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 101 tok | 4.4s | Write a python function to count the number of squares 
+2026-04-26 03:08:27,150 [INFO] [338/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 223 tok | 9.6s | Write a function to count sequences of given length hav
+2026-04-26 03:08:31,360 [INFO] [339/500] PASS ✓             | plan=N score=N/A R=1.00 | 97 tok | 4.1s | Write a python function to check whether the given stri
+2026-04-26 03:08:50,813 [INFO] [340/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 126 tok | 5.5s | Write a python function to minimize the length of the s
+2026-04-26 03:08:58,313 [INFO] [341/500] PASS ✓             | plan=N score=N/A R=1.00 | 174 tok | 7.4s | Write a python function to find the first element occur
+2026-04-26 03:09:03,482 [INFO] [342/500] PASS ✓             | plan=N score=N/A R=1.00 | 119 tok | 5.1s | Write a python function to check whether all the charac
+2026-04-26 03:09:09,401 [INFO] [343/500] PASS ✓             | plan=N score=N/A R=1.00 | 136 tok | 5.8s | Write a function to remove a specified column from a gi
+2026-04-26 03:09:12,370 [INFO] [344/500] PASS ✓             | plan=N score=N/A R=1.00 | 68 tok | 2.9s | Write a function to find t-nth term of arithemetic prog
+2026-04-26 03:09:42,792 [INFO] [345/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 164 tok | 6.9s | Write a python function to count the number of rectangl
+2026-04-26 03:09:46,533 [INFO] [346/500] PASS ✓             | plan=N score=N/A R=1.00 | 87 tok | 3.7s | Write a function to find the third angle of a triangle 
+2026-04-26 03:10:04,603 [INFO] [347/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 144 tok | 6.1s | Write a function to find the maximum element of all the
+2026-04-26 03:10:09,189 [INFO] [348/500] PASS ✓             | plan=N score=N/A R=1.00 | 105 tok | 4.5s | Write a function to find modulo division of two lists u
+2026-04-26 03:10:16,590 [INFO] [349/500] PASS ✓             | plan=N score=N/A R=1.00 | 170 tok | 7.3s | Write a python function to check whether one root of th
+2026-04-26 03:10:19,862 [INFO] [350/500] PASS ✓             | plan=N score=N/A R=1.00 | 73 tok | 3.2s | Write a function to find the n’th carol number.
+2026-04-26 03:10:26,234 [INFO] [351/500] PASS ✓             | plan=N score=N/A R=1.00 | 148 tok | 6.3s | Write a function to remove empty lists from a given lis
+2026-04-26 03:10:34,071 [INFO] [352/500] PASS ✓             | plan=N score=N/A R=1.00 | 182 tok | 7.8s | Write a python function to find the item with maximum o
+2026-04-26 03:10:40,820 [INFO] [353/500] PASS ✓             | plan=N score=N/A R=1.00 | 158 tok | 6.7s | Write a function to add the k elements to each element 
+2026-04-26 03:11:09,110 [INFO] [354/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 271 tok | 11.6s | Write a function to find the number of flips required t
+2026-04-26 03:11:13,669 [INFO] [355/500] PASS ✓             | plan=N score=N/A R=1.00 | 106 tok | 4.5s | Write a python function to count the number of digits o
+2026-04-26 03:11:34,245 [INFO] [356/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 177 tok | 7.4s | Write a python function to find the largest product of 
+2026-04-26 03:11:59,338 [INFO] [357/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 214 tok | 9.1s | Write a function to check if a binary tree is balanced 
+2026-04-26 03:12:05,101 [INFO] [358/500] PASS ✓             | plan=N score=N/A R=1.00 | 134 tok | 5.7s | Write a function to repeat the given tuple n times.
+2026-04-26 03:12:08,921 [INFO] [359/500] PASS ✓             | plan=N score=N/A R=1.00 | 87 tok | 3.8s | Write a function to find the lateral surface area of cu
+2026-04-26 03:12:31,953 [INFO] [360/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 131 tok | 5.6s | Write a function to sort a tuple by its float element.
+2026-04-26 03:12:43,198 [INFO] [361/500] PASS ✓             | plan=N score=N/A R=1.00 | 264 tok | 11.2s | Write a function to find the smallest missing element i
+2026-04-26 03:12:50,381 [INFO] [362/500] PASS ✓             | plan=N score=N/A R=1.00 | 168 tok | 7.1s | Write a function to sort a given list of elements in as
+2026-04-26 03:12:53,423 [INFO] [363/500] PASS ✓             | plan=N score=N/A R=1.00 | 68 tok | 3.0s | Write a function to find the volume of a cuboid.
+2026-04-26 03:13:19,016 [INFO] [364/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 92 tok | 3.9s | Write a function to print all permutations of a given s
+2026-04-26 03:13:35,554 [INFO] [365/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 113 tok | 4.8s | Write a function to round the given number to the neare
+2026-04-26 03:14:09,473 [INFO] [366/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 243 tok | 10.4s | Write a function to remove tuple elements that occur mo
+2026-04-26 03:14:14,749 [INFO] [367/500] PASS ✓             | plan=N score=N/A R=1.00 | 121 tok | 5.2s | Write a python function to remove all occurrences of a 
+2026-04-26 03:14:20,335 [INFO] [368/500] PASS ✓             | plan=N score=N/A R=1.00 | 129 tok | 5.5s | Write a python function to shift last element to first 
+2026-04-26 03:14:24,137 [INFO] [369/500] PASS ✓             | plan=N score=N/A R=1.00 | 86 tok | 3.7s | Write a function to find the surface area of a cuboid.
+2026-04-26 03:14:32,268 [INFO] [370/500] PASS ✓             | plan=N score=N/A R=1.00 | 189 tok | 8.1s | Write a function to generate a two-dimensional array.
+2026-04-26 03:14:39,437 [INFO] [371/500] PASS ✓             | plan=N score=N/A R=1.00 | 166 tok | 7.1s | Write a function to sort a list of lists by a given ind
+2026-04-26 03:14:45,313 [INFO] [372/500] PASS ✓             | plan=N score=N/A R=1.00 | 134 tok | 5.8s | Write a function to find the number of rotations in a c
+2026-04-26 03:15:07,663 [INFO] [373/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 142 tok | 6.1s | Write a python function to toggle all odd bits of a giv
+2026-04-26 03:15:14,420 [INFO] [374/500] PASS ✓             | plan=N score=N/A R=1.00 | 154 tok | 6.7s | Write a python function to find the frequency of the sm
+2026-04-26 03:15:19,501 [INFO] [375/500] PASS ✓             | plan=N score=N/A R=1.00 | 118 tok | 5.0s | Write a function to find the n'th perrin number using r
+2026-04-26 03:15:40,082 [INFO] [376/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 121 tok | 5.2s | Write a function to find out the minimum no of swaps re
+2026-04-26 03:15:44,403 [INFO] [377/500] PASS ✓             | plan=N score=N/A R=1.00 | 99 tok | 4.2s | Write a python function to check whether the hexadecima
+2026-04-26 03:15:49,895 [INFO] [378/500] PASS ✓             | plan=N score=N/A R=1.00 | 127 tok | 5.4s | Write a python function to find the highest power of 2 
+2026-04-26 03:15:56,829 [INFO] [379/500] PASS ✓             | plan=N score=N/A R=1.00 | 163 tok | 6.9s | Write a function to find the n'th lucas number.
+2026-04-26 03:16:00,742 [INFO] [380/500] PASS ✓             | plan=N score=N/A R=1.00 | 90 tok | 3.9s | Write a function to insert a given string at the beginn
+2026-04-26 03:16:10,910 [INFO] [381/500] PASS ✓             | plan=N score=N/A R=1.00 | 239 tok | 10.1s | Write a function to convert more than one list to neste
+2026-04-26 03:16:34,805 [INFO] [382/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 175 tok | 7.5s | Write a function to find the maximum sum possible by us
+2026-04-26 03:16:53,216 [INFO] [383/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 110 tok | 4.7s | Write a function to find the list with maximum length u
+2026-04-26 03:17:05,882 [INFO] [384/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 83 tok | 3.5s | Write a function to check if given tuple is distinct or
+2026-04-26 03:17:12,737 [INFO] [385/500] PASS ✓             | plan=N score=N/A R=1.00 | 157 tok | 6.8s | Write a python function to find the first non-repeated 
+2026-04-26 03:17:32,496 [INFO] [386/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 88 tok | 3.8s | Write a function to check whether the given string star
+2026-04-26 03:17:35,975 [INFO] [387/500] PASS ✓             | plan=N score=N/A R=1.00 | 81 tok | 3.4s | Write a function to find the median of three specific n
+2026-04-26 03:17:54,714 [INFO] [388/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 126 tok | 5.4s | Write a function to compute the sum of digits of each n
+2026-04-26 03:18:01,913 [INFO] [389/500] PASS ✓             | plan=N score=N/A R=1.00 | 167 tok | 7.1s | Write a function to perform the mathematical bitwise xo
+2026-04-26 03:18:26,090 [INFO] [390/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 169 tok | 7.2s | Write a function to extract the frequency of unique tup
+2026-04-26 03:18:34,931 [INFO] [391/500] PASS ✓             | plan=N score=N/A R=1.00 | 207 tok | 8.8s | Write a function to perform index wise addition of tupl
+2026-04-26 03:19:02,772 [INFO] [392/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 138 tok | 5.8s | Write a function to compute the value of ncr%p.
+2026-04-26 03:19:31,594 [INFO] [393/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 145 tok | 6.2s | Write a function to check if a url is valid or not usin
+2026-04-26 03:19:32,699 [INFO] [394/500] PASS ✓             | plan=N score=N/A R=1.00 | 23 tok | 1.0s | Write a python function to find the minimum of two numb
+2026-04-26 03:19:36,716 [INFO] [395/500] PASS ✓             | plan=N score=N/A R=1.00 | 93 tok | 4.0s | Write a function to check whether an element exists wit
+2026-04-26 03:19:40,276 [INFO] [396/500] PASS ✓             | plan=N score=N/A R=1.00 | 81 tok | 3.5s | Write a python function to find the parity of a given n
+2026-04-26 03:20:15,987 [INFO] [397/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 258 tok | 11.2s | Write a function to create the next bigger number by re
+2026-04-26 03:20:46,255 [INFO] [398/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 202 tok | 8.6s | Write a function to find k number of pairs which consis
+2026-04-26 03:20:52,502 [INFO] [399/500] PASS ✓             | plan=N score=N/A R=1.00 | 145 tok | 6.2s | Write a function to find the minimum product from the p
+2026-04-26 03:21:06,631 [INFO] [400/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 115 tok | 4.9s | Write a function to find the minimum value in a given h
+2026-04-26 03:21:22,804 [INFO] [401/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 93 tok | 3.9s | Write a function to convert the given snake case string
+2026-04-26 03:21:28,170 [INFO] [402/500] PASS ✓             | plan=N score=N/A R=1.00 | 125 tok | 5.3s | Write a python function to remove odd numbers from a gi
+2026-04-26 03:21:33,767 [INFO] [403/500] PASS ✓             | plan=N score=N/A R=1.00 | 131 tok | 5.5s | Write a function to extract the nth element from a give
+2026-04-26 03:21:37,438 [INFO] [404/500] PASS ✓             | plan=N score=N/A R=1.00 | 85 tok | 3.6s | Write a python function to check whether the value exis
+2026-04-26 03:22:02,037 [INFO] [405/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 169 tok | 7.1s | Write a python function to find a pair with highest pro
+2026-04-26 03:22:20,319 [INFO] [406/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 111 tok | 4.6s | Write a function to find the maximum sum we can make by
+2026-04-26 03:22:43,732 [INFO] [407/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 204 tok | 8.6s | Write a function to find common first element in given 
+2026-04-26 03:22:50,805 [INFO] [408/500] PASS ✓             | plan=N score=N/A R=1.00 | 158 tok | 7.0s | Write a python function to find the sublist having maxi
+2026-04-26 03:22:57,806 [INFO] [409/500] PASS ✓             | plan=N score=N/A R=1.00 | 161 tok | 6.9s | Write a function to round every number of a given list 
+2026-04-26 03:23:03,167 [INFO] [410/500] PASS ✓             | plan=N score=N/A R=1.00 | 120 tok | 5.3s | Write a python function to find the cube sum of first n
+2026-04-26 03:23:08,345 [INFO] [411/500] PASS ✓             | plan=N score=N/A R=1.00 | 120 tok | 5.1s | Write a function to concatenate each element of tuple b
+2026-04-26 03:23:12,951 [INFO] [412/500] PASS ✓             | plan=N score=N/A R=1.00 | 102 tok | 4.5s | Write a python function to find the average of cubes of
+2026-04-26 03:23:54,171 [INFO] [413/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 334 tok | 14.3s | Write a function to solve gold mine problem.
+2026-04-26 03:23:59,490 [INFO] [414/500] PASS ✓             | plan=N score=N/A R=1.00 | 123 tok | 5.2s | Write a function to extract only the rear index element
+2026-04-26 03:24:03,756 [INFO] [415/500] PASS ✓             | plan=N score=N/A R=1.00 | 95 tok | 4.2s | Write a function to count the number of sublists contai
+2026-04-26 03:24:08,224 [INFO] [416/500] PASS ✓             | plan=N score=N/A R=1.00 | 102 tok | 4.4s | Write a function to filter odd numbers using lambda fun
+2026-04-26 03:24:14,897 [INFO] [417/500] PASS ✓             | plan=N score=N/A R=1.00 | 155 tok | 6.6s | Write a function to convert a date of yyyy-mm-dd format
+2026-04-26 03:24:27,498 [INFO] [418/500] PASS ✓             | plan=N score=N/A R=1.00 | 294 tok | 12.5s | Write a function to sort the given array by using shell
+2026-04-26 03:24:34,519 [INFO] [419/500] PASS ✓             | plan=N score=N/A R=1.00 | 163 tok | 7.0s | Write a function to extract the elementwise and tuples 
+2026-04-26 03:24:50,297 [INFO] [420/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 78 tok | 3.4s | Write a function to find the directrix of a parabola.
+2026-04-26 03:25:06,728 [INFO] [421/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 118 tok | 5.1s | Write a function that takes two lists and returns true 
+2026-04-26 03:25:18,855 [INFO] [422/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 82 tok | 3.5s | Write a function to find the median of a trapezium.
+2026-04-26 03:25:39,089 [INFO] [423/500] FAIL ✗ → FIXED ✓   | plan=N score=N/A R=0.00 | 118 tok | 5.1s | Write a function to check whether the entered number is
+2026-04-26 03:25:43,865 [INFO] [424/500] PASS ✓             | plan=N score=N/A R=1.00 | 110 tok | 4.7s | Write a function that matches a string that has an a fo
+2026-04-26 03:25:46,652 [INFO] [425/500] PASS ✓             | plan=N score=N/A R=1.00 | 62 tok | 2.7s | Write a python function to find the last digit of a giv
+2026-04-26 03:25:58,734 [INFO] [426/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 81 tok | 3.5s | Write a python function to print negative numbers in a 
+2026-04-26 03:26:14,825 [INFO] [427/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 127 tok | 5.5s | Write a function to remove odd characters in a string.
+2026-04-26 03:26:38,610 [INFO] [428/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 158 tok | 6.9s | Write a function to count bidirectional tuple pairs.
+2026-04-26 03:26:42,602 [INFO] [429/500] PASS ✓             | plan=N score=N/A R=1.00 | 89 tok | 3.9s | Write a function to convert a list of multiple integers
+2026-04-26 03:26:48,642 [INFO] [430/500] PASS ✓             | plan=N score=N/A R=1.00 | 140 tok | 6.0s | Write a function to find all adverbs and their position
+2026-04-26 03:26:51,601 [INFO] [431/500] PASS ✓             | plan=N score=N/A R=1.00 | 68 tok | 2.9s | Write a function to find the surface area of a cube.
+2026-04-26 03:27:11,720 [INFO] [432/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 149 tok | 6.4s | Write a function to find the ration of positive numbers
+2026-04-26 03:27:30,216 [INFO] [433/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 147 tok | 6.3s | Write a python function to find the largest negative nu
+2026-04-26 03:27:58,864 [INFO] [434/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 207 tok | 9.0s | Write a function to trim each tuple by k in the given t
+2026-04-26 03:28:25,741 [INFO] [435/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 225 tok | 9.9s | Write a function to perform index wise multiplication o
+2026-04-26 03:28:35,860 [INFO] [436/500] PASS ✓             | plan=N score=N/A R=1.00 | 230 tok | 10.1s | Write a python function to count the occurence of all e
+2026-04-26 03:28:41,980 [INFO] [437/500] PASS ✓             | plan=N score=N/A R=1.00 | 137 tok | 6.0s | Write a function to find cubes of individual elements i
+2026-04-26 03:28:52,527 [INFO] [438/500] PASS ✓             | plan=N score=N/A R=1.00 | 248 tok | 10.5s | Write a function to calculate the sum of perrin numbers
+2026-04-26 03:29:02,251 [INFO] [439/500] PASS ✓             | plan=N score=N/A R=1.00 | 227 tok | 9.7s | Write a python function to check whether the triangle i
+2026-04-26 03:29:08,607 [INFO] [440/500] PASS ✓             | plan=N score=N/A R=1.00 | 146 tok | 6.3s | Write a function to extract specified size of strings f
+2026-04-26 03:29:11,635 [INFO] [441/500] PASS ✓             | plan=N score=N/A R=1.00 | 69 tok | 3.0s | Write a function to remove all whitespaces from the giv
+2026-04-26 03:29:15,574 [INFO] [442/500] PASS ✓             | plan=N score=N/A R=1.00 | 90 tok | 3.9s | Write a function that gives loss amount if the given am
+2026-04-26 03:29:21,361 [INFO] [443/500] PASS ✓             | plan=N score=N/A R=1.00 | 135 tok | 5.7s | Write a python function to find the sum of even factors
+2026-04-26 03:29:25,319 [INFO] [444/500] PASS ✓             | plan=N score=N/A R=1.00 | 90 tok | 3.9s | Write a function that matches a word containing 'z'.
+2026-04-26 03:29:30,104 [INFO] [445/500] PASS ✓             | plan=N score=N/A R=1.00 | 110 tok | 4.7s | Write a function to check whether the given month numbe
+2026-04-26 03:29:36,254 [INFO] [446/500] PASS ✓             | plan=N score=N/A R=1.00 | 141 tok | 6.1s | Write a function to reverse strings in a given list of 
+2026-04-26 03:29:45,424 [INFO] [447/500] PASS ✓             | plan=N score=N/A R=1.00 | 213 tok | 9.1s | Write a python function to find the sublist having mini
+2026-04-26 03:29:47,979 [INFO] [448/500] PASS ✓             | plan=N score=N/A R=1.00 | 58 tok | 2.5s | Write a function to find the area of a rectangle.
+2026-04-26 03:29:51,421 [INFO] [449/500] PASS ✓             | plan=N score=N/A R=1.00 | 80 tok | 3.4s | Write a function to remove uppercase substrings from a 
+2026-04-26 03:29:57,381 [INFO] [450/500] PASS ✓             | plan=N score=N/A R=1.00 | 138 tok | 5.9s | Write a python function to get the first element of eac
+2026-04-26 03:30:10,752 [INFO] [451/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 109 tok | 4.7s | Write a python function to count the upper case charact
+2026-04-26 03:31:06,648 [INFO] [452/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 266 tok | 11.3s | Write a function to find all possible combinations of t
+2026-04-26 03:31:15,573 [INFO] [453/500] PASS ✓             | plan=N score=N/A R=1.00 | 202 tok | 8.9s | Write a function to find the maximum product subarray o
+2026-04-26 03:31:20,133 [INFO] [454/500] PASS ✓             | plan=N score=N/A R=1.00 | 103 tok | 4.5s | Write a function to check if all values are same in a d
+2026-04-26 03:31:26,746 [INFO] [455/500] PASS ✓             | plan=N score=N/A R=1.00 | 154 tok | 6.5s | Write a function to drop empty items from a given dicti
+2026-04-26 03:31:35,138 [INFO] [456/500] PASS ✓             | plan=N score=N/A R=1.00 | 194 tok | 8.3s | Write a function to find the peak element in the given 
+2026-04-26 03:32:01,409 [INFO] [457/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 153 tok | 6.5s | Write a python function to convert decimal number to oc
+2026-04-26 03:32:33,234 [INFO] [458/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 237 tok | 10.1s | Write a function to find the maximum product formed by 
+2026-04-26 03:33:05,785 [INFO] [459/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 298 tok | 12.7s | Write a function to find the maximum profit earned from
+2026-04-26 03:33:25,665 [INFO] [460/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 157 tok | 6.7s | Write a function to find the pairwise addition of the e
+2026-04-26 03:33:31,460 [INFO] [461/500] PASS ✓             | plan=N score=N/A R=1.00 | 133 tok | 5.7s | Write a python function to find remainder of array mult
+2026-04-26 03:33:37,676 [INFO] [462/500] PASS ✓             | plan=N score=N/A R=1.00 | 138 tok | 6.1s | Write a python function to check whether the given list
+2026-04-26 03:34:03,108 [INFO] [463/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 169 tok | 7.3s | Write a function to find the tuple intersection of elem
+2026-04-26 03:34:09,774 [INFO] [464/500] PASS ✓             | plan=N score=N/A R=1.00 | 147 tok | 6.6s | Write a function to replace characters in a string.
+2026-04-26 03:34:14,663 [INFO] [465/500] PASS ✓             | plan=N score=N/A R=1.00 | 106 tok | 4.8s | Write a function to sort counter by value.
+2026-04-26 03:34:21,331 [INFO] [466/500] PASS ✓             | plan=N score=N/A R=1.00 | 154 tok | 6.6s | Write a python function to find the sum of the largest 
+2026-04-26 03:34:22,207 [INFO] [467/500] PASS ✓             | plan=N score=N/A R=1.00 | 17 tok | 0.8s | Write a python function to convert the given string to 
+2026-04-26 03:34:27,768 [INFO] [468/500] PASS ✓             | plan=N score=N/A R=1.00 | 123 tok | 5.5s | Write a function to remove lowercase substrings from a 
+2026-04-26 03:34:31,335 [INFO] [469/500] PASS ✓             | plan=N score=N/A R=1.00 | 83 tok | 3.5s | Write a python function to find the first digit of a gi
+2026-04-26 03:34:40,776 [INFO] [470/500] PASS ✓             | plan=N score=N/A R=1.00 | 212 tok | 9.4s | Write a python function to find the maximum occurring c
+2026-04-26 03:34:51,605 [INFO] [471/500] PASS ✓             | plan=N score=N/A R=1.00 | 243 tok | 10.8s | Write a function to determine if there is a subset of t
+2026-04-26 03:34:55,276 [INFO] [472/500] PASS ✓             | plan=N score=N/A R=1.00 | 83 tok | 3.6s | Write a function to find sequences of one upper case le
+2026-04-26 03:35:14,858 [INFO] [473/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 111 tok | 5.0s | Write a python function to find the first natural numbe
+2026-04-26 03:35:20,530 [INFO] [474/500] PASS ✓             | plan=N score=N/A R=1.00 | 131 tok | 5.6s | Write a function to remove the matching tuples from the
+2026-04-26 03:35:27,117 [INFO] [475/500] PASS ✓             | plan=N score=N/A R=1.00 | 151 tok | 6.5s | Write a function to find the largest palindromic number
+2026-04-26 03:35:33,753 [INFO] [476/500] PASS ✓             | plan=N score=N/A R=1.00 | 147 tok | 6.6s | Write a function to compute binomial probability for th
+2026-04-26 03:35:38,386 [INFO] [477/500] PASS ✓             | plan=N score=N/A R=1.00 | 102 tok | 4.6s | Write a function to sort a list of tuples in increasing
+2026-04-26 03:35:42,924 [INFO] [478/500] PASS ✓             | plan=N score=N/A R=1.00 | 101 tok | 4.5s | Write a function to find the area of a pentagon.
+2026-04-26 03:35:47,116 [INFO] [479/500] PASS ✓             | plan=N score=N/A R=1.00 | 94 tok | 4.1s | Write a python function to find the frequency of the la
+2026-04-26 03:36:11,748 [INFO] [480/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 160 tok | 6.8s | Write a function to extract all the pairs which are sym
+2026-04-26 03:36:15,331 [INFO] [481/500] PASS ✓             | plan=N score=N/A R=1.00 | 82 tok | 3.5s | Write a function to find the sum of geometric progressi
+2026-04-26 03:36:22,855 [INFO] [482/500] PASS ✓             | plan=N score=N/A R=1.00 | 174 tok | 7.5s | Write a function to search an element in the given arra
+2026-04-26 03:39:12,142 [INFO] [483/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 1972 tok | 82.8s | Write a function to calculate a grid of hexagon coordin
+2026-04-26 03:39:16,508 [INFO] [484/500] PASS ✓             | plan=N score=N/A R=1.00 | 100 tok | 4.3s | Write a function to convert the given binary tuple to i
+2026-04-26 03:39:20,197 [INFO] [485/500] PASS ✓             | plan=N score=N/A R=1.00 | 83 tok | 3.6s | Write a function to remove lowercase substrings from a 
+2026-04-26 03:39:25,009 [INFO] [486/500] PASS ✓             | plan=N score=N/A R=1.00 | 110 tok | 4.7s | Write a function to find the smallest integers from a g
+2026-04-26 03:39:30,637 [INFO] [487/500] PASS ✓             | plan=N score=N/A R=1.00 | 129 tok | 5.6s | Write a function to find the surface area of a cone.
+2026-04-26 03:39:33,116 [INFO] [488/500] PASS ✓             | plan=N score=N/A R=1.00 | 56 tok | 2.4s | Write a python function to find gcd of two positive int
+2026-04-26 03:39:35,458 [INFO] [489/500] PASS ✓             | plan=N score=N/A R=1.00 | 53 tok | 2.3s | Write a function to find the diameter of a circle.
+2026-04-26 03:39:50,504 [INFO] [490/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 115 tok | 4.9s | Write a function to concatenate all elements of the giv
+2026-04-26 03:39:57,585 [INFO] [491/500] PASS ✓             | plan=N score=N/A R=1.00 | 159 tok | 7.0s | Write a python function to find common divisor between 
+2026-04-26 03:39:58,940 [INFO] [492/500] PASS ✓             | plan=N score=N/A R=1.00 | 30 tok | 1.3s | Write a python function to find remainder of two number
+2026-04-26 03:40:05,617 [INFO] [493/500] PASS ✓             | plan=N score=N/A R=1.00 | 151 tok | 6.6s | Write a function to add consecutive numbers of a given 
+2026-04-26 03:40:08,685 [INFO] [494/500] PASS ✓             | plan=N score=N/A R=1.00 | 68 tok | 3.0s | Write a python function to find the cube sum of first n
+2026-04-26 03:40:16,507 [INFO] [495/500] PASS ✓             | plan=N score=N/A R=1.00 | 183 tok | 7.8s | Write a function to move all zeroes to the end of the g
+2026-04-26 03:40:21,507 [INFO] [496/500] PASS ✓             | plan=N score=N/A R=1.00 | 116 tok | 4.9s | Write a function to calculate the permutation coefficie
+2026-04-26 03:40:26,931 [INFO] [497/500] PASS ✓             | plan=N score=N/A R=1.00 | 119 tok | 5.3s | Write a function to remove specific words from a given 
+2026-04-26 03:40:51,326 [INFO] [498/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 169 tok | 7.2s | Write a function to check if the common elements betwee
+2026-04-26 03:40:58,225 [INFO] [499/500] PASS ✓             | plan=N score=N/A R=1.00 | 160 tok | 6.8s | Write a python function to find the average of odd numb
+2026-04-26 03:41:22,060 [INFO] [500/500] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 180 tok | 7.7s | Write a function to find the number of subsequences hav
+2026-04-26 03:41:22,061 [INFO] 
+RESULTS: test
+2026-04-26 03:41:22,062 [INFO]   pass@1  (attempt 1)     : 303/500 (60.6%)
+2026-04-26 03:41:22,062 [INFO]   pass@1  (after feedback): 327/500 (65.4%)
+2026-04-26 03:41:22,062 [INFO]   tasks entering feedback : 197
+2026-04-26 03:41:22,062 [INFO]   recovered by feedback   : 24 (12.2% of feedback tasks)
+2026-04-26 03:41:22,062 [INFO]   avg plan_score: N/A (judge disabled)
+2026-04-26 03:41:22,062 [INFO]   avg reward (attempt 1)  : 0.606
+2026-04-26 03:41:22,062 [INFO]   avg reward (final)      : 0.654
+2026-04-26 03:41:22,062 [INFO]   Saved: eval_results_optional_no_reward/eval_test.jsonl
+2026-04-26 03:41:22,064 [INFO] 
+FINAL SUMMARY
+2026-04-26 03:41:22,064 [INFO]   Split      pass@1  pass+FB  recovered            judge
+2026-04-26 03:41:22,064 [INFO]   val        67.8%   72.2%          4       rule-based
+2026-04-26 03:41:22,064 [INFO]   test       60.6%   65.4%         24       rule-based
+2026-04-26 03:41:22,064 [INFO] Summary     → eval_results_optional_no_reward/summary_global_step_230_20260426_013358.json
+2026-04-26 03:41:22,065 [INFO] Raw outputs → eval_results_optional_no_reward/raw_global_step_230_20260426_013358.jsonl

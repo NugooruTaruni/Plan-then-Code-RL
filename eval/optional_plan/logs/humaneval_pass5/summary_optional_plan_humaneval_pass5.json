@@ -1,0 +1,11 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 164,
+    "n": 5,
+    "passed": 145,
+    "pass_at_5": 0.884,
+    "has_plan_rate": 0.93,
+    "out_path": "eval_results_optional_plan/humaneval_pass5_test.jsonl"
+  }
+]

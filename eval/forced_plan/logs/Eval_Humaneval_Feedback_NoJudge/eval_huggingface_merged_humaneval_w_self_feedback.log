@@ -1,0 +1,352 @@
+2026-04-25 19:32:57,696 [INFO] [HumanEval+] checkpoint=checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140
+2026-04-25 19:32:57,697 [INFO] alpha=0.5 beta=1.0 judge=rule-based (no GPT) feedback=on (max=1) start_from=0
+2026-04-25 19:32:57,697 [INFO] raw generations → eval_results_humaneval/raw_huggingface_merged_step140_20260425_193257.jsonl
+2026-04-25 19:32:57,697 [INFO] Loading tokenizer: Qwen/Qwen2.5-Coder-3B-Instruct
+2026-04-25 19:32:58,567 [INFO] Loading HF model: checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140
+2026-04-25 19:33:01,416 [INFO] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-04-25 19:33:45,665 [INFO]   ✓ HF model loaded
+2026-04-25 19:33:45,667 [INFO] device: cuda:0
+2026-04-25 19:33:45,846 [INFO] Loaded 164 tasks (start_from=0)
+2026-04-25 19:33:45,847 [INFO] 
+============================================================
+EVALUATING: HumanEval+ (164 tasks)
+============================================================
+2026-04-25 19:34:38,045 [INFO] [  1/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 568 tok | 34.8s | has_close_elements
+[  1/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 568 tok | 34.8s | has_close_elements
+2026-04-25 19:35:33,126 [INFO] [  2/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 534 tok | 29.9s | separate_paren_groups
+[  2/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 534 tok | 29.9s | separate_paren_groups
+2026-04-25 19:36:01,478 [INFO] [  3/164] PASS ✓             | plan=Y score=N/A R=1.00 | 427 tok | 28.1s | truncate_number
+[  3/164] PASS ✓             | plan=Y score=N/A R=1.00 | 427 tok | 28.1s | truncate_number
+2026-04-25 19:36:21,205 [INFO] [  4/164] PASS ✓             | plan=Y score=N/A R=1.00 | 320 tok | 19.4s | below_zero
+[  4/164] PASS ✓             | plan=Y score=N/A R=1.00 | 320 tok | 19.4s | below_zero
+2026-04-25 19:36:46,106 [INFO] [  5/164] PASS ✓             | plan=Y score=N/A R=1.00 | 339 tok | 24.4s | mean_absolute_deviation
+[  5/164] PASS ✓             | plan=Y score=N/A R=1.00 | 339 tok | 24.4s | mean_absolute_deviation
+2026-04-25 19:37:21,919 [INFO] [  6/164] PASS ✓             | plan=Y score=N/A R=1.00 | 448 tok | 35.5s | intersperse
+[  6/164] PASS ✓             | plan=Y score=N/A R=1.00 | 448 tok | 35.5s | intersperse
+2026-04-25 19:38:03,448 [INFO] [  7/164] PASS ✓             | plan=Y score=N/A R=1.00 | 584 tok | 41.2s | parse_nested_parens
+[  7/164] PASS ✓             | plan=Y score=N/A R=1.00 | 584 tok | 41.2s | parse_nested_parens
+2026-04-25 19:38:43,314 [INFO] [  8/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 370 tok | 23.1s | filter_by_substring
+[  8/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 370 tok | 23.1s | filter_by_substring
+2026-04-25 19:39:36,928 [INFO] [  9/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 457 tok | 32.8s | sum_product
+[  9/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 457 tok | 32.8s | sum_product
+2026-04-25 19:39:58,917 [INFO] [ 10/164] PASS ✓             | plan=Y score=N/A R=1.00 | 459 tok | 21.7s | rolling_max
+[ 10/164] PASS ✓             | plan=Y score=N/A R=1.00 | 459 tok | 21.7s | rolling_max
+2026-04-25 19:40:20,961 [INFO] [ 11/164] PASS ✓             | plan=Y score=N/A R=1.00 | 484 tok | 21.8s | make_palindrome
+[ 11/164] PASS ✓             | plan=Y score=N/A R=1.00 | 484 tok | 21.8s | make_palindrome
+2026-04-25 19:40:46,130 [INFO] [ 12/164] PASS ✓             | plan=Y score=N/A R=1.00 | 559 tok | 24.9s | string_xor
+[ 12/164] PASS ✓             | plan=Y score=N/A R=1.00 | 559 tok | 24.9s | string_xor
+2026-04-25 19:41:01,345 [INFO] [ 13/164] PASS ✓             | plan=Y score=N/A R=1.00 | 345 tok | 14.9s | longest
+[ 13/164] PASS ✓             | plan=Y score=N/A R=1.00 | 345 tok | 14.9s | longest
+2026-04-25 19:41:24,217 [INFO] [ 14/164] PASS ✓             | plan=Y score=N/A R=1.00 | 508 tok | 22.6s | greatest_common_divisor
+[ 14/164] PASS ✓             | plan=Y score=N/A R=1.00 | 508 tok | 22.6s | greatest_common_divisor
+2026-04-25 19:41:39,136 [INFO] [ 15/164] PASS ✓             | plan=Y score=N/A R=1.00 | 321 tok | 14.6s | all_prefixes
+[ 15/164] PASS ✓             | plan=Y score=N/A R=1.00 | 321 tok | 14.6s | all_prefixes
+2026-04-25 19:42:06,458 [INFO] [ 16/164] PASS ✓             | plan=Y score=N/A R=1.00 | 454 tok | 19.6s | string_sequence
+[ 16/164] PASS ✓             | plan=Y score=N/A R=1.00 | 454 tok | 19.6s | string_sequence
+2026-04-25 19:42:21,219 [INFO] [ 17/164] PASS ✓             | plan=Y score=N/A R=1.00 | 348 tok | 14.5s | count_distinct_characters
+[ 17/164] PASS ✓             | plan=Y score=N/A R=1.00 | 348 tok | 14.5s | count_distinct_characters
+2026-04-25 19:42:45,558 [INFO] [ 18/164] PASS ✓             | plan=Y score=N/A R=1.00 | 578 tok | 24.1s | parse_music
+[ 18/164] PASS ✓             | plan=Y score=N/A R=1.00 | 578 tok | 24.1s | parse_music
+2026-04-25 19:43:04,462 [INFO] [ 19/164] PASS ✓             | plan=Y score=N/A R=1.00 | 449 tok | 18.7s | how_many_times
+[ 19/164] PASS ✓             | plan=Y score=N/A R=1.00 | 449 tok | 18.7s | how_many_times
+2026-04-25 19:43:51,342 [INFO] [ 20/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 535 tok | 22.6s | sort_numbers
+[ 20/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 535 tok | 22.6s | sort_numbers
+2026-04-25 19:44:15,285 [INFO] [ 21/164] PASS ✓             | plan=Y score=N/A R=1.00 | 566 tok | 23.7s | find_closest_elements
+[ 21/164] PASS ✓             | plan=Y score=N/A R=1.00 | 566 tok | 23.7s | find_closest_elements
+2026-04-25 19:44:35,912 [INFO] [ 22/164] PASS ✓             | plan=Y score=N/A R=1.00 | 490 tok | 20.3s | rescale_to_unit
+[ 22/164] PASS ✓             | plan=Y score=N/A R=1.00 | 490 tok | 20.3s | rescale_to_unit
+2026-04-25 19:45:14,379 [INFO] [ 23/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 451 tok | 18.6s | filter_integers
+[ 23/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 451 tok | 18.6s | filter_integers
+2026-04-25 19:45:28,581 [INFO] [ 24/164] PASS ✓             | plan=Y score=N/A R=1.00 | 330 tok | 13.9s | strlen
+[ 24/164] PASS ✓             | plan=Y score=N/A R=1.00 | 330 tok | 13.9s | strlen
+2026-04-25 19:45:49,190 [INFO] [ 25/164] PASS ✓             | plan=Y score=N/A R=1.00 | 434 tok | 19.2s | largest_divisor
+[ 25/164] PASS ✓             | plan=Y score=N/A R=1.00 | 434 tok | 19.2s | largest_divisor
+2026-04-25 19:46:16,912 [INFO] [ 26/164] PASS ✓             | plan=Y score=N/A R=1.00 | 641 tok | 27.4s | factorize
+[ 26/164] PASS ✓             | plan=Y score=N/A R=1.00 | 641 tok | 27.4s | factorize
+2026-04-25 19:46:40,006 [INFO] [ 27/164] PASS ✓             | plan=Y score=N/A R=1.00 | 547 tok | 22.8s | remove_duplicates
+[ 27/164] PASS ✓             | plan=Y score=N/A R=1.00 | 547 tok | 22.8s | remove_duplicates
+2026-04-25 19:46:58,574 [INFO] [ 28/164] PASS ✓             | plan=Y score=N/A R=1.00 | 442 tok | 18.3s | flip_case
+[ 28/164] PASS ✓             | plan=Y score=N/A R=1.00 | 442 tok | 18.3s | flip_case
+2026-04-25 19:47:17,685 [INFO] [ 29/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 284 tok | 11.9s | concatenate
+[ 29/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 284 tok | 11.9s | concatenate
+2026-04-25 19:47:42,307 [INFO] [ 30/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 333 tok | 13.8s | filter_by_prefix
+[ 30/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 333 tok | 13.8s | filter_by_prefix
+2026-04-25 19:48:02,125 [INFO] [ 31/164] PASS ✓             | plan=Y score=N/A R=1.00 | 440 tok | 19.5s | get_positive
+[ 31/164] PASS ✓             | plan=Y score=N/A R=1.00 | 440 tok | 19.5s | get_positive
+2026-04-25 19:48:24,642 [INFO] [ 32/164] PASS ✓             | plan=Y score=N/A R=1.00 | 526 tok | 22.3s | is_prime
+[ 32/164] PASS ✓             | plan=Y score=N/A R=1.00 | 526 tok | 22.3s | is_prime
+2026-04-25 19:49:22,223 [INFO] [ 33/164] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 699 tok | 29.0s | find_zero
+[ 33/164] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 699 tok | 29.0s | find_zero
+2026-04-25 19:49:43,074 [INFO] [ 34/164] PASS ✓             | plan=Y score=N/A R=1.00 | 491 tok | 20.6s | sort_third
+[ 34/164] PASS ✓             | plan=Y score=N/A R=1.00 | 491 tok | 20.6s | sort_third
+2026-04-25 19:49:56,827 [INFO] [ 35/164] PASS ✓             | plan=Y score=N/A R=1.00 | 316 tok | 13.5s | unique
+[ 35/164] PASS ✓             | plan=Y score=N/A R=1.00 | 316 tok | 13.5s | unique
+2026-04-25 19:50:14,528 [INFO] [ 36/164] PASS ✓             | plan=Y score=N/A R=1.00 | 404 tok | 17.4s | max_element
+[ 36/164] PASS ✓             | plan=Y score=N/A R=1.00 | 404 tok | 17.4s | max_element
+2026-04-25 19:50:39,126 [INFO] [ 37/164] PASS ✓             | plan=Y score=N/A R=1.00 | 520 tok | 23.3s | fizz_buzz
+[ 37/164] PASS ✓             | plan=Y score=N/A R=1.00 | 520 tok | 23.3s | fizz_buzz
+2026-04-25 19:50:57,261 [INFO] [ 38/164] PASS ✓             | plan=Y score=N/A R=1.00 | 417 tok | 17.9s | sort_even
+[ 38/164] PASS ✓             | plan=Y score=N/A R=1.00 | 417 tok | 17.9s | sort_even
+2026-04-25 19:51:19,187 [INFO] [ 39/164] PASS ✓             | plan=Y score=N/A R=1.00 | 518 tok | 21.7s | decode_cyclic
+[ 39/164] PASS ✓             | plan=Y score=N/A R=1.00 | 518 tok | 21.7s | decode_cyclic
+2026-04-25 19:52:21,278 [INFO] [ 40/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 639 tok | 26.6s | prime_fib
+[ 40/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 639 tok | 26.6s | prime_fib
+2026-04-25 19:52:47,900 [INFO] [ 41/164] PASS ✓             | plan=Y score=N/A R=1.00 | 589 tok | 26.3s | triples_sum_to_zero
+[ 41/164] PASS ✓             | plan=Y score=N/A R=1.00 | 589 tok | 26.3s | triples_sum_to_zero
+2026-04-25 19:53:07,385 [INFO] [ 42/164] PASS ✓             | plan=Y score=N/A R=1.00 | 453 tok | 19.3s | car_race_collision
+[ 42/164] PASS ✓             | plan=Y score=N/A R=1.00 | 453 tok | 19.3s | car_race_collision
+2026-04-25 19:53:27,091 [INFO] [ 43/164] PASS ✓             | plan=Y score=N/A R=1.00 | 466 tok | 19.4s | incr_list
+[ 43/164] PASS ✓             | plan=Y score=N/A R=1.00 | 466 tok | 19.4s | incr_list
+2026-04-25 19:53:47,584 [INFO] [ 44/164] PASS ✓             | plan=Y score=N/A R=1.00 | 488 tok | 20.2s | pairs_sum_to_zero
+[ 44/164] PASS ✓             | plan=Y score=N/A R=1.00 | 488 tok | 20.2s | pairs_sum_to_zero
+2026-04-25 19:54:04,458 [INFO] [ 45/164] PASS ✓             | plan=Y score=N/A R=1.00 | 402 tok | 16.6s | change_base
+[ 45/164] PASS ✓             | plan=Y score=N/A R=1.00 | 402 tok | 16.6s | change_base
+2026-04-25 19:54:20,364 [INFO] [ 46/164] PASS ✓             | plan=Y score=N/A R=1.00 | 375 tok | 15.7s | triangle_area
+[ 46/164] PASS ✓             | plan=Y score=N/A R=1.00 | 375 tok | 15.7s | triangle_area
+2026-04-25 19:54:51,009 [INFO] [ 47/164] PASS ✓             | plan=Y score=N/A R=1.00 | 692 tok | 30.4s | fib4
+[ 47/164] PASS ✓             | plan=Y score=N/A R=1.00 | 692 tok | 30.4s | fib4
+2026-04-25 19:55:12,288 [INFO] [ 48/164] PASS ✓             | plan=Y score=N/A R=1.00 | 485 tok | 21.0s | median
+[ 48/164] PASS ✓             | plan=Y score=N/A R=1.00 | 485 tok | 21.0s | median
+2026-04-25 19:55:49,682 [INFO] [ 49/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 440 tok | 18.4s | is_palindrome
+[ 49/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 440 tok | 18.4s | is_palindrome
+2026-04-25 19:56:13,388 [INFO] [ 50/164] PASS ✓             | plan=Y score=N/A R=1.00 | 563 tok | 23.5s | modp
+[ 50/164] PASS ✓             | plan=Y score=N/A R=1.00 | 563 tok | 23.5s | modp
+2026-04-25 19:56:29,506 [INFO] [ 51/164] PASS ✓             | plan=Y score=N/A R=1.00 | 383 tok | 15.9s | decode_shift
+[ 51/164] PASS ✓             | plan=Y score=N/A R=1.00 | 383 tok | 15.9s | decode_shift
+2026-04-25 19:56:51,235 [INFO] [ 52/164] PASS ✓             | plan=Y score=N/A R=1.00 | 505 tok | 21.5s | remove_vowels
+[ 52/164] PASS ✓             | plan=Y score=N/A R=1.00 | 505 tok | 21.5s | remove_vowels
+2026-04-25 19:57:09,278 [INFO] [ 53/164] PASS ✓             | plan=Y score=N/A R=1.00 | 417 tok | 17.8s | below_threshold
+[ 53/164] PASS ✓             | plan=Y score=N/A R=1.00 | 417 tok | 17.8s | below_threshold
+2026-04-25 19:57:22,369 [INFO] [ 54/164] PASS ✓             | plan=Y score=N/A R=1.00 | 305 tok | 12.9s | add
+[ 54/164] PASS ✓             | plan=Y score=N/A R=1.00 | 305 tok | 12.9s | add
+2026-04-25 19:58:03,431 [INFO] [ 55/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 473 tok | 19.8s | same_chars
+[ 55/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 473 tok | 19.8s | same_chars
+2026-04-25 19:58:23,319 [INFO] [ 56/164] PASS ✓             | plan=Y score=N/A R=1.00 | 467 tok | 19.7s | fib
+[ 56/164] PASS ✓             | plan=Y score=N/A R=1.00 | 467 tok | 19.7s | fib
+2026-04-25 19:58:44,874 [INFO] [ 57/164] PASS ✓             | plan=Y score=N/A R=1.00 | 505 tok | 21.3s | correct_bracketing
+[ 57/164] PASS ✓             | plan=Y score=N/A R=1.00 | 505 tok | 21.3s | correct_bracketing
+2026-04-25 19:59:05,934 [INFO] [ 58/164] PASS ✓             | plan=Y score=N/A R=1.00 | 494 tok | 20.8s | monotonic
+[ 58/164] PASS ✓             | plan=Y score=N/A R=1.00 | 494 tok | 20.8s | monotonic
+2026-04-25 19:59:28,256 [INFO] [ 59/164] PASS ✓             | plan=Y score=N/A R=1.00 | 526 tok | 22.1s | common
+[ 59/164] PASS ✓             | plan=Y score=N/A R=1.00 | 526 tok | 22.1s | common
+2026-04-25 19:59:52,167 [INFO] [ 60/164] PASS ✓             | plan=Y score=N/A R=1.00 | 566 tok | 23.7s | largest_prime_factor
+[ 60/164] PASS ✓             | plan=Y score=N/A R=1.00 | 566 tok | 23.7s | largest_prime_factor
+2026-04-25 20:00:14,835 [INFO] [ 61/164] PASS ✓             | plan=Y score=N/A R=1.00 | 531 tok | 22.4s | sum_to_n
+[ 61/164] PASS ✓             | plan=Y score=N/A R=1.00 | 531 tok | 22.4s | sum_to_n
+2026-04-25 20:00:34,844 [INFO] [ 62/164] PASS ✓             | plan=Y score=N/A R=1.00 | 472 tok | 19.8s | correct_bracketing
+[ 62/164] PASS ✓             | plan=Y score=N/A R=1.00 | 472 tok | 19.8s | correct_bracketing
+2026-04-25 20:00:57,499 [INFO] [ 63/164] PASS ✓             | plan=Y score=N/A R=1.00 | 528 tok | 22.4s | derivative
+[ 63/164] PASS ✓             | plan=Y score=N/A R=1.00 | 528 tok | 22.4s | derivative
+2026-04-25 20:01:26,537 [INFO] [ 64/164] PASS ✓             | plan=Y score=N/A R=1.00 | 679 tok | 28.8s | fibfib
+[ 64/164] PASS ✓             | plan=Y score=N/A R=1.00 | 679 tok | 28.8s | fibfib
+2026-04-25 20:01:48,916 [INFO] [ 65/164] PASS ✓             | plan=Y score=N/A R=1.00 | 518 tok | 22.1s | vowels_count
+[ 65/164] PASS ✓             | plan=Y score=N/A R=1.00 | 518 tok | 22.1s | vowels_count
+2026-04-25 20:02:05,014 [INFO] [ 66/164] PASS ✓             | plan=Y score=N/A R=1.00 | 376 tok | 15.9s | circular_shift
+[ 66/164] PASS ✓             | plan=Y score=N/A R=1.00 | 376 tok | 15.9s | circular_shift
+2026-04-25 20:02:26,462 [INFO] [ 67/164] PASS ✓             | plan=Y score=N/A R=1.00 | 505 tok | 21.2s | digitSum
+[ 67/164] PASS ✓             | plan=Y score=N/A R=1.00 | 505 tok | 21.2s | digitSum
+2026-04-25 20:02:51,831 [INFO] [ 68/164] PASS ✓             | plan=Y score=N/A R=1.00 | 598 tok | 25.1s | fruit_distribution
+[ 68/164] PASS ✓             | plan=Y score=N/A R=1.00 | 598 tok | 25.1s | fruit_distribution
+2026-04-25 20:03:19,010 [INFO] [ 69/164] PASS ✓             | plan=Y score=N/A R=1.00 | 640 tok | 26.9s | pluck
+[ 69/164] PASS ✓             | plan=Y score=N/A R=1.00 | 640 tok | 26.9s | pluck
+2026-04-25 20:03:40,350 [INFO] [ 70/164] PASS ✓             | plan=Y score=N/A R=1.00 | 503 tok | 21.0s | search
+[ 70/164] PASS ✓             | plan=Y score=N/A R=1.00 | 503 tok | 21.0s | search
+2026-04-25 20:04:04,284 [INFO] [ 71/164] PASS ✓             | plan=Y score=N/A R=1.00 | 565 tok | 23.7s | strange_sort_list
+[ 71/164] PASS ✓             | plan=Y score=N/A R=1.00 | 565 tok | 23.7s | strange_sort_list
+2026-04-25 20:04:27,795 [INFO] [ 72/164] PASS ✓             | plan=Y score=N/A R=1.00 | 550 tok | 23.3s | triangle_area
+[ 72/164] PASS ✓             | plan=Y score=N/A R=1.00 | 550 tok | 23.3s | triangle_area
+2026-04-25 20:04:54,704 [INFO] [ 73/164] PASS ✓             | plan=Y score=N/A R=1.00 | 633 tok | 26.6s | will_it_fly
+[ 73/164] PASS ✓             | plan=Y score=N/A R=1.00 | 633 tok | 26.6s | will_it_fly
+2026-04-25 20:05:19,344 [INFO] [ 74/164] PASS ✓             | plan=Y score=N/A R=1.00 | 581 tok | 24.4s | smallest_change
+[ 74/164] PASS ✓             | plan=Y score=N/A R=1.00 | 581 tok | 24.4s | smallest_change
+2026-04-25 20:05:51,440 [INFO] [ 75/164] PASS ✓             | plan=Y score=N/A R=1.00 | 749 tok | 31.8s | total_match
+[ 75/164] PASS ✓             | plan=Y score=N/A R=1.00 | 749 tok | 31.8s | total_match
+2026-04-25 20:07:36,843 [INFO] [ 76/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 1679 tok | 71.0s | is_multiply_prime
+[ 76/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 1679 tok | 71.0s | is_multiply_prime
+2026-04-25 20:08:36,054 [INFO] [ 77/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 699 tok | 29.4s | is_simple_power
+[ 77/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 699 tok | 29.4s | is_simple_power
+2026-04-25 20:09:24,722 [INFO] [ 78/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 722 tok | 30.1s | iscube
+[ 78/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 722 tok | 30.1s | iscube
+2026-04-25 20:09:50,513 [INFO] [ 79/164] PASS ✓             | plan=Y score=N/A R=1.00 | 607 tok | 25.6s | hex_key
+[ 79/164] PASS ✓             | plan=Y score=N/A R=1.00 | 607 tok | 25.6s | hex_key
+2026-04-25 20:10:05,268 [INFO] [ 80/164] PASS ✓             | plan=Y score=N/A R=1.00 | 342 tok | 14.5s | decimal_to_binary
+[ 80/164] PASS ✓             | plan=Y score=N/A R=1.00 | 342 tok | 14.5s | decimal_to_binary
+2026-04-25 20:10:23,786 [INFO] [ 81/164] PASS ✓             | plan=Y score=N/A R=1.00 | 434 tok | 18.3s | is_happy
+[ 81/164] PASS ✓             | plan=Y score=N/A R=1.00 | 434 tok | 18.3s | is_happy
+2026-04-25 20:11:43,853 [INFO] [ 82/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 863 tok | 36.7s | numerical_letter_grade
+[ 82/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 863 tok | 36.7s | numerical_letter_grade
+2026-04-25 20:12:13,068 [INFO] [ 83/164] PASS ✓             | plan=Y score=N/A R=1.00 | 685 tok | 29.0s | prime_length
+[ 83/164] PASS ✓             | plan=Y score=N/A R=1.00 | 685 tok | 29.0s | prime_length
+2026-04-25 20:12:56,344 [INFO] [ 84/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 525 tok | 22.1s | starts_one_ends
+[ 84/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 525 tok | 22.1s | starts_one_ends
+2026-04-25 20:13:46,780 [INFO] [ 85/164] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 586 tok | 24.8s | solve
+[ 85/164] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 586 tok | 24.8s | solve
+2026-04-25 20:14:06,553 [INFO] [ 86/164] PASS ✓             | plan=Y score=N/A R=1.00 | 460 tok | 19.5s | add
+[ 86/164] PASS ✓             | plan=Y score=N/A R=1.00 | 460 tok | 19.5s | add
+2026-04-25 20:14:49,133 [INFO] [ 87/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 477 tok | 20.2s | anti_shuffle
+[ 87/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 477 tok | 20.2s | anti_shuffle
+2026-04-25 20:15:20,290 [INFO] [ 88/164] PASS ✓             | plan=Y score=N/A R=1.00 | 736 tok | 30.9s | get_row
+[ 88/164] PASS ✓             | plan=Y score=N/A R=1.00 | 736 tok | 30.9s | get_row
+2026-04-25 20:15:49,304 [INFO] [ 89/164] PASS ✓             | plan=Y score=N/A R=1.00 | 682 tok | 28.7s | sort_array
+[ 89/164] PASS ✓             | plan=Y score=N/A R=1.00 | 682 tok | 28.7s | sort_array
+2026-04-25 20:16:36,921 [INFO] [ 90/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 556 tok | 23.6s | encrypt
+[ 90/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 556 tok | 23.6s | encrypt
+2026-04-25 20:17:02,877 [INFO] [ 91/164] PASS ✓             | plan=Y score=N/A R=1.00 | 607 tok | 25.7s | next_smallest
+[ 91/164] PASS ✓             | plan=Y score=N/A R=1.00 | 607 tok | 25.7s | next_smallest
+2026-04-25 20:17:48,266 [INFO] [ 92/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 556 tok | 23.5s | is_bored
+[ 92/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 556 tok | 23.5s | is_bored
+2026-04-25 20:18:13,134 [INFO] [ 93/164] PASS ✓             | plan=Y score=N/A R=1.00 | 578 tok | 24.6s | any_int
+[ 93/164] PASS ✓             | plan=Y score=N/A R=1.00 | 578 tok | 24.6s | any_int
+2026-04-25 20:18:37,311 [INFO] [ 94/164] PASS ✓             | plan=Y score=N/A R=1.00 | 563 tok | 23.9s | encode
+[ 94/164] PASS ✓             | plan=Y score=N/A R=1.00 | 563 tok | 23.9s | encode
+2026-04-25 20:19:25,067 [INFO] [ 95/164] PASS ✓             | plan=Y score=N/A R=1.00 | 1081 tok | 45.9s | skjkasdkd
+[ 95/164] PASS ✓             | plan=Y score=N/A R=1.00 | 1081 tok | 45.9s | skjkasdkd
+2026-04-25 20:19:49,049 [INFO] [ 96/164] PASS ✓             | plan=Y score=N/A R=1.00 | 556 tok | 23.7s | check_dict_case
+[ 96/164] PASS ✓             | plan=Y score=N/A R=1.00 | 556 tok | 23.7s | check_dict_case
+2026-04-25 20:20:16,638 [INFO] [ 97/164] PASS ✓             | plan=Y score=N/A R=1.00 | 643 tok | 27.1s | count_up_to
+[ 97/164] PASS ✓             | plan=Y score=N/A R=1.00 | 643 tok | 27.1s | count_up_to
+2026-04-25 20:20:40,166 [INFO] [ 98/164] PASS ✓             | plan=Y score=N/A R=1.00 | 552 tok | 23.3s | multiply
+[ 98/164] PASS ✓             | plan=Y score=N/A R=1.00 | 552 tok | 23.3s | multiply
+2026-04-25 20:21:02,213 [INFO] [ 99/164] PASS ✓             | plan=Y score=N/A R=1.00 | 515 tok | 21.8s | count_upper
+[ 99/164] PASS ✓             | plan=Y score=N/A R=1.00 | 515 tok | 21.8s | count_upper
+2026-04-25 20:21:44,490 [INFO] [100/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 495 tok | 20.9s | closest_integer
+[100/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 495 tok | 20.9s | closest_integer
+2026-04-25 20:22:07,912 [INFO] [101/164] PASS ✓             | plan=Y score=N/A R=1.00 | 551 tok | 23.0s | make_a_pile
+[101/164] PASS ✓             | plan=Y score=N/A R=1.00 | 551 tok | 23.0s | make_a_pile
+2026-04-25 20:22:28,864 [INFO] [102/164] PASS ✓             | plan=Y score=N/A R=1.00 | 494 tok | 20.7s | words_string
+[102/164] PASS ✓             | plan=Y score=N/A R=1.00 | 494 tok | 20.7s | words_string
+2026-04-25 20:22:50,086 [INFO] [103/164] PASS ✓             | plan=Y score=N/A R=1.00 | 500 tok | 21.0s | choose_num
+[103/164] PASS ✓             | plan=Y score=N/A R=1.00 | 500 tok | 21.0s | choose_num
+2026-04-25 20:24:00,726 [INFO] [104/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 831 tok | 35.1s | rounded_avg
+[104/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 831 tok | 35.1s | rounded_avg
+2026-04-25 20:24:20,776 [INFO] [105/164] PASS ✓             | plan=Y score=N/A R=1.00 | 469 tok | 19.8s | unique_digits
+[105/164] PASS ✓             | plan=Y score=N/A R=1.00 | 469 tok | 19.8s | unique_digits
+2026-04-25 20:24:44,648 [INFO] [106/164] PASS ✓             | plan=Y score=N/A R=1.00 | 561 tok | 23.6s | by_length
+[106/164] PASS ✓             | plan=Y score=N/A R=1.00 | 561 tok | 23.6s | by_length
+2026-04-25 20:25:11,455 [INFO] [107/164] PASS ✓             | plan=Y score=N/A R=1.00 | 631 tok | 26.6s | f
+[107/164] PASS ✓             | plan=Y score=N/A R=1.00 | 631 tok | 26.6s | f
+2026-04-25 20:25:33,892 [INFO] [108/164] PASS ✓             | plan=Y score=N/A R=1.00 | 523 tok | 22.2s | even_odd_palindrome
+[108/164] PASS ✓             | plan=Y score=N/A R=1.00 | 523 tok | 22.2s | even_odd_palindrome
+2026-04-25 20:26:16,972 [INFO] [109/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 474 tok | 20.1s | count_nums
+[109/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 474 tok | 20.1s | count_nums
+2026-04-25 20:27:23,608 [INFO] [110/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 822 tok | 34.5s | move_one_ball
+[110/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 822 tok | 34.5s | move_one_ball
+2026-04-25 20:27:55,724 [INFO] [111/164] PASS ✓             | plan=Y score=N/A R=1.00 | 750 tok | 31.9s | exchange
+[111/164] PASS ✓             | plan=Y score=N/A R=1.00 | 750 tok | 31.9s | exchange
+2026-04-25 20:28:22,243 [INFO] [112/164] PASS ✓             | plan=Y score=N/A R=1.00 | 615 tok | 26.3s | histogram
+[112/164] PASS ✓             | plan=Y score=N/A R=1.00 | 615 tok | 26.3s | histogram
+2026-04-25 20:29:16,980 [INFO] [113/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 640 tok | 27.2s | reverse_delete
+[113/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 640 tok | 27.2s | reverse_delete
+2026-04-25 20:29:44,681 [INFO] [114/164] PASS ✓             | plan=Y score=N/A R=1.00 | 652 tok | 27.4s | odd_count
+[114/164] PASS ✓             | plan=Y score=N/A R=1.00 | 652 tok | 27.4s | odd_count
+2026-04-25 20:30:04,791 [INFO] [115/164] PASS ✓             | plan=Y score=N/A R=1.00 | 471 tok | 19.8s | minSubArraySum
+[115/164] PASS ✓             | plan=Y score=N/A R=1.00 | 471 tok | 19.8s | minSubArraySum
+2026-04-25 20:31:16,618 [INFO] [116/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 853 tok | 36.0s | max_fill
+[116/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 853 tok | 36.0s | max_fill
+2026-04-25 20:32:08,970 [INFO] [117/164] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 627 tok | 26.5s | sort_array
+[117/164] FAIL ✗ → still FAIL| plan=N score=N/A R=0.00 | 627 tok | 26.5s | sort_array
+2026-04-25 20:32:33,038 [INFO] [118/164] PASS ✓             | plan=Y score=N/A R=1.00 | 563 tok | 23.8s | select_words
+[118/164] PASS ✓             | plan=Y score=N/A R=1.00 | 563 tok | 23.8s | select_words
+2026-04-25 20:32:50,898 [INFO] [119/164] PASS ✓             | plan=Y score=N/A R=1.00 | 413 tok | 17.6s | get_closest_vowel
+[119/164] PASS ✓             | plan=Y score=N/A R=1.00 | 413 tok | 17.6s | get_closest_vowel
+2026-04-25 20:33:50,432 [INFO] [120/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 708 tok | 29.9s | match_parens
+[120/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 708 tok | 29.9s | match_parens
+2026-04-25 20:34:34,548 [INFO] [121/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 517 tok | 21.8s | maximum
+[121/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 517 tok | 21.8s | maximum
+2026-04-25 20:34:53,726 [INFO] [122/164] PASS ✓             | plan=Y score=N/A R=1.00 | 450 tok | 18.9s | solution
+[122/164] PASS ✓             | plan=Y score=N/A R=1.00 | 450 tok | 18.9s | solution
+2026-04-25 20:35:14,477 [INFO] [123/164] PASS ✓             | plan=Y score=N/A R=1.00 | 481 tok | 20.5s | add_elements
+[123/164] PASS ✓             | plan=Y score=N/A R=1.00 | 481 tok | 20.5s | add_elements
+2026-04-25 20:35:44,390 [INFO] [124/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 362 tok | 15.5s | get_odd_collatz
+[124/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 362 tok | 15.5s | get_odd_collatz
+2026-04-25 20:37:03,938 [INFO] [125/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 931 tok | 39.5s | valid_date
+[125/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 931 tok | 39.5s | valid_date
+2026-04-25 20:37:29,092 [INFO] [126/164] PASS ✓             | plan=Y score=N/A R=1.00 | 590 tok | 24.9s | split_words
+[126/164] PASS ✓             | plan=Y score=N/A R=1.00 | 590 tok | 24.9s | split_words
+2026-04-25 20:38:26,403 [INFO] [127/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 672 tok | 28.4s | is_sorted
+[127/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 672 tok | 28.4s | is_sorted
+2026-04-25 20:39:39,102 [INFO] [128/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 858 tok | 36.0s | intersection
+[128/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 858 tok | 36.0s | intersection
+2026-04-25 20:39:59,537 [INFO] [129/164] PASS ✓             | plan=Y score=N/A R=1.00 | 479 tok | 20.2s | prod_signs
+[129/164] PASS ✓             | plan=Y score=N/A R=1.00 | 479 tok | 20.2s | prod_signs
+2026-04-25 20:40:28,706 [INFO] [130/164] PASS ✓             | plan=Y score=N/A R=1.00 | 687 tok | 28.9s | minPath
+[130/164] PASS ✓             | plan=Y score=N/A R=1.00 | 687 tok | 28.9s | minPath
+2026-04-25 20:41:02,474 [INFO] [131/164] PASS ✓             | plan=Y score=N/A R=1.00 | 614 tok | 25.9s | tri
+[131/164] PASS ✓             | plan=Y score=N/A R=1.00 | 614 tok | 25.9s | tri
+2026-04-25 20:41:24,556 [INFO] [132/164] PASS ✓             | plan=Y score=N/A R=1.00 | 520 tok | 21.9s | digits
+[132/164] PASS ✓             | plan=Y score=N/A R=1.00 | 520 tok | 21.9s | digits
+2026-04-25 20:42:17,188 [INFO] [133/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 627 tok | 26.4s | is_nested
+[133/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 627 tok | 26.4s | is_nested
+2026-04-25 20:42:43,561 [INFO] [134/164] PASS ✓             | plan=Y score=N/A R=1.00 | 621 tok | 26.1s | sum_squares
+[134/164] PASS ✓             | plan=Y score=N/A R=1.00 | 621 tok | 26.1s | sum_squares
+2026-04-25 20:43:32,017 [INFO] [135/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 580 tok | 24.4s | check_if_last_char_is_a_letter
+[135/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 580 tok | 24.4s | check_if_last_char_is_a_letter
+2026-04-25 20:43:52,355 [INFO] [136/164] PASS ✓             | plan=Y score=N/A R=1.00 | 479 tok | 20.1s | can_arrange
+[136/164] PASS ✓             | plan=Y score=N/A R=1.00 | 479 tok | 20.1s | can_arrange
+2026-04-25 20:44:17,779 [INFO] [137/164] PASS ✓             | plan=Y score=N/A R=1.00 | 599 tok | 25.2s | largest_smallest_integers
+[137/164] PASS ✓             | plan=Y score=N/A R=1.00 | 599 tok | 25.2s | largest_smallest_integers
+2026-04-25 20:44:40,463 [INFO] [138/164] PASS ✓             | plan=Y score=N/A R=1.00 | 528 tok | 22.4s | compare_one
+[138/164] PASS ✓             | plan=Y score=N/A R=1.00 | 528 tok | 22.4s | compare_one
+2026-04-25 20:45:04,519 [INFO] [139/164] PASS ✓             | plan=Y score=N/A R=1.00 | 564 tok | 23.8s | is_equal_to_sum_even
+[139/164] PASS ✓             | plan=Y score=N/A R=1.00 | 564 tok | 23.8s | is_equal_to_sum_even
+2026-04-25 20:46:04,049 [INFO] [140/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 550 tok | 23.1s | special_factorial
+[140/164] FAIL ✗ → FIXED ✓   | plan=Y score=N/A R=0.00 | 550 tok | 23.1s | special_factorial
+2026-04-25 20:46:26,486 [INFO] [141/164] PASS ✓             | plan=Y score=N/A R=1.00 | 522 tok | 22.2s | fix_spaces
+[141/164] PASS ✓             | plan=Y score=N/A R=1.00 | 522 tok | 22.2s | fix_spaces
+2026-04-25 20:47:00,881 [INFO] [142/164] PASS ✓             | plan=Y score=N/A R=1.00 | 807 tok | 34.2s | file_name_check
+[142/164] PASS ✓             | plan=Y score=N/A R=1.00 | 807 tok | 34.2s | file_name_check
+2026-04-25 20:47:40,442 [INFO] [143/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 473 tok | 20.0s | sum_squares
+[143/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 473 tok | 20.0s | sum_squares
+2026-04-25 20:48:05,745 [INFO] [144/164] PASS ✓             | plan=Y score=N/A R=1.00 | 597 tok | 25.1s | words_in_sentence
+[144/164] PASS ✓             | plan=Y score=N/A R=1.00 | 597 tok | 25.1s | words_in_sentence
+2026-04-25 20:48:31,160 [INFO] [145/164] PASS ✓             | plan=Y score=N/A R=1.00 | 596 tok | 25.2s | simplify
+[145/164] PASS ✓             | plan=Y score=N/A R=1.00 | 596 tok | 25.2s | simplify
+2026-04-25 20:49:17,879 [INFO] [146/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 547 tok | 23.3s | order_by_points
+[146/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 547 tok | 23.3s | order_by_points
+2026-04-25 20:49:40,568 [INFO] [147/164] PASS ✓             | plan=Y score=N/A R=1.00 | 529 tok | 22.4s | specialFilter
+[147/164] PASS ✓             | plan=Y score=N/A R=1.00 | 529 tok | 22.4s | specialFilter
+2026-04-25 20:50:03,695 [INFO] [148/164] PASS ✓             | plan=Y score=N/A R=1.00 | 490 tok | 20.8s | get_max_triples
+[148/164] PASS ✓             | plan=Y score=N/A R=1.00 | 490 tok | 20.8s | get_max_triples
+2026-04-25 20:50:21,920 [INFO] [149/164] PASS ✓             | plan=Y score=N/A R=1.00 | 420 tok | 18.0s | bf
+[149/164] PASS ✓             | plan=Y score=N/A R=1.00 | 420 tok | 18.0s | bf
+2026-04-25 20:50:54,817 [INFO] [150/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 405 tok | 17.4s | sorted_list_sum
+[150/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 405 tok | 17.4s | sorted_list_sum
+2026-04-25 20:51:17,015 [INFO] [151/164] PASS ✓             | plan=Y score=N/A R=1.00 | 516 tok | 22.0s | x_or_y
+[151/164] PASS ✓             | plan=Y score=N/A R=1.00 | 516 tok | 22.0s | x_or_y
+2026-04-25 20:51:33,399 [INFO] [152/164] PASS ✓             | plan=Y score=N/A R=1.00 | 378 tok | 16.1s | double_the_difference
+[152/164] PASS ✓             | plan=Y score=N/A R=1.00 | 378 tok | 16.1s | double_the_difference
+2026-04-25 20:51:55,850 [INFO] [153/164] PASS ✓             | plan=Y score=N/A R=1.00 | 527 tok | 22.2s | compare
+[153/164] PASS ✓             | plan=Y score=N/A R=1.00 | 527 tok | 22.2s | compare
+2026-04-25 20:52:25,439 [INFO] [154/164] PASS ✓             | plan=Y score=N/A R=1.00 | 686 tok | 29.4s | Strongest_Extension
+[154/164] PASS ✓             | plan=Y score=N/A R=1.00 | 686 tok | 29.4s | Strongest_Extension
+2026-04-25 20:53:13,232 [INFO] [155/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 649 tok | 27.6s | cycpattern_check
+[155/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 649 tok | 27.6s | cycpattern_check
+2026-04-25 20:53:54,654 [INFO] [156/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 496 tok | 21.1s | even_odd_count
+[156/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 496 tok | 21.1s | even_odd_count
+2026-04-25 20:54:28,990 [INFO] [157/164] PASS ✓             | plan=Y score=N/A R=1.00 | 801 tok | 34.1s | int_to_mini_roman
+[157/164] PASS ✓             | plan=Y score=N/A R=1.00 | 801 tok | 34.1s | int_to_mini_roman
+2026-04-25 20:54:51,468 [INFO] [158/164] PASS ✓             | plan=Y score=N/A R=1.00 | 526 tok | 22.2s | right_angle_triangle
+[158/164] PASS ✓             | plan=Y score=N/A R=1.00 | 526 tok | 22.2s | right_angle_triangle
+2026-04-25 20:55:03,746 [INFO] [159/164] PASS ✓             | plan=Y score=N/A R=1.00 | 283 tok | 12.0s | find_max
+[159/164] PASS ✓             | plan=Y score=N/A R=1.00 | 283 tok | 12.0s | find_max
+2026-04-25 20:55:35,947 [INFO] [160/164] PASS ✓             | plan=Y score=N/A R=1.00 | 751 tok | 32.0s | eat
+[160/164] PASS ✓             | plan=Y score=N/A R=1.00 | 751 tok | 32.0s | eat
+2026-04-25 20:56:04,770 [INFO] [161/164] PASS ✓             | plan=Y score=N/A R=1.00 | 671 tok | 28.6s | do_algebra
+[161/164] PASS ✓             | plan=Y score=N/A R=1.00 | 671 tok | 28.6s | do_algebra
+2026-04-25 20:56:24,876 [INFO] [162/164] PASS ✓             | plan=Y score=N/A R=1.00 | 469 tok | 19.9s | solve
+[162/164] PASS ✓             | plan=Y score=N/A R=1.00 | 469 tok | 19.9s | solve
+2026-04-25 20:56:40,829 [INFO] [163/164] PASS ✓             | plan=Y score=N/A R=1.00 | 371 tok | 15.7s | string_to_md5
+[163/164] PASS ✓             | plan=Y score=N/A R=1.00 | 371 tok | 15.7s | string_to_md5
+2026-04-25 20:57:27,422 [INFO] [164/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 541 tok | 23.1s | generate_integers
+[164/164] FAIL ✗ → still FAIL| plan=Y score=N/A R=0.00 | 541 tok | 23.1s | generate_integers
+2026-04-25 20:57:27,422 [INFO] 
+RESULTS: HumanEval+
+2026-04-25 20:57:27,422 [INFO]   pass@1  (attempt 1)     : 121/164 (73.8%)
+2026-04-25 20:57:27,422 [INFO]   pass@1  (after feedback): 126/164 (76.8%)
+2026-04-25 20:57:27,423 [INFO]   tasks entering feedback : 43
+2026-04-25 20:57:27,423 [INFO]   recovered by feedback   : 5 (11.6% of feedback tasks)
+2026-04-25 20:57:27,423 [INFO]   avg plan_score: N/A
+2026-04-25 20:57:27,423 [INFO]   has_plan rate : 98.2%
+2026-04-25 20:57:27,423 [INFO]   Saved: eval_results_humaneval/eval_humaneval.jsonl
+2026-04-25 20:57:27,424 [INFO] Summary → eval_results_humaneval/summary_huggingface_merged_step140_20260425_193257.json
+2026-04-25 20:57:27,424 [INFO] Raw     → eval_results_humaneval/raw_huggingface_merged_step140_20260425_193257.jsonl

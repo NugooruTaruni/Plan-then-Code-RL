@@ -1,0 +1,16 @@
+{
+  "dataset": "humaneval_plus",
+  "num_tasks": 164,
+  "passed_attempt1": 121,
+  "passed_final": 126,
+  "recovered": 5,
+  "pass_at_1": 0.7378048780487805,
+  "pass_at_1_final": 0.7682926829268293,
+  "feedback_recovery_rate": 0.11627906976744186,
+  "avg_plan_score": NaN,
+  "has_plan_rate": 0.9817073170731707,
+  "judge_mode": "rule-based",
+  "alpha": 0.5,
+  "beta": 1.0,
+  "out_path": "eval_results_humaneval/eval_humaneval.jsonl"
+}

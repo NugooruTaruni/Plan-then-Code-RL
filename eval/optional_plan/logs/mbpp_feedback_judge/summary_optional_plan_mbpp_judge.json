@@ -1,0 +1,16 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed_attempt_1": 309,
+    "pass_at_1": 0.618,
+    "recovered": 42,
+    "passed_final": 351,
+    "pass_at_1_retry": 0.702,
+    "has_plan_rate": 0.946,
+    "avg_plan_score": 0.798,
+    "avg_reward_attempt1": 0.818,
+    "avg_reward_final": 0.944,
+    "out_path": "eval_results_optional_plan/mbpp_feedback_judge.jsonl"
+  }
+]

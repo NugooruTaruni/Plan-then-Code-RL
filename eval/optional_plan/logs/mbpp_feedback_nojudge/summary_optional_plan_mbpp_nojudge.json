@@ -1,0 +1,15 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed_attempt_1": 309,
+    "pass_at_1": 0.618,
+    "recovered": 13,
+    "passed_final": 322,
+    "pass_at_1_retry": 0.644,
+    "has_plan_rate": 0.946,
+    "avg_reward_attempt1": 0.772,
+    "avg_reward_final": 0.805,
+    "out_path": "eval_results_optional_plan/mbpp_feedback_nojudge.jsonl"
+  }
+]

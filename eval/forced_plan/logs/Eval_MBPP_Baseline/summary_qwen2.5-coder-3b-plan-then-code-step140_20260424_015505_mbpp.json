@@ -1,0 +1,21 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed_attempt1": 293,
+    "passed_final": 306,
+    "recovered": 13,
+    "pass_at_1": 0.586,
+    "pass_at_1_final": 0.612,
+    "feedback_recovery_rate": 0.06280193236714976,
+    "avg_plan_score": NaN,
+    "avg_plan_dims": {},
+    "avg_reward_attempt1": 0.586,
+    "avg_reward_final": 0.612,
+    "has_plan_rate": 0.926,
+    "judge_mode": "rule-based",
+    "alpha": 0.5,
+    "beta": 1.0,
+    "out_path": "eval_results_exp1_full/eval_test.jsonl"
+  }
+]

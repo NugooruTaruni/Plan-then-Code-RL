@@ -1,0 +1,29 @@
+2026-04-25 23:22:08,033 [INFO] [HumanEval+ pass@k] checkpoint=checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140
+2026-04-25 23:22:08,034 [INFO] n=5 k=[5] temperature=0.8
+2026-04-25 23:22:08,034 [INFO] Loading tokenizer: Qwen/Qwen2.5-Coder-3B-Instruct
+2026-04-25 23:22:08,721 [INFO] Loading HF model: checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140
+2026-04-25 23:22:09,973 [INFO] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-04-25 23:22:14,644 [INFO]   ✓ HF model loaded
+2026-04-25 23:22:14,645 [INFO] device: cuda:0
+2026-04-25 23:22:14,735 [INFO] Loaded 164 tasks from data/humaneval_plus_test.parquet
+2026-04-25 23:37:55,197 [INFO] [10/164] running pass@5=100.0%
+2026-04-25 23:54:22,953 [INFO] [20/164] running pass@5=100.0%
+2026-04-26 00:09:52,593 [INFO] [30/164] running pass@5=96.7%
+2026-04-26 00:28:16,646 [INFO] [40/164] running pass@5=92.5%
+2026-04-26 00:46:14,956 [INFO] [50/164] running pass@5=92.0%
+2026-04-26 01:01:50,313 [INFO] [60/164] running pass@5=91.7%
+2026-04-26 01:21:36,524 [INFO] [70/164] running pass@5=91.4%
+2026-04-26 01:43:45,390 [INFO] [80/164] running pass@5=90.0%
+2026-04-26 02:04:34,869 [INFO] [90/164] running pass@5=90.0%
+2026-04-26 02:24:47,107 [INFO] [100/164] running pass@5=90.0%
+2026-04-26 02:45:51,737 [INFO] [110/164] running pass@5=90.9%
+2026-04-26 03:08:39,613 [INFO] [120/164] running pass@5=90.8%
+2026-04-26 03:30:56,670 [INFO] [130/164] running pass@5=89.2%
+2026-04-26 03:51:35,332 [INFO] [140/164] running pass@5=88.6%
+2026-04-26 04:11:37,798 [INFO] [150/164] running pass@5=86.7%
+2026-04-26 04:31:50,536 [INFO] [160/164] running pass@5=87.5%
+2026-04-26 04:39:12,943 [INFO] 
+FINAL RESULTS: HumanEval+ pass@k (n=5)
+2026-04-26 04:39:12,944 [INFO]   pass@5: 87.20%
+2026-04-26 04:39:12,944 [INFO] Summary → eval_results_humaneval_passk/summary_huggingface_merged_step140_20260425_232208.json
+2026-04-26 04:39:12,944 [INFO] Raw     → eval_results_humaneval_passk/raw_huggingface_merged_step140_20260425_232208.jsonl

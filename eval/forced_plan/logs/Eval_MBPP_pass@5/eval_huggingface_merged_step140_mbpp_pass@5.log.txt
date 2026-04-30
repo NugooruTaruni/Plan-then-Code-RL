@@ -1,0 +1,63 @@
+2026-04-26 04:50:41,163 [INFO] [MBPP pass@k] checkpoint=checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140
+2026-04-26 04:50:41,163 [INFO] n=5 k=[5] temperature=0.8
+2026-04-26 04:50:41,164 [INFO] Loading tokenizer: Qwen/Qwen2.5-Coder-3B-Instruct
+2026-04-26 04:50:42,096 [INFO] Loading HF model: checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140
+2026-04-26 04:50:44,244 [INFO] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-04-26 04:51:17,636 [INFO]   ✓ HF model loaded
+2026-04-26 04:51:17,639 [INFO] device: cuda:0
+2026-04-26 04:51:17,747 [INFO] Loaded 500 tasks from data/exp1_full_test.parquet
+2026-04-26 05:08:12,888 [INFO] [10/500] running pass@5=80.0%
+2026-04-26 05:22:02,704 [INFO] [20/500] running pass@5=70.0%
+2026-04-26 05:36:39,311 [INFO] [30/500] running pass@5=63.3%
+2026-04-26 05:52:26,154 [INFO] [40/500] running pass@5=67.5%
+2026-04-26 06:09:48,433 [INFO] [50/500] running pass@5=70.0%
+2026-04-26 06:27:43,585 [INFO] [60/500] running pass@5=66.7%
+2026-04-26 06:40:52,917 [INFO] [70/500] running pass@5=67.1%
+2026-04-26 06:56:37,935 [INFO] [80/500] running pass@5=70.0%
+2026-04-26 07:10:16,852 [INFO] [90/500] running pass@5=71.1%
+2026-04-26 07:27:09,546 [INFO] [100/500] running pass@5=71.0%
+2026-04-26 07:42:29,833 [INFO] [110/500] running pass@5=73.6%
+2026-04-26 08:00:02,718 [INFO] [120/500] running pass@5=72.5%
+2026-04-26 08:16:12,015 [INFO] [130/500] running pass@5=73.1%
+2026-04-26 08:32:22,279 [INFO] [140/500] running pass@5=73.6%
+2026-04-26 08:45:30,708 [INFO] [150/500] running pass@5=73.3%
+2026-04-26 09:01:01,518 [INFO] [160/500] running pass@5=74.4%
+2026-04-26 09:14:37,144 [INFO] [170/500] running pass@5=74.7%
+2026-04-26 09:28:33,938 [INFO] [180/500] running pass@5=75.6%
+2026-04-26 09:42:27,637 [INFO] [190/500] running pass@5=76.3%
+2026-04-26 09:58:23,203 [INFO] [200/500] running pass@5=77.5%
+2026-04-26 10:15:52,649 [INFO] [210/500] running pass@5=77.6%
+2026-04-26 10:31:02,094 [INFO] [220/500] running pass@5=76.4%
+2026-04-26 10:46:27,701 [INFO] [230/500] running pass@5=74.8%
+2026-04-26 11:00:36,303 [INFO] [240/500] running pass@5=75.0%
+2026-04-26 11:15:46,913 [INFO] [250/500] running pass@5=74.4%
+2026-04-26 11:29:41,047 [INFO] [260/500] running pass@5=74.6%
+2026-04-26 11:48:48,292 [INFO] [270/500] running pass@5=75.2%
+2026-04-26 12:06:03,282 [INFO] [280/500] running pass@5=74.6%
+2026-04-26 12:21:05,988 [INFO] [290/500] running pass@5=74.8%
+2026-04-26 12:38:09,697 [INFO] [300/500] running pass@5=74.7%
+2026-04-26 12:52:18,219 [INFO] [310/500] running pass@5=75.5%
+2026-04-26 13:08:59,473 [INFO] [320/500] running pass@5=75.3%
+2026-04-26 13:23:14,555 [INFO] [330/500] running pass@5=75.5%
+2026-04-26 13:39:48,237 [INFO] [340/500] running pass@5=75.3%
+2026-04-26 13:54:57,016 [INFO] [350/500] running pass@5=74.9%
+2026-04-26 14:10:44,667 [INFO] [360/500] running pass@5=74.4%
+2026-04-26 14:25:37,513 [INFO] [370/500] running pass@5=74.9%
+2026-04-26 14:40:39,048 [INFO] [380/500] running pass@5=74.7%
+2026-04-26 14:56:23,130 [INFO] [390/500] running pass@5=74.9%
+2026-04-26 15:10:37,558 [INFO] [400/500] running pass@5=74.8%
+2026-04-26 15:26:45,271 [INFO] [410/500] running pass@5=74.9%
+2026-04-26 15:39:48,953 [INFO] [420/500] running pass@5=75.0%
+2026-04-26 15:54:15,490 [INFO] [430/500] running pass@5=74.9%
+2026-04-26 16:08:44,716 [INFO] [440/500] running pass@5=74.5%
+2026-04-26 16:26:12,700 [INFO] [450/500] running pass@5=74.4%
+2026-04-26 16:46:50,991 [INFO] [460/500] running pass@5=74.6%
+2026-04-26 17:00:59,786 [INFO] [470/500] running pass@5=74.7%
+2026-04-26 17:19:30,897 [INFO] [480/500] running pass@5=74.2%
+2026-04-26 17:35:09,776 [INFO] [490/500] running pass@5=74.5%
+2026-04-26 17:50:02,906 [INFO] [500/500] running pass@5=74.4%
+2026-04-26 17:50:02,907 [INFO] 
+FINAL RESULTS: MBPP pass@k (n=5)
+2026-04-26 17:50:02,907 [INFO]   pass@5: 74.40%
+2026-04-26 17:50:02,907 [INFO] Summary → eval_results_exp1_passk/summary_huggingface_merged_step140_20260426_045041.json
+2026-04-26 17:50:02,907 [INFO] Raw     → eval_results_exp1_passk/raw_huggingface_merged_step140_20260426_045041.jsonl

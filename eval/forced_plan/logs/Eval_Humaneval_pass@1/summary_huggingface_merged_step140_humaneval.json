@@ -1,0 +1,10 @@
+{
+  "checkpoint": "checkpoints/exp1_full/global_step_140/actor/huggingface_merged_step140",
+  "dataset": "humaneval_plus",
+  "num_tasks": 164,
+  "passed": 121,
+  "pass_at_1": 0.7378048780487805,
+  "has_plan_rate": 0.9817073170731707,
+  "avg_tokens": 546.9756097560976,
+  "out_path": "eval_results_humaneval/eval_huggingface_merged_step140_20260425_153044.jsonl"
+}

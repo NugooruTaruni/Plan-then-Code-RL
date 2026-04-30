@@ -1,0 +1,11 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed": 303,
+    "pass_at_1": 0.574,
+    "has_plan_rate": 0.0,
+    "avg_tokens": 148.512,
+    "out_path": "eval_results_plan_no_reward_upd2/eval_test.jsonl"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "model": "checkpoints_mbpp_full/checkpoints/global_step_230/actor/huggingface",
+  "condition": "optional-plan-no-reward",
+  "timestamp": "2026-04-25T22:36:02.925305",
+  "config": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "num_samples": 20,
+    "k_values": [
+      1,
+      5,
+      10
+    ],
+    "plan_scoring": "rule-based"
+  },
+  "pass1": {
+    "mbpp_val": {
+      "accuracy": 60.0,
+      "passed": 54,
+      "total": 90,
+      "plan_stats": {
+        "plan_percentage": 10.0,
+        "avg_plan_score": 0.99,
+        "avg_plan_length_words": 0.0,
+        "with_plan_success_rate": 60.0,
+        "without_plan_success_rate": 0,
+        "plan_benefit": 60.0
+      }
+    },
+    "mbpp_test": {
+      "accuracy": 57.4,
+      "passed": 287,
+      "total": 500,
+      "plan_stats": {
+        "plan_percentage": 9.6,
+        "avg_plan_score": 0.9835341365461847,
+        "avg_plan_length_words": 0.0,
+        "with_plan_success_rate": 57.630522088353416,
+        "without_plan_success_rate": 0.0,
+        "plan_benefit": 57.630522088353416
+      }
+    }
+  },
+  "passk": {}
+}

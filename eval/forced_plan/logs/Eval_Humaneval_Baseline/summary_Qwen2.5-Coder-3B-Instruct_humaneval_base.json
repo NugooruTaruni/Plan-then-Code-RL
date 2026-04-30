@@ -1,0 +1,10 @@
+{
+  "checkpoint": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "dataset": "humaneval_plus",
+  "num_tasks": 164,
+  "passed": 119,
+  "pass_at_1": 0.725609756097561,
+  "has_plan_rate": 0.975609756097561,
+  "avg_tokens": 555.1768292682926,
+  "out_path": "eval_results_humaneval/eval_Qwen2.5-Coder-3B-Instruct_20260425_173342.jsonl"
+}
