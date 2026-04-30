@@ -27,12 +27,12 @@ The plan is scored by a frozen LLM judge (GPT-4o-mini) across 4 dimensions — D
 
 ## Results
 
-| Model | MBPP pass@1 | MBPP +feedback | MBPP pass@5 | HumanEval+ pass@1 | HumanEval+ +feedback | HumanEval+ pass@5 |
-|---|---|---|---|---|---|---|
-| Base Model | 57.6% | — | — | 71.5% | — | — |
-| Plan-No-Reward *(ablation)* | 57.4% | — | — | — | — | — |
-| Forced Plan (step 140) | 60.6% | 68.6% | 74.4% | 73.8% | 79.9% | 87.2% |
-| **Optional Plan (step 125)** ★ | **61.8%** | **70.2%** | **76.2%** | **75.0%** | **80.5%** | **88.4%** |
+| Model | MBPP pass@1 | MBPP +feedback (self repair) | MBPP +feedback (GPT-4o-mini judge) | MBPP pass@5 | HumanEval+ pass@1 | HumanEval+ +feedback (self repair) | HumanEval+ +feedback (GPT-4o-mini judge) | HumanEval+ pass@5 |
+|---|---|---|---|---|---|---|---|---|
+| Base Model | 57.6% | — | — | — | 71.5% | — | — | — |
+| Plan-No-Reward *(ablation)* | 57.4% | — | — | — | — | — | — | — |
+| Forced Plan (step 140) | 60.6% | 61.2% | 68.6% | 74.4% | 73.8% | 76.8% | 79.9% | 87.2% |
+| **Optional Plan (step 125)** ★ | **61.8%** | **64.5%** | **70.2%** | **76.2%** | **75.6%** | **78.7%** | **81.1%** | **88.4%** |
 
 ★ Best overall model
 
