@@ -38,6 +38,24 @@ The plan is scored by a frozen LLM judge (GPT-4o-mini) across 4 dimensions — D
 
 Optional Plan (trained on MBPP-full, 374 tasks) is best on 7 of 8 metrics; Forced Plan remains best on MBPP pass@5 (74.4% vs 73.1%). Step 185 was chosen from the top-5 checkpoints by mean pass@1 over MBPP and HumanEval+ — logs for the other four are in `eval/optional_plan/logs/other_top_steps/`. Optional Plan was evaluated with `eval/optional_plan/vllm_eval.py`; Base and Forced Plan with the original eval scripts.
 
+### Extra Experiments: is it the RL?
+
+Two no-RL baselines on the same base model, evaluated on the same tasks and tests with the same eval code as Optional Plan (seed 0).
+
+| Model | MBPP pass@1 | MBPP +feedback (self repair) | MBPP +feedback (GPT-4o-mini judge) | MBPP pass@5 | HumanEval+ pass@1 | HumanEval+ +feedback (self repair) | HumanEval+ +feedback (GPT-4o-mini judge) | HumanEval+ pass@5 |
+|---|---|---|---|---|---|---|---|---|
+| Few-shot Plan-then-Code *(base, 3-shot, no RL)* | 58.4% | 64.4% | **69.8%** | **74.5%** | 75.6% | 80.5% | 83.5% | 86.2% |
+| SFT-only *(plan-annotated MBPP train, no RL)* | 54.0% | 60.6% | 65.2% | 72.3% | 62.2% | 67.1% | 75.0% | 79.4% |
+| **Optional Plan (step 185, GRPO)** ★ | **61.0%** | **67.2%** | 68.8% | 73.1% | **78.0%** | **81.7%** | **85.4%** | **89.7%** |
+
+**Q: Does RL training add anything over just prompting the base model to plan?**
+Yes. GRPO beats 3-shot plan-then-code prompting on 6 of 8 metrics, with the biggest gains in first-attempt accuracy: pass@1 +2.6 (MBPP) and +2.4 (HumanEval+), and HumanEval+ pass@5 +3.5. Prompting is slightly ahead on MBPP judge feedback (+1.0) and MBPP pass@5 (+1.4). So on MBPP, RL mainly makes the first attempt more reliable rather than widening what the model can solve.
+
+**Q: Do the gains come from supervised training on plans, or from GRPO?**
+From GRPO. SFT on 373 plan-annotated MBPP train tasks (the same tasks GRPO trains on: GPT-4o-mini plans plus the MBPP reference solutions) is the weakest model on all 8 metrics. It even falls below the prompted base model (MBPP pass@1 54.0% vs 58.4%; HumanEval+ 62.2% vs 75.6%). Imitating MBPP's reference solutions hurts, most of all on the out-of-distribution HumanEval+, whereas reward-driven GRPO improves both benchmarks.
+
+All three models plan on ≥98.8% of tasks. Results are from a single seed, so gaps of about 1 point are within noise. Code: [`experiments/fewshot-plan/`](experiments/fewshot-plan/), [`experiments/sft-plan/`](experiments/sft-plan/); logs: [`eval/fewshot_plan/logs/`](eval/fewshot_plan/logs/), [`eval/sft_plan/logs/`](eval/sft_plan/logs/).
+
 ---
 
 ## Repository Structure
@@ -75,6 +93,15 @@ plan-then-code-rl/
 │   │       ├── mbpp_val_full.parquet
 │   │       ├── mbpp_test_full.parquet
 │   │       └── humaneval_plus_test_full.parquet
+│   │
+│   ├── fewshot-plan/                  # extra experiment: few-shot baseline (no RL)
+│   │   └── fewshot_prompts.py
+│   │
+│   ├── sft-plan/                      # extra experiment: SFT-only baseline (no RL)
+│   │   ├── annotate_plans.py
+│   │   ├── train_sft.py
+│   │   └── data/
+│   │       └── sft_train.jsonl
 │   │
 │   └── merge_checkpoint.py
 │
@@ -120,6 +147,13 @@ plan-then-code-rl/
 │   │           ├── step175/
 │   │           ├── step180/
 │   │           └── step190/
+│   │
+│   ├── fewshot_plan/
+│   │   ├── fewshot_eval.py
+│   │   └── logs/                      # same layout as optional_plan/logs
+│   │
+│   ├── sft_plan/
+│   │   └── logs/                      # evaluated with optional_plan/vllm_eval.py
 │   │
 │   └── plan_no_reward/
 │       ├── eval_feedback_mbpp_optional_no_reward_pass1.py
@@ -202,6 +236,14 @@ bash experiments/optional-plan/train.sh
 bash experiments/plan_no_reward/run_training.sh
 ```
 
+### SFT-only Baseline (no RL)
+```bash
+export OPENAI_API_KEY="sk-..."
+cd experiments/sft-plan
+python annotate_plans.py   # GPT-4o-mini plans + MBPP reference code → data/sft_train.jsonl
+python train_sft.py        # LoRA SFT (r16, α32), 3 epochs, lr 1e-4 → merged/
+```
+
 **Key hyperparameters:**
 
 | Parameter | Forced Plan | Optional Plan | Plan-No-Reward |
@@ -246,6 +288,18 @@ python vllm_eval.py --checkpoint TaruniNugooru/qwen2.5-coder-3b-optional-plan-fu
 ```
 
 Large per-task logs are stored gzipped (`*.jsonl.gz`); read them with `gzip -dc file.jsonl.gz`.
+
+```bash
+# Few-shot baseline — base model, 3-shot plan-then-code prompt (run from eval/fewshot_plan)
+python fewshot_eval.py --dataset mbpp      --data ../../experiments/optional-plan/data/mbpp_test_optional_plan.parquet      --outdir logs
+python fewshot_eval.py --dataset humaneval --data ../../experiments/optional-plan/data/humaneval_plan_optional_plan.parquet --outdir logs
+
+# SFT-only baseline — same vllm_eval.py as Optional Plan (run from eval/optional_plan)
+python vllm_eval.py --checkpoint TaruniNugooru/qwen2.5-coder-3b-sft-plan --dataset mbpp \
+    --data ../../experiments/optional-plan/data/mbpp_test_optional_plan.parquet --outdir ../sft_plan/logs
+python vllm_eval.py --checkpoint TaruniNugooru/qwen2.5-coder-3b-sft-plan --dataset humaneval \
+    --data ../../experiments/optional-plan/data/humaneval_plan_optional_plan.parquet --outdir ../sft_plan/logs
+```
 
 ---
 
@@ -297,6 +351,7 @@ python analysis/plot_category_comparison.py \
 | Optional Plan (step 190) | [TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step190](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step190) |
 | Optional Plan (step 140) | [TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step140](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step140) |
 | Optional Plan — LoRA adapters (all steps) | [TaruniNugooru/plan-then-code-optional-full-adapters](https://huggingface.co/TaruniNugooru/plan-then-code-optional-full-adapters) |
+| SFT-only baseline (no RL) | [TaruniNugooru/qwen2.5-coder-3b-sft-plan](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-sft-plan) |
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer

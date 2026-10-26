@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/workspace/models/sft",
+  "dataset": "mbpp",
+  "prompt_style": "optional",
+  "seed": 0,
+  "n": 500,
+  "pass@1": 0.54,
+  "pass@5": 0.7226,
+  "feedback_nojudge_pass@1": 0.606,
+  "feedback_judge_pass@1": 0.652,
+  "has_plan_rate": 1.0,
+  "avg_plan_score": 0.5
+}

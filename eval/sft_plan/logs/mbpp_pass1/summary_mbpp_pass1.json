@@ -1,0 +1,10 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed": 270,
+    "pass_at_1": 0.54,
+    "has_plan_rate": 1.0,
+    "out_path": "/workspace/results/sft_s0/mbpp_pass1/mbpp_pass1.jsonl"
+  }
+]

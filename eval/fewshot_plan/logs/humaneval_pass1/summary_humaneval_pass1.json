@@ -1,0 +1,10 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 164,
+    "passed": 124,
+    "pass_at_1": 0.7561,
+    "has_plan_rate": 0.9878,
+    "out_path": "/workspace/results/fewshot_base_s0/humaneval_pass1/humaneval_pass1.jsonl"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 164,
+    "passed_attempt_1": 102,
+    "pass_at_1": 0.622,
+    "recovered": 21,
+    "passed_final": 123,
+    "pass_at_1_retry": 0.75,
+    "avg_plan_score": 0.5,
+    "out_path": "/workspace/results/sft_s0/humaneval_feedback_judge/humaneval_feedback_judge.jsonl"
+  }
+]

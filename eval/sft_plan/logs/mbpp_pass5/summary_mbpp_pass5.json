@@ -1,0 +1,9 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "n_samples": 16,
+    "pass_at_5": 0.7226,
+    "out_path": "/workspace/results/sft_s0/mbpp_pass5/mbpp_pass5.jsonl"
+  }
+]

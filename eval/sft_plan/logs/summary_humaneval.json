@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/workspace/models/sft",
+  "dataset": "humaneval",
+  "prompt_style": "optional",
+  "seed": 0,
+  "n": 164,
+  "pass@1": 0.622,
+  "pass@5": 0.7944,
+  "feedback_nojudge_pass@1": 0.6707,
+  "feedback_judge_pass@1": 0.75,
+  "has_plan_rate": 1.0,
+  "avg_plan_score": 0.5
+}

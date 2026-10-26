@@ -1,0 +1,57 @@
+[INFO] Running in WANDB offline mode
+Map:   0%|          | 0/373 [00:00<?, ? examples/s]
+Map:  14%|█▍        | 53/373 [00:00<00:00, 516.40 examples/s]
+Map:  32%|███▏      | 119/373 [00:00<00:00, 593.62 examples/s]
+Map:  49%|████▉     | 183/373 [00:00<00:00, 610.63 examples/s]
+Map:  67%|██████▋   | 250/373 [00:00<00:00, 629.70 examples/s]
+Map:  85%|████████▍ | 316/373 [00:00<00:00, 635.34 examples/s]
+Map: 100%|██████████| 373/373 [00:00<00:00, 525.81 examples/s]
+373 training examples
+trainable params: 29,933,568 || all params: 3,115,872,256 || trainable%: 0.9607
+Traceback (most recent call last):
+File "/workspace/Plan-then-Code-RL/experiments/sft-plan/train_sft.py", line 83, in <module>
+main()
+File "/workspace/Plan-then-Code-RL/experiments/sft-plan/train_sft.py", line 65, in main
+args = TrainingArguments(
+^^^^^^^^^^^^^^^^^^
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'warmup_ratio'
+[INFO] Running in WANDB offline mode
+Map:   0%|          | 0/373 [00:00<?, ? examples/s]
+Map:  14%|█▍        | 53/373 [00:00<00:00, 513.24 examples/s]
+Map:  32%|███▏      | 118/373 [00:00<00:00, 590.04 examples/s]
+Map:  49%|████▉     | 183/373 [00:00<00:00, 608.03 examples/s]
+Map:  67%|██████▋   | 250/373 [00:00<00:00, 628.02 examples/s]
+Map:  85%|████████▍ | 316/373 [00:00<00:00, 633.75 examples/s]
+Map: 100%|██████████| 373/373 [00:00<00:00, 524.59 examples/s]
+373 training examples
+trainable params: 29,933,568 || all params: 3,115,872,256 || trainable%: 0.9607
+{'loss': '0.7032', 'grad_norm': '0.5248', 'learning_rate': '0.0001', 'epoch': '0.1064'}
+{'loss': '0.5643', 'grad_norm': '0.2446', 'learning_rate': '9.967e-05', 'epoch': '0.2128'}
+{'loss': '0.527', 'grad_norm': '0.2908', 'learning_rate': '9.869e-05', 'epoch': '0.3191'}
+{'loss': '0.4877', 'grad_norm': '0.2624', 'learning_rate': '9.707e-05', 'epoch': '0.4255'}
+{'loss': '0.4729', 'grad_norm': '0.2901', 'learning_rate': '9.483e-05', 'epoch': '0.5319'}
+{'loss': '0.5161', 'grad_norm': '0.3228', 'learning_rate': '9.201e-05', 'epoch': '0.6383'}
+{'loss': '0.4404', 'grad_norm': '0.2858', 'learning_rate': '8.863e-05', 'epoch': '0.7447'}
+{'loss': '0.4835', 'grad_norm': '0.3423', 'learning_rate': '8.474e-05', 'epoch': '0.8511'}
+{'loss': '0.4277', 'grad_norm': '0.2881', 'learning_rate': '8.04e-05', 'epoch': '0.9574'}
+{'loss': '0.4137', 'grad_norm': '0.3371', 'learning_rate': '7.566e-05', 'epoch': '1.064'}
+{'loss': '0.378', 'grad_norm': '0.31', 'learning_rate': '7.058e-05', 'epoch': '1.17'}
+{'loss': '0.3886', 'grad_norm': '0.355', 'learning_rate': '6.523e-05', 'epoch': '1.277'}
+{'loss': '0.3667', 'grad_norm': '0.42', 'learning_rate': '5.968e-05', 'epoch': '1.383'}
+{'loss': '0.382', 'grad_norm': '0.3828', 'learning_rate': '5.401e-05', 'epoch': '1.489'}
+{'loss': '0.371', 'grad_norm': '0.3613', 'learning_rate': '4.828e-05', 'epoch': '1.596'}
+{'loss': '0.3836', 'grad_norm': '0.4445', 'learning_rate': '4.257e-05', 'epoch': '1.702'}
+{'loss': '0.4031', 'grad_norm': '0.3925', 'learning_rate': '3.697e-05', 'epoch': '1.809'}
+{'loss': '0.3688', 'grad_norm': '0.4669', 'learning_rate': '3.153e-05', 'epoch': '1.915'}
+{'loss': '0.3559', 'grad_norm': '0.3809', 'learning_rate': '2.634e-05', 'epoch': '2.021'}
+{'loss': '0.3103', 'grad_norm': '0.3689', 'learning_rate': '2.145e-05', 'epoch': '2.128'}
+{'loss': '0.3127', 'grad_norm': '0.3838', 'learning_rate': '1.694e-05', 'epoch': '2.234'}
+{'loss': '0.336', 'grad_norm': '0.4462', 'learning_rate': '1.287e-05', 'epoch': '2.34'}
+{'loss': '0.2954', 'grad_norm': '0.434', 'learning_rate': '9.281e-06', 'epoch': '2.447'}
+{'loss': '0.3111', 'grad_norm': '0.5216', 'learning_rate': '6.229e-06', 'epoch': '2.553'}
+{'loss': '0.308', 'grad_norm': '0.4293', 'learning_rate': '3.751e-06', 'epoch': '2.66'}
+{'loss': '0.3325', 'grad_norm': '0.4519', 'learning_rate': '1.881e-06', 'epoch': '2.766'}
+{'loss': '0.3318', 'grad_norm': '0.4286', 'learning_rate': '6.428e-07', 'epoch': '2.872'}
+{'loss': '0.3307', 'grad_norm': '0.4524', 'learning_rate': '5.258e-08', 'epoch': '2.979'}
+{'train_runtime': '124.3', 'train_samples_per_second': '9.004', 'train_steps_per_second': '1.135', 'train_loss': '0.4033', 'epoch': '3'}
+merged -> /workspace/models/sft

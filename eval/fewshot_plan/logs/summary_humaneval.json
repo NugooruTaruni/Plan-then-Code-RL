@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/workspace/models/base",
+  "dataset": "humaneval",
+  "prompt_style": "fewshot-3",
+  "seed": 0,
+  "n": 164,
+  "pass@1": 0.7561,
+  "pass@5": 0.8622,
+  "feedback_nojudge_pass@1": 0.8049,
+  "feedback_judge_pass@1": 0.8354,
+  "has_plan_rate": 0.9878,
+  "avg_plan_score": 0.5
+}

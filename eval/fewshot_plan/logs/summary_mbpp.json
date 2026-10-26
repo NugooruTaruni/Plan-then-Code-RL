@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/workspace/models/base",
+  "dataset": "mbpp",
+  "prompt_style": "fewshot-3",
+  "seed": 0,
+  "n": 500,
+  "pass@1": 0.584,
+  "pass@5": 0.7453,
+  "feedback_nojudge_pass@1": 0.644,
+  "feedback_judge_pass@1": 0.698,
+  "has_plan_rate": 1.0,
+  "avg_plan_score": 0.5002
+}
