@@ -7,7 +7,7 @@
     "recovered": 45,
     "passed_final": 348,
     "pass_at_1_retry": 0.696,
-    "avg_plan_score": 0.5024,
+    "avg_plan_score": 0.5625,
     "out_path": "/workspace/results/opt175_optional_s0/mbpp_feedback_judge/mbpp_feedback_judge.jsonl"
   }
 ]

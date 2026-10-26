@@ -107,6 +107,7 @@ plan-then-code-rl/
 │
 ├── eval/
 │   ├── fence_rescore.py               # fence-aware re-scoring of saved logs (no GPU)
+│   ├── plan_rescore.py                # re-scores plan quality (GPT-4o-mini) in judge-feedback logs
 │   ├── forced_plan/
 │   │   ├── exp1_evaluate_upd2.py
 │   │   ├── exp1_evaluate_feedback_upd.py

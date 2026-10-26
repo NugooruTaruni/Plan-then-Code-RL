@@ -7,7 +7,7 @@
     "recovered": 13,
     "passed_final": 137,
     "pass_at_1_retry": 0.8354,
-    "avg_plan_score": 0.5,
+    "avg_plan_score": 0.6594,
     "out_path": "/workspace/results/fewshot_base_s0/humaneval_feedback_judge/humaneval_feedback_judge.jsonl"
   }
 ]

@@ -7,7 +7,7 @@
     "recovered": 11,
     "passed_final": 138,
     "pass_at_1_retry": 0.8415,
-    "avg_plan_score": 0.5008,
+    "avg_plan_score": 0.659,
     "out_path": "/workspace/results/opt180_optional_s0/humaneval_feedback_judge/humaneval_feedback_judge.jsonl"
   }
 ]
