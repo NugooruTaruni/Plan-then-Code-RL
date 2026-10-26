@@ -159,6 +159,7 @@ def convert_humaneval():
             "reward_model": {"ground_truth": gt, "style": "rule"},
             "extra_info": {
                 "task_id": item["task_id"],
+                "task_description": item["prompt"],
                 "test_code": test_code,
                 "test_list": [test_code]
             }

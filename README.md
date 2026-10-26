@@ -31,10 +31,12 @@ The plan is scored by a frozen LLM judge (GPT-4o-mini) across 4 dimensions — D
 |---|---|---|---|---|---|---|---|---|
 | Base Model | 57.6% | — | — | — | 71.5% | — | — | — |
 | Plan-No-Reward *(ablation)* | 57.4% | — | — | — | — | — | — | — |
-| Forced Plan (step 140) | 60.6% | 61.2% | 68.6% | 74.4% | 73.8% | 76.8% | 79.9% | 87.2% |
-| **Optional Plan (step 125)** ★ | **61.8%** | **64.5%** | **70.2%** | **76.2%** | **75.6%** | **78.7%** | **81.1%** | **88.4%** |
+| Forced Plan (step 140) | 60.6% | 61.2% | 68.6% | **74.4%** | 73.8% | 76.8% | 79.9% | 87.2% |
+| **Optional Plan (step 185)** ★ | **61.0%** | **67.2%** | **68.8%** | 73.1% | **78.0%** | **81.7%** | **85.4%** | **89.7%** |
 
-★ Best overall model
+★ Best overall model · **bold** = best in column
+
+Optional Plan (trained on MBPP-full, 374 tasks) is best on 7 of 8 metrics; Forced Plan remains best on MBPP pass@5 (74.4% vs 73.1%). Step 185 was chosen from the top-5 checkpoints by mean pass@1 over MBPP and HumanEval+ — logs for the other four are in `eval/optional_plan/logs/other_top_steps/`. Optional Plan was evaluated with `eval/optional_plan/vllm_eval.py`; Base and Forced Plan with the original eval scripts.
 
 ---
 
@@ -96,9 +98,15 @@ plan-then-code-rl/
 │   │       └── Eval_Humaneval_Feedback_W_Judge/
 │   │
 │   ├── optional_plan/
+│   │   ├── vllm_eval.py
 │   │   ├── run_all_mbpp.py
 │   │   ├── run_all_humaneval.py
-│   │   └── logs/
+│   │   ├── runfix.py
+│   │   ├── code_cleaner.py
+│   │   └── logs/                      # step 185
+│   │       ├── summary_mbpp.json
+│   │       ├── summary_humaneval.json
+│   │       ├── eval.log
 │   │       ├── mbpp_pass1/
 │   │       ├── mbpp_pass5/
 │   │       ├── mbpp_feedback_judge/
@@ -106,7 +114,12 @@ plan-then-code-rl/
 │   │       ├── humaneval_pass1/
 │   │       ├── humaneval_pass5/
 │   │       ├── humaneval_feedback_judge/
-│   │       └── humaneval_feedback_nojudge/
+│   │       ├── humaneval_feedback_nojudge/
+│   │       └── other_top_steps/
+│   │           ├── step140/
+│   │           ├── step175/
+│   │           ├── step180/
+│   │           └── step190/
 │   │
 │   └── plan_no_reward/
 │       ├── eval_feedback_mbpp_optional_no_reward_pass1.py
@@ -198,7 +211,7 @@ bash experiments/plan_no_reward/run_training.sh
 | Plan Reward α | 0.5 | 0.5 | 0 |
 | Code Reward β | 1.0 | 1.0 | 1.0 |
 | Rollouts (n) | 5 | 5 | 5 |
-| Best Checkpoint | Step 140 | Step 125 | — |
+| Best Checkpoint | Step 140 | Step 185 | — |
 
 ---
 
@@ -221,10 +234,18 @@ python eval/forced_plan/exp1_eval_passk_mbpp.py \
 python eval/forced_plan/exp1_eval_passk_humaneval.py \
     --checkpoint <path> --num-samples 5 --k-values 5
 
-# Optional plan — all evals
-python eval/optional_plan/run_all_mbpp.py
-python eval/optional_plan/run_all_humaneval.py
+# Optional plan — all 8 evals (pass@1, pass@5, +feedback self repair, +feedback judge) with vLLM
+cd experiments/optional-plan
+python convert_to_parquet.py              # MBPP-full train/val/test
+python convert_to_parquet.py --humaneval  # HumanEval+
+cd ../../eval/optional_plan
+python vllm_eval.py --checkpoint TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step185 \
+    --dataset mbpp --data ../../experiments/optional-plan/data/mbpp_test_optional_plan.parquet --outdir logs
+python vllm_eval.py --checkpoint TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step185 \
+    --dataset humaneval --data ../../experiments/optional-plan/data/humaneval_plan_optional_plan.parquet --outdir logs
 ```
+
+Large per-task logs are stored gzipped (`*.jsonl.gz`); read them with `gzip -dc file.jsonl.gz`.
 
 ---
 
@@ -270,11 +291,17 @@ python analysis/plot_category_comparison.py \
 |---|---|
 | Forced Plan (step 140) | [palandyeanagha/qwen2.5-coder-3b-plan-then-code-step140](https://huggingface.co/palandyeanagha/qwen2.5-coder-3b-plan-then-code-step140) |
 | Forced Plan (step 200) | [palandyeanagha/qwen2.5-coder-3b-plan-then-code-step200](https://huggingface.co/palandyeanagha/qwen2.5-coder-3b-plan-then-code-step200) |
+| **Optional Plan (step 185)** ★ | [TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step185](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step185) |
+| Optional Plan (step 180) | [TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step180](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step180) |
+| Optional Plan (step 175) | [TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step175](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step175) |
+| Optional Plan (step 190) | [TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step190](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step190) |
+| Optional Plan (step 140) | [TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step140](https://huggingface.co/TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step140) |
+| Optional Plan — LoRA adapters (all steps) | [TaruniNugooru/plan-then-code-optional-full-adapters](https://huggingface.co/TaruniNugooru/plan-then-code-optional-full-adapters) |
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
-model     = AutoModelForCausalLM.from_pretrained("palandyeanagha/qwen2.5-coder-3b-plan-then-code-step140")
-tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-Coder-3B-Instruct")
+model     = AutoModelForCausalLM.from_pretrained("TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step185")
+tokenizer = AutoTokenizer.from_pretrained("TaruniNugooru/qwen2.5-coder-3b-optional-plan-full-step185")
 ```
 
 To merge and upload your own checkpoint:
@@ -288,8 +315,8 @@ python experiments/merge_checkpoint.py \
 
 ## Compute
 
-- **Hardware:** 1× NVIDIA A100 80GB (Lightning.ai)
-- **Framework:** VERL + vLLM (rollouts) + HuggingFace Transformers (eval)
+- **Hardware:** 1× NVIDIA A100 80GB (Lightning.ai; Vast.ai for Optional Plan)
+- **Framework:** VERL + vLLM (rollouts) + HuggingFace Transformers (eval); vLLM for Optional Plan eval
 - **Tracking:** W&B (`plan-then-code` project)
 - **Training time:** ~8 hours per experiment
 

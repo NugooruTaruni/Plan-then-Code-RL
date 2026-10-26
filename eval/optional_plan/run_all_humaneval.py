@@ -51,14 +51,25 @@ def extract_func_name(code, task_prompt=""):
 def run_test(code, test):
     if not code.strip():
         return False, "Empty code"
+    # Run from a temp file (not `python3 -c`) so HumanEval+'s large test suites
+    # don't overflow the OS argument-length limit ("Argument list too long").
+    import tempfile
+    path = None
     try:
-        r = subprocess.run(['python3', '-c', f'{code}\n\n{test}'],
-                           capture_output=True, text=True, timeout=10)
+        with tempfile.NamedTemporaryFile("w", suffix=".py", delete=False) as fh:
+            fh.write(f'{code}\n\n{test}'); path = fh.name
+        r = subprocess.run(['python3', path], capture_output=True, text=True, timeout=20)
         return (r.returncode == 0, r.stderr[:400])
     except subprocess.TimeoutExpired:
         return (False, "Timeout")
     except Exception as e:
         return (False, str(e)[:400])
+    finally:
+        if path:
+            try:
+                os.unlink(path)
+            except Exception:
+                pass
 
 
 def safe_list(lst):
@@ -83,10 +94,10 @@ def write_log(filename, msg):
 def row_meta(row, i):
     extra = row.get("extra_info", {}) or {}
     task_id     = str(row.get("task_id", extra.get("task_id", f"HumanEval/{i}")))
-    task_prompt = extra.get("task_description", extra.get("task_id", task_id))
     test_code   = extra.get("test_code", "")
     test_list   = safe_list(extra.get("test_list", []))
     prompt_text = row["prompt"][0]["content"] if isinstance(row["prompt"], list) else str(row["prompt"])
+    task_prompt = extra.get("task_description", prompt_text)
     return task_id, task_prompt, test_code, test_list, prompt_text
 
 

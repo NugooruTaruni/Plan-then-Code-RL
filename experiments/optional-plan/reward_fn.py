@@ -4,7 +4,7 @@ reward_fn.py — Optional-Plan Reward (GPT-4o-mini Judge)
 R = 0.5 * plan_score * test_ratio + 1.0 * test_ratio
 """
 
-import os, re, ast, json, subprocess, logging
+import os, re, ast, json, subprocess, tempfile, logging
 
 logger = logging.getLogger(__name__)
 ALPHA, BETA, MAX_REWARD = 0.5, 1.0, 1.6
@@ -12,6 +12,41 @@ CODE_TIMEOUT = 10
 METADATA_PATH = os.environ.get("MBPP_METADATA_PATH", "data/mbpp_train_metadata.json")
 _metadata_cache = None
 _openai_client = None
+
+
+def _clean_code(code, test_list=None):
+    code = re.sub(r"^```(?:python)?\s*", "", code, flags=re.MULTILINE)
+    code = re.sub(r"\s*```$", "", code, flags=re.MULTILINE)
+    try:
+        ast.parse(code)
+    except SyntaxError:
+        try:
+            cand = code.encode().decode('unicode_escape')
+            ast.parse(cand)
+            code = cand
+        except Exception:
+            pass
+    if test_list and len(test_list) > 0:
+        first_test = str(test_list[0])
+        expected = None
+        if 'def check(' in first_test:
+            cands = re.findall(r"check\(\s*(\w+)\s*\)", first_test)
+            if cands:
+                expected = cands[-1]
+        else:
+            m = re.search(r"assert\s+(\w+)\s*\(", first_test)
+            if m:
+                expected = m.group(1)
+        if expected:
+            all_defs = re.findall(r"def\s+(\w+)\s*\(", code)
+            if all_defs and expected not in all_defs:
+                tl = list(re.finditer(r"(?m)^def\s+\w+\s*\(", code))
+                if tl:
+                    last = tl[-1].start()
+                    code = code[:last] + re.sub(r"^def\s+\w+\s*\(", f"def {expected}(",
+                                                code[last:], count=1)
+    code = code.replace("\t", "    ")
+    return code.strip()
 
 
 def _load_metadata():
@@ -106,25 +141,34 @@ def _score_plan(task_desc, plan_text):
     return 0.5
 
 
-def _exec(code, test):
+def _exec(code, test, test_list=None):
     if not code.strip() or not test.strip():
         return False
+    cleaned = _clean_code(code, test_list)
+    full = f"{cleaned}\n\n{test}"
     try:
-        r = subprocess.run(["python3", "-c", f"{code}\n\n{test}"],
-                           capture_output=True, text=True, timeout=CODE_TIMEOUT)
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as f:
+            f.write(full)
+            tmp = f.name
+        r = subprocess.run(["python3", tmp], capture_output=True, text=True, timeout=CODE_TIMEOUT)
         return r.returncode == 0
     except:
         return False
+    finally:
+        try:
+            os.unlink(tmp)
+        except:
+            pass
 
 
 def _test_ratio(code, test_list, test_code):
     if not code.strip():
         return 0.0
-    if test_code and _exec(code, test_code):
+    if test_code and _exec(code, test_code, test_list):
         return 1.0
     if not test_list:
         return 0.0
-    passed = sum(1 for t in test_list if _exec(code, t))
+    passed = sum(1 for t in test_list if _exec(code, t, test_list))
     return passed / len(test_list)
 
 

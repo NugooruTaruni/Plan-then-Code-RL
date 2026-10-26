@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/workspace/models/opt185",
+  "dataset": "mbpp",
+  "prompt_style": "optional",
+  "seed": 0,
+  "n": 500,
+  "pass@1": 0.61,
+  "pass@5": 0.7311,
+  "feedback_nojudge_pass@1": 0.672,
+  "feedback_judge_pass@1": 0.688,
+  "has_plan_rate": 1.0,
+  "avg_plan_score": 0.5011
+}

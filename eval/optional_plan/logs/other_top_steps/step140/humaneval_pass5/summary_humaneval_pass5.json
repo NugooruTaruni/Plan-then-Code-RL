@@ -1,0 +1,9 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 164,
+    "n_samples": 16,
+    "pass_at_5": 0.8927,
+    "out_path": "/workspace/results/opt140_optional_s0/humaneval_pass5/humaneval_pass5.jsonl"
+  }
+]

@@ -56,13 +56,25 @@ def run_tests(code, test_list, test_code=""):
     if not test_list and not test_code:
         return False, "no tests"
     full = f"{code}\n\n{test_code}" if test_code else code + "\n\n" + "\n".join(test_list)
+    # Run from a temp file (not `python3 -c`) so large test suites don't overflow
+    # the OS argument-length limit ("Argument list too long").
+    import tempfile
+    path = None
     try:
-        r = subprocess.run(["python3", "-c", full], capture_output=True, text=True, timeout=10)
+        with tempfile.NamedTemporaryFile("w", suffix=".py", delete=False) as fh:
+            fh.write(full); path = fh.name
+        r = subprocess.run(["python3", path], capture_output=True, text=True, timeout=20)
         return r.returncode == 0, r.stderr[:400]
     except subprocess.TimeoutExpired:
         return False, "TIMEOUT"
     except Exception as e:
         return False, str(e)[:400]
+    finally:
+        if path:
+            try:
+                os.unlink(path)
+            except Exception:
+                pass
 
 
 def safe_list(lst):

@@ -1,0 +1,13 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 164,
+    "passed_attempt_1": 126,
+    "pass_at_1": 0.7683,
+    "recovered": 10,
+    "passed_final": 136,
+    "pass_at_1_retry": 0.8293,
+    "avg_plan_score": 0.5,
+    "out_path": "/workspace/results/opt190_optional_s0/humaneval_feedback_judge/humaneval_feedback_judge.jsonl"
+  }
+]

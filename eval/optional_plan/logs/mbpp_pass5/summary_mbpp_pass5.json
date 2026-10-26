@@ -2,10 +2,8 @@
   {
     "split": "test",
     "num_tasks": 500,
-    "n": 5,
-    "passed": 381,
-    "pass_at_5": 0.762,
-    "has_plan_rate": 0.945,
-    "out_path": "eval_results_optional_plan/mbpp_pass5.jsonl"
+    "n_samples": 16,
+    "pass_at_5": 0.7311,
+    "out_path": "/workspace/results/opt185_optional_s0/mbpp_pass5/mbpp_pass5.jsonl"
   }
 ]

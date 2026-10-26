@@ -1,0 +1,12 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 164,
+    "passed_attempt_1": 127,
+    "pass_at_1": 0.7744,
+    "recovered": 6,
+    "passed_final": 133,
+    "pass_at_1_retry": 0.811,
+    "out_path": "/workspace/results/opt175_optional_s0/humaneval_feedback_nojudge/humaneval_feedback_nojudge.jsonl"
+  }
+]

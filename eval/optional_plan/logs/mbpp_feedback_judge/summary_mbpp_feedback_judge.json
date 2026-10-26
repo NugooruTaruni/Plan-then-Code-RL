@@ -1,0 +1,13 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed_attempt_1": 305,
+    "pass_at_1": 0.61,
+    "recovered": 39,
+    "passed_final": 344,
+    "pass_at_1_retry": 0.688,
+    "avg_plan_score": 0.5011,
+    "out_path": "/workspace/results/opt185_optional_s0/mbpp_feedback_judge/mbpp_feedback_judge.jsonl"
+  }
+]

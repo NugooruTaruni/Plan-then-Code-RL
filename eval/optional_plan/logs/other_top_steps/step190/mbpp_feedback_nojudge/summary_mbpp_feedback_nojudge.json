@@ -1,0 +1,12 @@
+[
+  {
+    "split": "test",
+    "num_tasks": 500,
+    "passed_attempt_1": 304,
+    "pass_at_1": 0.608,
+    "recovered": 29,
+    "passed_final": 333,
+    "pass_at_1_retry": 0.666,
+    "out_path": "/workspace/results/opt190_optional_s0/mbpp_feedback_nojudge/mbpp_feedback_nojudge.jsonl"
+  }
+]

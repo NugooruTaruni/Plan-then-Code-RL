@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/workspace/models/opt175",
+  "dataset": "humaneval",
+  "prompt_style": "optional",
+  "seed": 0,
+  "n": 164,
+  "pass@1": 0.7744,
+  "pass@5": 0.8913,
+  "feedback_nojudge_pass@1": 0.811,
+  "feedback_judge_pass@1": 0.8415,
+  "has_plan_rate": 1.0,
+  "avg_plan_score": 0.5008
+}
