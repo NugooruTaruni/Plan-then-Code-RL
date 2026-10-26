@@ -1,0 +1,46 @@
+{
+  "mbpp": {
+    "pass@1": {
+      "strict": 0.54,
+      "fence_aware": 0.54,
+      "unclosed": 0,
+      "rescued": 0
+    },
+    "pass@5": {
+      "strict": 0.7226,
+      "fence_aware": 0.7226,
+      "unclosed": 1,
+      "rescued": 0
+    },
+    "feedback_nojudge": {
+      "strict": 0.606,
+      "fence_aware": 0.606
+    },
+    "feedback_judge": {
+      "strict": 0.652,
+      "fence_aware": 0.652
+    }
+  },
+  "humaneval": {
+    "pass@1": {
+      "strict": 0.622,
+      "fence_aware": 0.622,
+      "unclosed": 0,
+      "rescued": 0
+    },
+    "pass@5": {
+      "strict": 0.7944,
+      "fence_aware": 0.7944,
+      "unclosed": 2,
+      "rescued": 0
+    },
+    "feedback_nojudge": {
+      "strict": 0.6707,
+      "fence_aware": 0.6707
+    },
+    "feedback_judge": {
+      "strict": 0.75,
+      "fence_aware": 0.75
+    }
+  }
+}

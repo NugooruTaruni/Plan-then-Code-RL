@@ -44,17 +44,17 @@ Two no-RL baselines on the same base model, evaluated on the same tasks and test
 
 | Model | MBPP pass@1 | MBPP +feedback (self repair) | MBPP +feedback (GPT-4o-mini judge) | MBPP pass@5 | HumanEval+ pass@1 | HumanEval+ +feedback (self repair) | HumanEval+ +feedback (GPT-4o-mini judge) | HumanEval+ pass@5 |
 |---|---|---|---|---|---|---|---|---|
-| Few-shot Plan-then-Code *(base, 3-shot, no RL)* | 58.4% | 64.4% | **69.8%** | **74.5%** | 75.6% | 80.5% | 83.5% | 86.2% |
+| Few-shot Plan-then-Code *(base, 3-shot, no RL)* | 58.4% | 64.8% | **70.4%** | **74.5%** | 76.8% | **82.9%** | **85.4%** | 87.7% |
 | SFT-only *(plan-annotated MBPP train, no RL)* | 54.0% | 60.6% | 65.2% | 72.3% | 62.2% | 67.1% | 75.0% | 79.4% |
-| **Optional Plan (step 185, GRPO)** ★ | **61.0%** | **67.2%** | 68.8% | 73.1% | **78.0%** | **81.7%** | **85.4%** | **89.7%** |
+| **Optional Plan (step 185, GRPO)** ★ | **61.0%** | **67.2%** | 68.8% | 73.1% | **78.0%** | 81.7% | **85.4%** | **89.7%** |
 
 **Q: Does RL training add anything over just prompting the base model to plan?**
-Yes. GRPO beats 3-shot plan-then-code prompting on 6 of 8 metrics, with the biggest gains in first-attempt accuracy: pass@1 +2.6 (MBPP) and +2.4 (HumanEval+), and HumanEval+ pass@5 +3.5. Prompting is slightly ahead on MBPP judge feedback (+1.0) and MBPP pass@5 (+1.4). So on MBPP, RL mainly makes the first attempt more reliable rather than widening what the model can solve.
+Yes, mainly in first-attempt accuracy. GRPO is ahead on pass@1 (+2.6 on MBPP, +1.2 on HumanEval+), on MBPP self-repair (+2.4) and on HumanEval+ pass@5 (+2.0). The 3-shot prompted base model is ahead on MBPP judge feedback (+1.6), MBPP pass@5 (+1.4) and HumanEval+ self-repair (+1.2), and the two tie on HumanEval+ judge feedback. So RL makes the model right more often on the first try. Given feedback or several samples, prompting the base model to plan gets about as far.
 
 **Q: Do the gains come from supervised training on plans, or from GRPO?**
-From GRPO. SFT on 373 plan-annotated MBPP train tasks (the same tasks GRPO trains on: GPT-4o-mini plans plus the MBPP reference solutions) is the weakest model on all 8 metrics. It even falls below the prompted base model (MBPP pass@1 54.0% vs 58.4%; HumanEval+ 62.2% vs 75.6%). Imitating MBPP's reference solutions hurts, most of all on the out-of-distribution HumanEval+, whereas reward-driven GRPO improves both benchmarks.
+From GRPO. SFT on 373 plan-annotated MBPP train tasks (the same tasks GRPO trains on: GPT-4o-mini plans plus the MBPP reference solutions) is the weakest model on all 8 metrics. It even falls below the prompted base model (MBPP pass@1 54.0% vs 58.4%; HumanEval+ 62.2% vs 76.8%). Its failures are wrong answers, not format errors: it copies MBPP's short reference solutions, which miss HumanEval+'s edge cases. Reward-driven GRPO, by contrast, improves both benchmarks.
 
-All three models plan on ≥98.8% of tasks. Results are from a single seed, so gaps of about 1 point are within noise. Code: [`experiments/fewshot-plan/`](experiments/fewshot-plan/), [`experiments/sft-plan/`](experiments/sft-plan/); logs: [`eval/fewshot_plan/logs/`](eval/fewshot_plan/logs/), [`eval/sft_plan/logs/`](eval/sft_plan/logs/).
+All three models plan on ≥98.8% of tasks. Scores use fence-aware code extraction ([`eval/fence_rescore.py`](eval/fence_rescore.py)): an answer that opens `<code>` but closes its code with a Markdown fence instead of `</code>` is cut at the fence and re-tested, rather than failing on the trailing explanation. This only changes the few-shot model, by up to +2.4 points; the trained models' scores are identical under strict scoring (`summary_fence_aware.json` in each logs folder has both). Results are from a single seed, so gaps of about 1 point are within noise. Code: [`experiments/fewshot-plan/`](experiments/fewshot-plan/), [`experiments/sft-plan/`](experiments/sft-plan/); logs: [`eval/fewshot_plan/logs/`](eval/fewshot_plan/logs/), [`eval/sft_plan/logs/`](eval/sft_plan/logs/).
 
 ---
 
@@ -106,6 +106,7 @@ plan-then-code-rl/
 │   └── merge_checkpoint.py
 │
 ├── eval/
+│   ├── fence_rescore.py               # fence-aware re-scoring of saved logs (no GPU)
 │   ├── forced_plan/
 │   │   ├── exp1_evaluate_upd2.py
 │   │   ├── exp1_evaluate_feedback_upd.py
